@@ -1,0 +1,41 @@
+
+Min 10c Profit per Roll:    2.06
+All Profit per Roll:       5.83
+
+-----Min 10c Modifiers-----
+Shaper Guardian                     |         60
+Elder Guardian                      |         24
+Conqueror Map                       |        280
+Alva                                |         15
+Strongbox Enraged                   |         84
+Chayula                             |         13
+Abyss                               |         43
+8 Modifiers                         |         85
+Copy of Beasts                      |         14
+Splinters Emblems Duplicate         |         10
+Oils Tier                           |         10
+Blue Plants                         |         40
+Purple Plants                       |         42
+Yellow Plants                       |         60
+Mysterious Harbinger                |         10
+Beyond                              |        235
+Gilded Scarab                       |         20
+Mortal/Sacrifice Fragment 8 Packs   |         10
+Legion                              |         18
+Mirror of Delirium                  |         90
+Sacred Grove                        |         40
+10c Mods: 21 / 66
+
+-----Blocker Modifiers-----
+Fire Monsters        |      0.009
+Cold Monsters        |      0.009
+Lightning Monsters   |      0.009
+Physical Monsters    |      0.009
+Chaos Monsters       |      0.009
+Rare Map Rare Packs  |      0.009
+Reflected            |      0.009
+Convert Monsters     |      0.009
+Flasks Instant       |      0.009
+Gloom Shrine         |      0.009
+Resonating Shrine    |      0.009
+Shrine               |      0.009

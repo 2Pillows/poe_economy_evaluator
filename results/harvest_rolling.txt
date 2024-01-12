@@ -55,16 +55,16 @@ Buy []
 Deafening Loathing   |       31.0
 Deafening Scorn      |       24.0
 Deafening Contempt   |       18.0
-Deafening Rage       |       15.0
+Deafening Rage       |      15.53
 Deafening Zeal       |       15.0
-Deafening Envy       |      14.49
-Deafening Spite      |       14.4
+Deafening Spite      |      14.49
+Deafening Envy       |       14.0
 Deafening Wrath      |       13.0
-Deafening Hatred     |      12.79
+Deafening Hatred     |       12.5
 Deafening Anger      |       12.0
-Average Profit: 7.97 
-Average Profit (9x): 71.73 
-Buy ['Torment', 'Woe', 'Sorrow', 'Fear', 'Misery', 'Greed', 'Suffering', 'Doubt', 'Anguish', 'Dread']
+Average Profit: 7.95 
+Average Profit (9x): 71.55 
+Buy ['Torment', 'Woe', 'Fear', 'Misery', 'Sorrow', 'Greed', 'Suffering', 'Doubt', 'Anguish', 'Dread']
 
 Shrieking Loathing   |        9.0
 Shrieking Envy       |        6.0
@@ -93,7 +93,7 @@ Buy ['Anguish', 'Doubt', 'Suffering']
 Diviner's Orb        |       30.0
 Fine Orb             |       27.0
 Singular Orb         |       22.0
-Armoursmith's Orb    |       22.0
+Armoursmith's Orb    |       20.3
 Fragmented Orb       |       20.0
 Cartographer's Orb   |       20.0
 Jeweller's Orb       |       20.0
@@ -106,7 +106,7 @@ Blacksmith's Orb     |       20.0
 Blighted Orb         |       20.0
 Timeless Orb         |       20.0
 Whispering Orb       |       20.0
-Average Profit: 4.81 
-Average Profit (10x): 48.1 
+Average Profit: 4.71 
+Average Profit (10x): 47.1 
 Buy []
 
