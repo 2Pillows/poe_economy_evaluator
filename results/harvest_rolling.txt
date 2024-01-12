@@ -1,39 +1,39 @@
 
 ----------Scarab----------
 
-Winged Reliquary     |      120.0
+Winged Reliquary     |     121.39
 Winged Ambush        |       90.0
 Winged Abyss         |       90.0
-Winged Divination    |       83.0
-Average Profit: 30.3 
-Average Profit (10x): 303.0 
+Winged Divination    |       80.0
+Average Profit: 29.9 
+Average Profit (10x): 299.0 
 Buy ['Legion', 'Cartography', 'Torment', 'Sulphite', 'Breach', 'Bestiary', 'Shaper', 'Harbinger', 'Elder', 'Blight', 'Expedition', 'Ultimatum']
 
-Gilded Reliquary     |      25.28
-Gilded Divination    |      18.36
+Gilded Reliquary     |      24.15
+Gilded Divination    |      18.21
 Gilded Abyss         |      15.53
-Gilded Ambush        |      11.15
-Gilded Harbinger     |      10.25
+Gilded Ambush        |      11.32
+Gilded Harbinger     |       10.0
 Gilded Legion        |       9.06
-Average Profit: 4.3 
-Average Profit (10x): 43.0 
+Average Profit: 4.07 
+Average Profit (10x): 40.7 
 Buy ['Cartography', 'Breach', 'Torment', 'Bestiary', 'Sulphite', 'Elder', 'Blight', 'Expedition', 'Ultimatum', 'Shaper']
 
 Polished Legion      |      24.15
-Polished Reliquary   |      10.67
+Polished Reliquary   |      10.68
 Polished Divination  |        8.0
 Polished Harbinger   |        6.0
 Polished Ambush      |       5.72
 Polished Abyss       |       5.43
-Average Profit: 3.35 
-Average Profit (10x): 33.5 
-Buy ['Cartography', 'Bestiary', 'Blight', 'Expedition', 'Shaper', 'Sulphite', 'Breach', 'Torment', 'Elder', 'Ultimatum']
+Average Profit: 3.36 
+Average Profit (10x): 33.6 
+Buy ['Cartography', 'Bestiary', 'Blight', 'Breach', 'Expedition', 'Shaper', 'Sulphite', 'Torment', 'Elder', 'Ultimatum']
 
 Rusted Legion        |        9.0
 Rusted Reliquary     |        3.0
 Rusted Divination    |       2.53
 Rusted Abyss         |       2.29
-Rusted Ambush        |       2.24
+Rusted Ambush        |       2.27
 Rusted Sulphite      |       2.16
 Rusted Cartography   |        2.0
 Rusted Elder         |        2.0

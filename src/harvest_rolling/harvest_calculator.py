@@ -1,6 +1,6 @@
 # calculate_profit
 
-import os
+# import os
 
 
 def filter_name(input_string, indices):
@@ -60,7 +60,7 @@ def start_calculations(
             with open(FILE_DESTINATION, "a") as file:
                 file.write(f"{object_type} Not Profitable\n\n")
 
-    os.system(f"start {FILE_DESTINATION}")
+    # os.system(f"start {FILE_DESTINATION}")
 
 
 def maximize_profit(
