@@ -1,40 +1,40 @@
 
 ----------Scarab----------
 
-Winged Reliquary     |     120.77
+Winged Reliquary     |      130.0
 Winged Ambush        |       90.0
 Winged Abyss         |       90.0
-Winged Divination    |       80.0
-Average Profit: 29.74 
-Average Profit (10x): 297.4 
+Winged Divination    |       80.8
+Average Profit: 32.25 
+Average Profit (10x): 322.5 
 Buy ['Legion', 'Cartography', 'Torment', 'Sulphite', 'Breach', 'Bestiary', 'Shaper', 'Harbinger', 'Elder', 'Blight', 'Expedition', 'Ultimatum']
 
-Gilded Reliquary     |      24.75
-Gilded Divination    |       18.9
+Gilded Reliquary     |      24.99
+Gilded Divination    |       19.0
 Gilded Abyss         |      15.53
-Gilded Ambush        |      11.44
+Gilded Ambush        |       11.0
 Gilded Harbinger     |       10.0
 Gilded Legion        |       9.06
-Average Profit: 4.31 
-Average Profit (10x): 43.1 
-Buy ['Cartography', 'Breach', 'Torment', 'Bestiary', 'Sulphite', 'Elder', 'Blight', 'Expedition', 'Ultimatum', 'Shaper']
+Average Profit: 4.29 
+Average Profit (10x): 42.9 
+Buy ['Cartography', 'Breach', 'Bestiary', 'Expedition', 'Ultimatum', 'Torment', 'Shaper', 'Sulphite', 'Elder', 'Blight']
 
 Polished Legion      |      24.15
-Polished Reliquary   |      10.77
+Polished Reliquary   |      10.87
 Polished Divination  |        8.0
 Polished Harbinger   |        6.0
 Polished Ambush      |       5.72
-Polished Abyss       |       5.43
-Average Profit: 3.37 
-Average Profit (10x): 33.7 
+Polished Abyss       |       5.47
+Average Profit: 3.39 
+Average Profit (10x): 33.9 
 Buy ['Cartography', 'Bestiary', 'Blight', 'Expedition', 'Shaper', 'Sulphite', 'Breach', 'Torment', 'Elder', 'Ultimatum']
 
 Rusted Legion        |        9.0
 Rusted Reliquary     |        3.0
 Rusted Divination    |       2.56
 Rusted Abyss         |       2.29
+Rusted Sulphite      |       2.27
 Rusted Ambush        |       2.26
-Rusted Sulphite      |       2.17
 Rusted Cartography   |        2.0
 Rusted Elder         |        2.0
 Rusted Bestiary      |        2.0
@@ -45,26 +45,26 @@ Rusted Harbinger     |        2.0
 Rusted Blight        |        2.0
 Rusted Expedition    |        2.0
 Rusted Ultimatum     |        2.0
-Average Profit: 0.22 
-Average Profit (10x): 2.2 
+Average Profit: 0.23 
+Average Profit (10x): 2.3 
 Buy []
 
 
 ----------Essence----------
 
 Deafening Loathing   |       31.0
-Deafening Scorn      |       24.0
-Deafening Contempt   |      17.78
-Deafening Rage       |       15.0
+Deafening Scorn      |      24.15
+Deafening Contempt   |       18.0
+Deafening Rage       |      15.53
+Deafening Spite      |       15.0
 Deafening Zeal       |       15.0
-Deafening Spite      |      14.49
-Deafening Envy       |       14.0
+Deafening Envy       |      14.49
 Deafening Wrath      |       13.0
-Deafening Hatred     |      12.34
+Deafening Hatred     |      12.79
 Deafening Anger      |      12.08
-Average Profit: 7.87 
-Average Profit (9x): 70.83 
-Buy ['Torment', 'Woe', 'Fear', 'Misery', 'Sorrow', 'Greed', 'Suffering', 'Anguish', 'Doubt', 'Dread']
+Average Profit: 8.1 
+Average Profit (9x): 72.9 
+Buy ['Torment', 'Woe', 'Sorrow', 'Fear', 'Misery', 'Greed', 'Suffering', 'Anguish', 'Doubt', 'Dread']
 
 Shrieking Loathing   |        9.0
 Shrieking Envy       |        6.0
@@ -91,8 +91,8 @@ Buy ['Anguish', 'Doubt', 'Suffering']
 ----------DeliriumOrb----------
 
 Diviner's Orb        |       30.0
-Fine Orb             |       27.0
-Singular Orb         |       22.0
+Fine Orb             |       26.0
+Singular Orb         |       21.0
 Fragmented Orb       |       20.0
 Cartographer's Orb   |       20.0
 Jeweller's Orb       |       20.0
@@ -106,7 +106,7 @@ Blacksmith's Orb     |       20.0
 Blighted Orb         |       20.0
 Timeless Orb         |       20.0
 Whispering Orb       |       20.0
-Average Profit: 4.69 
-Average Profit (10x): 46.9 
+Average Profit: 4.56 
+Average Profit (10x): 45.6 
 Buy []
 
