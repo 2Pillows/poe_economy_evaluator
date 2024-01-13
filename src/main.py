@@ -5,8 +5,6 @@ from sanctum_rewards.sanctum_main import start_sanctum_main
 from sextant_rolling.sextant_main import start_sextant_main
 from awakened_leveling.awakened_main import start_awakened_main
 
-LEAGUE_URL = "https://api.pathofexile.com/leagues?type=main&compact=1"
-
 
 def set_urls(LEAGUE_NAME):
     URLs = {
