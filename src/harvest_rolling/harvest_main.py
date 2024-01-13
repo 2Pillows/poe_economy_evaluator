@@ -1,8 +1,12 @@
 import requests
+import os
 from harvest_rolling.harvest_calculator import filter_types, start_calculations
 
 LEAGUE_NAME = "Affliction"
-FILE_DESTINATION = "./results/harvest_rolling.txt"
+
+CUR_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.dirname(os.path.dirname(CUR_DIR))
+RESULTS_FILE = os.path.join(PROJECT_DIR, "results", "harvest_rolling.txt")
 
 BLUE_LIFEFORCE_PER_CHAOS = 20
 RED_LIFEFORCE_PER_CHAOS = 22
@@ -69,7 +73,7 @@ def fetch_data(league_name, object_name):
 
 
 def start_harvest_main():
-    clear_file(FILE_DESTINATION)
+    clear_file(RESULTS_FILE)
 
     for item_name, item_data in ITEMS.items():
         object_data = fetch_data(LEAGUE_NAME, item_data["url"])
@@ -83,6 +87,6 @@ def start_harvest_main():
             item_data["lifeforce_per_reforge"],
             item_data["lifeforce_used"],
             item_data["chaos_acquisition_types"],
-            FILE_DESTINATION,
+            RESULTS_FILE,
             item_data["stack_limit"],
         )

@@ -1,6 +1,6 @@
 # sanctum_rewards.py
 
-# import os
+import os
 import requests
 
 
@@ -9,8 +9,11 @@ NAME_KEY = "name"
 COUNT_KEY = "count"
 CHAOS_KEY = "chaos_equiv"
 MIN_CHAOS = 10
-RESULTS_FILE = "./results/sanctum_rewards.txt"
-REWARD_FILE = "./src/sanctum_rewards/reward_data.txt"
+
+CUR_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.dirname(os.path.dirname(CUR_DIR))
+RESULTS_FILE = os.path.join(PROJECT_DIR, "results", "sanctum_rewards.txt")
+REWARD_FILE = os.path.join(CUR_DIR, "reward_data.txt")
 
 CURRENCY_URL = (
     f"https://poe.ninja/api/data/currencyoverview?league={LEAGUE_NAME}&type=Currency"

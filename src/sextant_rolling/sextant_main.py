@@ -1,14 +1,17 @@
 # sextant_main.py
 
-# import os
+import os
 import requests
+
 
 SEXTANT_CHAOS = 3.5
 MIN_PROFIT = 10
 COMPASS_COST = 1
 
-RESULTS_FILE = "./results/sextant_rolling.txt"
-MODIFIER_FILE = "./src/sextant_rolling/modifier_weights.txt"
+CUR_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.dirname(os.path.dirname(CUR_DIR))
+RESULTS_FILE = os.path.join(PROJECT_DIR, "results", "sextant_rolling.txt")
+MODIFIER_FILE = os.path.join(CUR_DIR, "modifier_weights.txt")
 
 PRICES_URL = "https://raw.githubusercontent.com/The-Forbidden-Trove/tft-data-prices/master/lsc/bulk-compasses.json"
 

@@ -54,17 +54,17 @@ Buy []
 
 Deafening Loathing   |       31.0
 Deafening Scorn      |       24.0
-Deafening Contempt   |       18.0
-Deafening Rage       |      15.53
+Deafening Contempt   |      17.78
+Deafening Rage       |       15.0
 Deafening Zeal       |       15.0
 Deafening Spite      |      14.49
 Deafening Envy       |       14.0
 Deafening Wrath      |       13.0
-Deafening Hatred     |       12.5
-Deafening Anger      |       12.0
-Average Profit: 7.95 
-Average Profit (9x): 71.55 
-Buy ['Torment', 'Woe', 'Fear', 'Misery', 'Sorrow', 'Greed', 'Suffering', 'Doubt', 'Anguish', 'Dread']
+Deafening Hatred     |      12.34
+Deafening Anger      |      12.08
+Average Profit: 7.87 
+Average Profit (9x): 70.83 
+Buy ['Torment', 'Woe', 'Fear', 'Misery', 'Sorrow', 'Greed', 'Suffering', 'Anguish', 'Doubt', 'Dread']
 
 Shrieking Loathing   |        9.0
 Shrieking Envy       |        6.0
