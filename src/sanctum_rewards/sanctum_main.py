@@ -1,7 +1,6 @@
-# sanctum_rewards.py
+# sanctum_main.py
 
 import os
-import requests
 
 
 LEAGUE_NAME = "Affliction"
@@ -47,19 +46,6 @@ def add_reward(reward_data, all_data):
         all_data.append({NAME_KEY: reward_name, COUNT_KEY: reward_data[COUNT_KEY]})
 
 
-def fetch_data(url):
-    try:
-        response = requests.get(url)
-        response.raise_for_status()
-
-        data = response.json()
-
-    except requests.exceptions.RequestException as e:
-        print(f"Error occurred while fetching data: {e}")
-
-    return data
-
-
 def calculate_chaos(reward_data, prices):
     all_chaos_equiv = []
 
@@ -91,12 +77,11 @@ def write_to_file(reward_data):
             file.write(formatted_line + "\n")
 
 
-def start_sanctum_main(CURRENCY_URL):
+def start_sanctum_main(CURRENCY_DATA):
     reward_data = get_reward_data(REWARD_FILE)
 
     currency_prices = {
-        item["currencyTypeName"]: item["chaosEquivalent"]
-        for item in fetch_data(CURRENCY_URL).get("lines")
+        item["currencyTypeName"]: item["chaosEquivalent"] for item in CURRENCY_DATA
     }
 
     all_rewards = calculate_chaos(reward_data, currency_prices)

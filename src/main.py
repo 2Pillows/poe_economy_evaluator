@@ -6,46 +6,54 @@ from sextant_rolling.sextant_main import start_sextant_main
 from awakened_leveling.awakened_main import start_awakened_main
 
 
-def set_urls(LEAGUE_NAME):
-    URLs = {
-        "GEM_URL": f"https://poe.ninja/api/data/itemoverview?league={LEAGUE_NAME}&type=SkillGem",
-        "BEAST_URL": f"https://poe.ninja/api/data/itemoverview?league={LEAGUE_NAME}&type=Beast",
-        "CURRENCY_URL": f"https://poe.ninja/api/data/currencyoverview?league={LEAGUE_NAME}&type=Currency",
-        "COMPASS_PRICES_URL": "https://raw.githubusercontent.com/The-Forbidden-Trove/tft-data-prices/master/lsc/bulk-compasses.json",
-    }
-    return URLs
-
-
 def fetch_data(url):
     my_headers = {"user-agent": "my-app/0.0.1"}
 
     try:
         with requests.get(url, headers=my_headers) as response:
             response.raise_for_status()
-            data = response.json()
+            return response.json()
     except requests.exceptions.RequestException as e:
         raise RuntimeError(f"Error occurred while fetching data: {e}")
-
-    return data
 
 
 def get_league_name():
     league_data = fetch_data("https://api.pathofexile.com/leagues?type=main&compact=1")
+    return next(
+        (league["id"] for league in league_data if league["endAt"] is not None), None
+    )
 
-    for league in league_data:
-        if league["endAt"] is not None:
-            return league["id"]
-    return None
+
+def get_api_data():
+    LEAGUE_NAME = get_league_name()
+    base_url = "https://poe.ninja/api/data"
+    url_endpoints = {
+        "GEM": f"{base_url}/itemoverview?league={LEAGUE_NAME}&type=SkillGem",
+        "BEAST": f"{base_url}/itemoverview?league={LEAGUE_NAME}&type=Beast",
+        "CURRENCY": f"{base_url}/currencyoverview?league={LEAGUE_NAME}&type=Currency",
+        "SCARAB": f"{base_url}/itemoverview?league={LEAGUE_NAME}&type=Scarab",
+        "ESSENCE": f"{base_url}/itemoverview?league={LEAGUE_NAME}&type=Essence",
+        "DELIRIUMORB": f"{base_url}/itemoverview?league={LEAGUE_NAME}&type=DeliriumOrb",
+        "COMPASS_PRICES": "https://raw.githubusercontent.com/The-Forbidden-Trove/tft-data-prices/master/lsc/bulk-compasses.json",
+    }
+
+    url_data = {
+        key: fetch_data(endpoint)["lines"]
+        if key != "COMPASS_PRICES"
+        else fetch_data(endpoint)
+        for key, endpoint in url_endpoints.items()
+    }
+
+    return url_data
 
 
 def main():
-    LEAGUE_NAME = get_league_name()
-    URLs = set_urls(LEAGUE_NAME)
+    api_data = get_api_data()
 
-    start_harvest_main(LEAGUE_NAME)
-    start_sanctum_main(URLs["CURRENCY_URL"])
-    start_sextant_main(URLs["COMPASS_PRICES_URL"])
-    start_awakened_main(URLs["GEM_URL"], URLs["BEAST_URL"], URLs["CURRENCY_URL"])
+    start_harvest_main(api_data["SCARAB"], api_data["ESSENCE"], api_data["DELIRIUMORB"])
+    start_sanctum_main(api_data["CURRENCY"])
+    start_sextant_main(api_data["COMPASS_PRICES"])
+    start_awakened_main(api_data["GEM"], api_data["BEAST"], api_data["CURRENCY"])
 
 
 if __name__ == "__main__":

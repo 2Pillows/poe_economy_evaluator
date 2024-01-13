@@ -1,7 +1,6 @@
 # sextant_main.py
 
 import os
-import requests
 
 SEXTANT_CHAOS = 3.5
 MIN_PROFIT = 10
@@ -35,19 +34,6 @@ def get_compass_data(file):
                 compass_data[current_compass][key] = value
 
     return compass_data
-
-
-def fetch_data(url):
-    try:
-        response = requests.get(url)
-        response.raise_for_status()
-
-        data = response.json()
-
-    except requests.exceptions.RequestException as e:
-        print(f"Error occurred while fetching data: {e}")
-
-    return data
 
 
 def calculate_blockers(compass_data):
@@ -112,8 +98,8 @@ def find_modifiers(compass_data):
     return valuable_compass
 
 
-def start_sextant_main(PRICES_URL):
-    compass_prices = {item["name"]: item for item in fetch_data(PRICES_URL).get("data")}
+def start_sextant_main(PRICES_DATA):
+    compass_prices = {item["name"]: item for item in PRICES_DATA.get("data")}
 
     compass_data = {
         name: {

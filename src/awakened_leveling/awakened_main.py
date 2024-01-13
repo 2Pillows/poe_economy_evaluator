@@ -1,26 +1,12 @@
-# main.py
+# awakened_main.py
 
 import os
-import requests
 
 MIN_PROFIT = 10
 
 CUR_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(os.path.dirname(CUR_DIR))
 RESULTS_FILE = os.path.join(PROJECT_DIR, "results", "awakened_leveling.txt")
-
-
-def fetch_data(url):
-    try:
-        response = requests.get(url)
-        response.raise_for_status()
-
-        data = response.json()
-
-    except requests.exceptions.RequestException as e:
-        print(f"Error occurred while fetching data: {e}")
-
-    return data
 
 
 def sort_gem_data(gem_data):
@@ -50,25 +36,19 @@ def write_to_file(gem_data):
             file.write(formatted_line + "\n")
 
 
-def start_awakened_main(GEM_URL, BEAST_URL, CURRENCY_URL):
-    gem_data = fetch_data(GEM_URL)["lines"]
-
-    gem_levels = sort_gem_data(gem_data)
-
-    beast_data = fetch_data(BEAST_URL)["lines"]
+def start_awakened_main(GEM_DATA, BEAST_DATA, CURRENCY_DATA):
+    gem_levels = sort_gem_data(GEM_DATA)
 
     wild_brambleback = {
         beast.get("name"): beast
-        for beast in beast_data
+        for beast in BEAST_DATA
         if "Wild Brambleback" in beast.get("name")
     }["Wild Brambleback"]
     wild_brambleback_chaos = wild_brambleback.get("chaosValue")
 
-    currency_data = fetch_data(CURRENCY_URL)["lines"]
-
     gemcutter_chaos = {
         currency_item.get("currencyTypeName"): currency_item.get("chaosEquivalent")
-        for currency_item in currency_data
+        for currency_item in CURRENCY_DATA
         if "Gemcutter's Prism" in currency_item.get("currencyTypeName")
     }["Gemcutter's Prism"]
 

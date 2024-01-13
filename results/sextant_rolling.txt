@@ -1,28 +1,28 @@
 
-Min 10c Profit per Roll:     2.0
-All Profit per Roll:       5.78
+Min 10c Profit per Roll:    1.94
+All Profit per Roll:       5.62
 
 -----Min 10c Modifiers-----
 Shaper Guardian                     |         60
-Elder Guardian                      |         25
-Conqueror Map                       |        280
+Elder Guardian                      |         26
+Conqueror Map                       |        275
 Alva                                |         15
-Strongbox Enraged                   |         80
+Strongbox Enraged                   |         75
 Chayula                             |         12
-Abyss                               |         42
-8 Modifiers                         |         85
-Copy of Beasts                      |         14
+Abyss                               |         44
+8 Modifiers                         |         89
+Copy of Beasts                      |         15
 Splinters Emblems Duplicate         |         10
 Oils Tier                           |         10
 Blue Plants                         |         40
-Purple Plants                       |         41
+Purple Plants                       |         40
 Yellow Plants                       |         60
 Mysterious Harbinger                |         10
 Beyond                              |        235
-Gilded Scarab                       |         20
+Gilded Scarab                       |         18
 Mortal/Sacrifice Fragment 8 Packs   |         10
-Legion                              |         18
-Mirror of Delirium                  |         90
+Legion                              |         17
+Mirror of Delirium                  |         87
 Sacred Grove                        |         40
 10c Mods: 21 / 66
 
