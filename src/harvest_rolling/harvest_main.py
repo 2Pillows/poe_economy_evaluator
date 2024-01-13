@@ -2,8 +2,6 @@ import requests
 import os
 from harvest_rolling.harvest_calculator import filter_types, start_calculations
 
-LEAGUE_NAME = "Affliction"
-
 CUR_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(os.path.dirname(CUR_DIR))
 RESULTS_FILE = os.path.join(PROJECT_DIR, "results", "harvest_rolling.txt")
@@ -72,7 +70,7 @@ def fetch_data(league_name, object_name):
         return []
 
 
-def start_harvest_main():
+def start_harvest_main(LEAGUE_NAME=None):
     clear_file(RESULTS_FILE)
 
     for item_name, item_data in ITEMS.items():

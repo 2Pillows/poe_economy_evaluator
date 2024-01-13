@@ -15,10 +15,6 @@ PROJECT_DIR = os.path.dirname(os.path.dirname(CUR_DIR))
 RESULTS_FILE = os.path.join(PROJECT_DIR, "results", "sanctum_rewards.txt")
 REWARD_FILE = os.path.join(CUR_DIR, "reward_data.txt")
 
-CURRENCY_URL = (
-    f"https://poe.ninja/api/data/currencyoverview?league={LEAGUE_NAME}&type=Currency"
-)
-
 
 def get_reward_data(file):
     with open(file, "r") as file:
@@ -95,7 +91,7 @@ def write_to_file(reward_data):
             file.write(formatted_line + "\n")
 
 
-def start_sanctum_main():
+def start_sanctum_main(CURRENCY_URL):
     reward_data = get_reward_data(REWARD_FILE)
 
     currency_prices = {

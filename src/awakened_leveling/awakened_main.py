@@ -3,18 +3,11 @@
 import os
 import requests
 
-LEAUGE_NAME = "Affliction"
 MIN_PROFIT = 10
 
 CUR_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(os.path.dirname(CUR_DIR))
 RESULTS_FILE = os.path.join(PROJECT_DIR, "results", "awakened_leveling.txt")
-
-GEM_URL = f"https://poe.ninja/api/data/itemoverview?league={LEAUGE_NAME}&type=SkillGem"
-BEAST_URL = f"https://poe.ninja/api/data/itemoverview?league={LEAUGE_NAME}&type=Beast"
-CURRENCY_URL = (
-    f"https://poe.ninja/api/data/currencyoverview?league={LEAUGE_NAME}&type=Currency"
-)
 
 
 def fetch_data(url):
@@ -57,7 +50,7 @@ def write_to_file(gem_data):
             file.write(formatted_line + "\n")
 
 
-def start_awakened_main():
+def start_awakened_main(GEM_URL, BEAST_URL, CURRENCY_URL):
     gem_data = fetch_data(GEM_URL)["lines"]
 
     gem_levels = sort_gem_data(gem_data)

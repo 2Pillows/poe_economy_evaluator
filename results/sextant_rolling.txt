@@ -1,6 +1,6 @@
 
-Min 10c Profit per Roll:    2.01
-All Profit per Roll:       5.79
+Min 10c Profit per Roll:     2.0
+All Profit per Roll:       5.78
 
 -----Min 10c Modifiers-----
 Shaper Guardian                     |         60
@@ -9,13 +9,13 @@ Conqueror Map                       |        280
 Alva                                |         15
 Strongbox Enraged                   |         80
 Chayula                             |         12
-Abyss                               |         43
+Abyss                               |         42
 8 Modifiers                         |         85
 Copy of Beasts                      |         14
 Splinters Emblems Duplicate         |         10
 Oils Tier                           |         10
 Blue Plants                         |         40
-Purple Plants                       |         40
+Purple Plants                       |         41
 Yellow Plants                       |         60
 Mysterious Harbinger                |         10
 Beyond                              |        235

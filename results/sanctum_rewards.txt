@@ -3,7 +3,7 @@ Awakened Sextant          | 11, 21, 57
 Glassblower's Bauble      | 15, 33, 49
 Gemcutter's Prism         | 11, 21, 32
 Exalted Orb               | 0, 13, 25
-Orb of Annulment          | 0, 13, 25
+Orb of Annulment          | 0, 12, 24
 Enkindling Orb            | 5, 10, 15
 Chaos Orb                 | 5, 10, 14
 Vaal Orb                  | 4, 8, 12
