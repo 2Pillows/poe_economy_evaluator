@@ -107,7 +107,7 @@ def check_lower_type(CHAOS_AQUISITION_TYPES, current_type):
         next_type = keys[index + 1]
         next_value = CHAOS_AQUISITION_TYPES[next_type]
 
-        if CHAOS_AQUISITION_TYPES[current_type] > 3 * next_value:
+        if CHAOS_AQUISITION_TYPES[current_type] >= 3 * next_value:
             return True, next_type
 
     return False, next_type
