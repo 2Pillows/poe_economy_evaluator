@@ -1,3 +1,5 @@
+# main.py
+
 import requests
 
 from harvest_rolling.harvest_main import start_harvest_main
@@ -50,7 +52,12 @@ def get_api_data():
 def main():
     api_data = get_api_data()
 
-    start_harvest_main(api_data["SCARAB"], api_data["ESSENCE"], api_data["DELIRIUMORB"])
+    start_harvest_main(
+        api_data["SCARAB"],
+        api_data["ESSENCE"],
+        api_data["DELIRIUMORB"],
+        api_data["CURRENCY"],
+    )
     start_sanctum_main(api_data["CURRENCY"])
     start_sextant_main(api_data["COMPASS_PRICES"])
     start_awakened_main(api_data["GEM"], api_data["BEAST"], api_data["CURRENCY"])

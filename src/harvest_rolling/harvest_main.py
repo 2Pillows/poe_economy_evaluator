@@ -8,21 +8,42 @@ CUR_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(os.path.dirname(CUR_DIR))
 RESULTS_FILE = os.path.join(PROJECT_DIR, "results", "harvest_rolling.txt")
 
-BLUE_LIFEFORCE_PER_CHAOS = 20
-RED_LIFEFORCE_PER_CHAOS = 22
-
 
 def clear_file(file_destination):
     with open(file_destination, "w") as file:
         pass
 
 
-def start_harvest_main(SCARAB_URL, ESSENCE_URL, DELIRIUMORB_URL):
+def get_lifeforce_per_chaos(CURRENCY_DATA):
+    lifeforce_types = {
+        "yellow": "Vivid Crystallised Lifeforce",
+        "red": "Wild Crystallised Lifeforce",
+        "blue": "Primal Crystallised Lifeforce",
+    }
+
+    lifeforce_per_chaos = {
+        color: next(
+            (
+                currency_item["chaosEquivalent"]
+                for currency_item in CURRENCY_DATA
+                if lifeforce_type in currency_item["currencyTypeName"]
+            ),
+            None,
+        )
+        for color, lifeforce_type in lifeforce_types.items()
+    }
+
+    return lifeforce_per_chaos
+
+
+def start_harvest_main(SCARAB_DATA, ESSENCE_DATA, DELIRIUMORB_DATA, CURRENCY_DATA):
     clear_file(RESULTS_FILE)
+
+    lifeforce_per_chaos = get_lifeforce_per_chaos(CURRENCY_DATA)
 
     ITEMS = {
         "Scarab": {
-            "url": SCARAB_URL,
+            "data": SCARAB_DATA,
             "types": ["Winged", "Gilded", "Polished", "Rusted"],
             "chaos_acquisition_types": {
                 "Winged": 60,
@@ -32,11 +53,11 @@ def start_harvest_main(SCARAB_URL, ESSENCE_URL, DELIRIUMORB_URL):
             },
             "notable_words": [0, 1],
             "lifeforce_per_reforge": 30,
-            "lifeforce_used": RED_LIFEFORCE_PER_CHAOS,
+            "lifeforce_used": lifeforce_per_chaos["red"],
             "stack_limit": 10,
         },
         "Essence": {
-            "url": ESSENCE_URL,
+            "data": ESSENCE_DATA,
             "types": ["Deafening", "Shrieking"],
             "chaos_acquisition_types": {
                 "Deafening": 6,
@@ -44,26 +65,25 @@ def start_harvest_main(SCARAB_URL, ESSENCE_URL, DELIRIUMORB_URL):
             },
             "notable_words": [0, -1],
             "lifeforce_per_reforge": 30,
-            "lifeforce_used": BLUE_LIFEFORCE_PER_CHAOS,
+            "lifeforce_used": lifeforce_per_chaos["blue"],
             "stack_limit": 9,
         },
         "DeliriumOrb": {
-            "url": DELIRIUMORB_URL,
+            "data": DELIRIUMORB_DATA,
             "types": ["Orb"],
             "chaos_acquisition_types": {
                 "Orb": 15,
             },
             "notable_words": [0, -1],
             "lifeforce_per_reforge": 30,
-            "lifeforce_used": BLUE_LIFEFORCE_PER_CHAOS,
+            "lifeforce_used": lifeforce_per_chaos["blue"],
             "stack_limit": 10,
         },
     }
 
     for item_name, item_data in ITEMS.items():
-        # object_data = fetch_data(LEAGUE_NAME, item_data["url"])
         filtered_types = filter_types(
-            item_data["url"], item_data["types"], item_data["notable_words"]
+            item_data["data"], item_data["types"], item_data["notable_words"]
         )
 
         start_calculations(
