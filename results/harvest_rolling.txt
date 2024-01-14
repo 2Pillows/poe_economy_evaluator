@@ -2,93 +2,49 @@
 ----------Scarab----------
 
 Winged Reliquary     |      139.0
-Winged Ambush        |      94.63
+Winged Ambush        |       94.0
 Winged Abyss         |       91.0
 Winged Divination    |       84.0
-Average Profit: 35.19 
-Average Profit (10x): 351.9 
+Average Profit (10x): 162.7 
+Average Profit per Div (2.78x): 45.2 
+Upgrading Gilded is Profitable
 Buy ['Legion', 'Harbinger', 'Sulphite', 'Cartography', 'Breach', 'Bestiary', 'Shaper', 'Elder', 'Torment', 'Blight', 'Expedition', 'Ultimatum']
 
 Gilded Reliquary     |      25.58
 Gilded Divination    |      18.12
 Gilded Abyss         |      15.53
-Gilded Ambush        |      10.87
+Gilded Ambush        |       11.0
 Gilded Harbinger     |       10.0
 Gilded Legion        |        9.0
-Average Profit: 3.21 
-Average Profit (10x): 32.1 
+Average Profit (10x): 0.7 
+Average Profit per Div (22.16x): 1.55 
+Upgrading Polished is NOT Profitable
 Buy ['Cartography', 'Breach', 'Bestiary', 'Blight', 'Ultimatum', 'Torment', 'Shaper', 'Sulphite', 'Elder', 'Expedition']
 
-Polished Legion      |       24.0
-Polished Reliquary   |      10.87
-Polished Divination  |        8.0
-Polished Harbinger   |        6.0
-Polished Ambush      |       5.88
-Polished Abyss       |        5.6
-Average Profit: 2.42 
-Average Profit (10x): 24.2 
-Buy ['Cartography', 'Bestiary', 'Expedition', 'Shaper', 'Sulphite', 'Breach', 'Torment', 'Elder', 'Blight', 'Ultimatum']
-
-Rusted Not Profitable
+Polished Not Profitable
 
 
 ----------Essence----------
 
-Deafening Loathing   |       30.6
+Deafening Loathing   |       31.0
 Deafening Scorn      |      24.15
-Deafening Contempt   |       17.0
+Deafening Contempt   |      18.04
 Deafening Rage       |      15.53
-Deafening Spite      |       15.0
-Deafening Zeal       |       15.0
+Deafening Zeal       |      15.53
+Deafening Spite      |      15.42
 Deafening Envy       |      14.49
 Deafening Wrath      |       13.0
-Deafening Hatred     |      12.05
-Deafening Anger      |       12.0
-Average Profit: 8.05 
-Average Profit (9x): 72.45 
-Buy ['Sorrow', 'Torment', 'Woe', 'Fear', 'Misery', 'Greed', 'Suffering', 'Doubt', 'Anguish', 'Dread']
+Deafening Hatred     |      12.33
+Deafening Anger      |      12.08
+Average Profit (9x): 4.77 
+Average Profit per Div (16.13x): 8.55 
+Upgrading Shrieking is Profitable
+Buy ['Sorrow', 'Fear', 'Torment', 'Woe', 'Misery', 'Greed', 'Doubt', 'Suffering', 'Anguish', 'Dread']
 
-Shrieking Loathing   |        9.0
-Shrieking Envy       |        6.0
-Shrieking Scorn      |        6.0
-Shrieking Contempt   |        5.0
-Shrieking Rage       |        5.0
-Shrieking Spite      |        5.0
-Shrieking Wrath      |        5.0
-Shrieking Zeal       |        5.0
-Shrieking Anger      |        4.0
-Shrieking Greed      |        4.0
-Shrieking Hatred     |        4.0
-Shrieking Torment    |        4.0
-Shrieking Dread      |        3.0
-Shrieking Fear       |        3.0
-Shrieking Misery     |        3.0
-Shrieking Sorrow     |        3.0
-Shrieking Woe        |        3.0
-Average Profit: 0.87 
-Average Profit (9x): 7.83 
-Buy ['Anguish', 'Doubt', 'Suffering']
+Shrieking Not Profitable
 
 
 ----------DeliriumOrb----------
 
-Diviner's Orb        |       30.0
-Fine Orb             |       27.0
-Fragmented Orb       |       20.0
-Cartographer's Orb   |       20.0
-Jeweller's Orb       |       20.0
-Abyssal Orb          |       20.0
-Singular Orb         |       20.0
-Obscured Orb         |       20.0
-Armoursmith's Orb    |       20.0
-Fossilised Orb       |       20.0
-Thaumaturge's Orb    |       20.0
-Foreboding Orb       |       20.0
-Blacksmith's Orb     |       20.0
-Blighted Orb         |       20.0
-Timeless Orb         |       20.0
-Whispering Orb       |       20.0
-Average Profit: 4.65 
-Average Profit (10x): 46.5 
-Buy []
+Orb Not Profitable
 

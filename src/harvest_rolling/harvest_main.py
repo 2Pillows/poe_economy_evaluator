@@ -36,21 +36,56 @@ def get_lifeforce_per_chaos(CURRENCY_DATA):
     return lifeforce_per_chaos
 
 
+def get_average_prices(SCARAB_DATA, ESSENCE_DATA, DELIRIUMORB_DATA):
+    price_types = {
+        "Scarab": {
+            "data": SCARAB_DATA,
+            "types": [
+                "Winged",
+                "Gilded",
+                "Polished",
+            ],
+        },
+        "Essence": {
+            "data": ESSENCE_DATA,
+            "types": [
+                "Deafening",
+                "Shrieking",
+            ],
+        },
+        "DeliriumOrb": {
+            "data": DELIRIUMORB_DATA,
+            "types": [
+                "Orb",
+            ],
+        },
+    }
+
+    average_prices = {}
+
+    for name, data in price_types.items():
+        average_prices[name] = {}
+        for type in data["types"]:
+            prices = [
+                item["chaosValue"] for item in data["data"] if type in item["name"]
+            ]
+            average_prices[name][type] = sum(prices) / len(prices) if prices else 0
+
+    return average_prices
+
+
 def start_harvest_main(SCARAB_DATA, ESSENCE_DATA, DELIRIUMORB_DATA, CURRENCY_DATA):
     clear_file(RESULTS_FILE)
 
     lifeforce_per_chaos = get_lifeforce_per_chaos(CURRENCY_DATA)
 
+    average_prices = get_average_prices(SCARAB_DATA, ESSENCE_DATA, DELIRIUMORB_DATA)
+
     ITEMS = {
         "Scarab": {
             "data": SCARAB_DATA,
-            "types": ["Winged", "Gilded", "Polished", "Rusted"],
-            "chaos_acquisition_types": {
-                "Winged": 60,
-                "Gilded": 7,
-                "Polished": 3,
-                "Rusted": 1,
-            },
+            "types": ["Winged", "Gilded", "Polished"],
+            "chaos_acquisition_types": average_prices["Scarab"],
             "notable_words": [0, 1],
             "lifeforce_per_reforge": 30,
             "lifeforce_used": lifeforce_per_chaos["red"],
@@ -59,10 +94,7 @@ def start_harvest_main(SCARAB_DATA, ESSENCE_DATA, DELIRIUMORB_DATA, CURRENCY_DAT
         "Essence": {
             "data": ESSENCE_DATA,
             "types": ["Deafening", "Shrieking"],
-            "chaos_acquisition_types": {
-                "Deafening": 6,
-                "Shrieking": 2,
-            },
+            "chaos_acquisition_types": average_prices["Essence"],
             "notable_words": [0, -1],
             "lifeforce_per_reforge": 30,
             "lifeforce_used": lifeforce_per_chaos["blue"],
@@ -71,9 +103,7 @@ def start_harvest_main(SCARAB_DATA, ESSENCE_DATA, DELIRIUMORB_DATA, CURRENCY_DAT
         "DeliriumOrb": {
             "data": DELIRIUMORB_DATA,
             "types": ["Orb"],
-            "chaos_acquisition_types": {
-                "Orb": 15,
-            },
+            "chaos_acquisition_types": average_prices["DeliriumOrb"],
             "notable_words": [0, -1],
             "lifeforce_per_reforge": 30,
             "lifeforce_used": lifeforce_per_chaos["blue"],
@@ -94,4 +124,5 @@ def start_harvest_main(SCARAB_DATA, ESSENCE_DATA, DELIRIUMORB_DATA, CURRENCY_DAT
             item_data["chaos_acquisition_types"],
             RESULTS_FILE,
             item_data["stack_limit"],
+            CURRENCY_DATA,
         )

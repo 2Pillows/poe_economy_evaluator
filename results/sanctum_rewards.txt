@@ -2,7 +2,7 @@ Divine Orb                | 0, 217, 435
 Awakened Sextant          | 10, 21, 56
 Glassblower's Bauble      | 15, 33, 50
 Gemcutter's Prism         | 11, 21, 32
-Exalted Orb               | 0, 13, 25
+Exalted Orb               | 0, 13, 26
 Orb of Annulment          | 0, 13, 25
 Enkindling Orb            | 5, 10, 15
 Chaos Orb                 | 5, 10, 14
@@ -13,9 +13,9 @@ Orb of Scouring           | 3, 6, 9
 Orb of Regret             | 3, 6, 9
 Orb of Unmaking           | 3, 5, 8
 Veiled Chaos Orb          | 0, 4, 8
+Orb of Horizons           | 2, 4, 6
 Blessed Orb               | 2, 4, 6
 Chromatic Orb             | 2, 4, 5
-Orb of Horizons           | 2, 4, 5
 Orb of Fusing             | 1, 3, 4
 Instilling Orb            | 1, 3, 4
 Orb of Alteration         | 1, 2, 3

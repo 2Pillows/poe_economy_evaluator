@@ -33,6 +33,7 @@ def start_calculations(
     CHAOS_AQUISITION_TYPES,
     FILE_DESTINATION,
     STACK_LIMIT,
+    CURRENCY_DATA,
 ):
     with open(FILE_DESTINATION, "a") as file:
         file.write(f"\n----------{OBJECT_NAME}----------\n\n")
@@ -54,6 +55,23 @@ def start_calculations(
                 file.write(
                     f"Average Profit ({STACK_LIMIT}x): {round(average_profits * STACK_LIMIT, 2)} \n"
                 )
+
+                stacks_per_div = get_stacks_per_div(
+                    CHAOS_AQUISITION_TYPES[object_type], CURRENCY_DATA
+                )
+
+                file.write(
+                    f"Average Profit per Div ({round(stacks_per_div, 2)}x): {round(average_profits * stacks_per_div, 2)} \n"
+                )
+
+                lower_type_cheaper, next_type = check_lower_type(
+                    CHAOS_AQUISITION_TYPES, object_type
+                )
+                if lower_type_cheaper:
+                    file.write(f"Upgrading {next_type} is Profitable\n")
+                else:
+                    file.write(f"Upgrading {next_type} is NOT Profitable\n")
+
                 file.write(f"Buy {unprofitable_objects}\n\n")
 
         else:
@@ -61,6 +79,38 @@ def start_calculations(
                 file.write(f"{object_type} Not Profitable\n\n")
 
     # os.system(f"start {FILE_DESTINATION}")
+
+
+def get_stacks_per_div(type_chaos, CURRENCY_DATA):
+    divine_chaos = next(
+        (
+            item["chaosEquivalent"]
+            for item in CURRENCY_DATA
+            if "Divine Orb" in item["currencyTypeName"]
+        ),
+        None,
+    )
+
+    if divine_chaos:
+        stacks_per_div = divine_chaos / type_chaos
+        return stacks_per_div
+    else:
+        return None
+
+
+def check_lower_type(CHAOS_AQUISITION_TYPES, current_type):
+    keys = list(CHAOS_AQUISITION_TYPES.keys())
+
+    index = keys.index(current_type)
+
+    if index < len(keys) - 1:
+        next_type = keys[index + 1]
+        next_value = CHAOS_AQUISITION_TYPES[next_type]
+
+        if CHAOS_AQUISITION_TYPES[current_type] > 3 * next_value:
+            return True, next_type
+
+    return False, next_type
 
 
 def maximize_profit(
@@ -107,4 +157,4 @@ def write_to_file(file_name, objects, average_profit):
         for obj in objects:
             formatted_line = f"{obj.get('name'):20} | {obj.get('chaosValue'):10}"
             file.write(formatted_line + "\n")
-        file.write(f"Average Profit: {average_profit} \n")
+        # file.write(f"Average Profit: {average_profit} \n")
