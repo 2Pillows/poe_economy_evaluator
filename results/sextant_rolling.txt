@@ -2,8 +2,11 @@
 Chaos per Sextant: 3.48
 Sextant per Div:   62.47
 
-Min 10c Profit per Roll: 1.87
-All Profit per Roll:     5.64
+Min 10c Profit per Roll: 1.9
+Min 10c Profit per Div:  413.04
+
+All Profit per Roll:     5.67
+All Profit per Div:      1232.6
 
 -----Min 10c Modifiers-----
 Shaper Guardian                     |         60
@@ -12,7 +15,7 @@ Conqueror Map                       |        270
 Alva                                |         15
 Strongbox Enraged                   |         74
 Chayula                             |         12
-Abyss                               |         42
+Abyss                               |         43
 8 Modifiers                         |         89
 Copy of Beasts                      |         15
 Splinters Emblems Duplicate         |         10

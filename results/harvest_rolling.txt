@@ -1,9 +1,9 @@
 
 ---------- Lifeforce per Chaos ----------
 
-Yellow: 16.61
+Yellow: 17.0
 Red: 16.04
-Blue: 20.22
+Blue: 18.64
 
 ----------Scarab----------
 
@@ -42,8 +42,8 @@ Deafening Envy       |      14.49
 Deafening Wrath      |       13.0
 Deafening Hatred     |      12.78
 Deafening Anger      |      12.08
-Average Profit (9x): 6.66 
-Average Profit per Div (16.16x): 11.96 
+Average Profit (9x): 4.41 
+Average Profit per Div (16.16x): 7.92 
 Upgrading Shrieking is Profitable
 Buy ['Fear', 'Sorrow', 'Torment', 'Woe', 'Greed', 'Misery', 'Suffering', 'Anguish', 'Doubt', 'Dread']
 

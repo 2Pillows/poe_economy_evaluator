@@ -2,7 +2,6 @@
 
 import os
 
-SEXTANT_CHAOS = 3.5
 MIN_PROFIT = 10
 COMPASS_COST = 1
 
@@ -64,31 +63,23 @@ def write_to_file(
     unblocked_average,
     valuable_mods,
     valuable_average,
-    CURRENCY_DATA,
+    sextant_chaos,
+    divine_chaos,
 ):
-    sextant_chaos = next(
-        (
-            item["chaosEquivalent"]
-            for item in CURRENCY_DATA
-            if "Awakened Sextant" in item["currencyTypeName"]
-        ),
-        None,
-    )
-    divine_chaos = next(
-        (
-            item["chaosEquivalent"]
-            for item in CURRENCY_DATA
-            if "Divine Orb" in item["currencyTypeName"]
-        ),
-        None,
-    )
-
     with open(file_name, "w") as file:
-        file.write(f"\nChaos per Sextant: {sextant_chaos}\n")
-        file.write(f"Sextant per Div:   {round(divine_chaos/sextant_chaos, 2)}\n")
+        file.write(f"\nChaos per Sextant: {sextant_chaos}")
+        file.write(f"\nSextant per Div:   {round(divine_chaos/sextant_chaos, 2)}\n")
 
         file.write(f"\nMin {MIN_PROFIT}c Profit per Roll: {valuable_average}")
-        file.write(f"\nAll Profit per Roll:     {unblocked_average}\n\n")
+        file.write(
+            f"\nMin {MIN_PROFIT}c Profit per Div:  {round(divine_chaos * valuable_average, 2)}\n"
+        )
+
+        file.write(f"\nAll Profit per Roll:     {unblocked_average}")
+        file.write(
+            f"\nAll Profit per Div:      {round(divine_chaos * unblocked_average, 2)}\n\n"
+        )
+
         file.write(f"-----Min {MIN_PROFIT}c Modifiers-----\n")
         for name, value in valuable_mods.items():
             formatted_line = f"{name:35} | {value.get('chaos'):10}"
@@ -101,7 +92,7 @@ def write_to_file(
             file.write(formatted_line + "\n")
 
 
-def find_modifiers(compass_data):
+def find_modifiers(compass_data, sextant_chaos):
     total_weight = sum(value.get("weight") for key, value in compass_data.items())
     total_chaos = sum(value.get("chaos") for key, value in compass_data.items())
 
@@ -113,13 +104,31 @@ def find_modifiers(compass_data):
         compass_value = compass.get("chaos") / compass.get("weight")
         potential_value = (total_chaos - compass.get("chaos")) / (
             total_weight - compass.get("weight")
-        ) - SEXTANT_CHAOS
+        ) - sextant_chaos
         if compass_value >= potential_value:
             valuable_compass[name] = compass
     return valuable_compass
 
 
 def start_sextant_main(PRICES_DATA, CURRENCY_DATA):
+    sextant_chaos = next(
+        (
+            item["chaosEquivalent"]
+            for item in CURRENCY_DATA
+            if "Awakened Sextant" in item["currencyTypeName"]
+        ),
+        None,
+    )
+
+    divine_chaos = next(
+        (
+            item["chaosEquivalent"]
+            for item in CURRENCY_DATA
+            if "Divine Orb" in item["currencyTypeName"]
+        ),
+        None,
+    )
+
     compass_prices = {item["name"]: item for item in PRICES_DATA.get("data")}
 
     compass_data = {
@@ -151,17 +160,17 @@ def start_sextant_main(PRICES_DATA, CURRENCY_DATA):
         for key, value in unblocked_mods.items()
     )
     unblocked_average = round(
-        unblocked_weighted_sum / unblocked_total_weight - 1 - SEXTANT_CHAOS, 2
+        unblocked_weighted_sum / unblocked_total_weight - 1 - sextant_chaos, 2
     )
 
-    valuable_mods = find_modifiers(unblocked_mods)
+    valuable_mods = find_modifiers(unblocked_mods, sextant_chaos)
     valuable_weighted_sum = sum(
         value.get("weight") * value.get("chaos")
         for key, value in compass_data.items()
         if key in valuable_mods
     )
     valuable_average = round(
-        valuable_weighted_sum / unblocked_total_weight - 1 - SEXTANT_CHAOS, 2
+        valuable_weighted_sum / unblocked_total_weight - 1 - sextant_chaos, 2
     )
 
     write_to_file(
@@ -171,6 +180,7 @@ def start_sextant_main(PRICES_DATA, CURRENCY_DATA):
         unblocked_average,
         valuable_mods,
         valuable_average,
-        CURRENCY_DATA,
+        sextant_chaos,
+        divine_chaos,
     )
     # os.system(f"start {compass_rolling_file}")
