@@ -110,7 +110,7 @@ def check_lower_type(CHAOS_AQUISITION_TYPES, current_type):
         if CHAOS_AQUISITION_TYPES[current_type] >= 3 * next_value:
             return True, next_type
 
-    return False, next_type
+    return False, None
 
 
 def maximize_profit(

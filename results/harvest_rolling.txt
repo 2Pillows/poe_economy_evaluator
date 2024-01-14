@@ -1,50 +1,60 @@
 
 ---------- Lifeforce per Chaos ----------
 
-Yellow: 16.04
-Red: 17.23
+Yellow: 16.61
+Red: 17.89
 Blue: 22.02
 
 ----------Scarab----------
 
-Winged Reliquary     |      139.0
-Winged Ambush        |       94.0
-Winged Abyss         |       91.0
-Winged Divination    |       83.0
-Average Profit (10x): 166.0 
-Average Profit per Div (2.78x): 46.15 
+Winged Reliquary     |      135.0
+Winged Ambush        |       95.0
+Winged Abyss         |      93.17
+Winged Divination    |       80.0
+Average Profit (10x): 161.3 
+Average Profit per Div (2.79x): 44.99 
 Upgrading Gilded is Profitable
 Buy ['Legion', 'Harbinger', 'Sulphite', 'Cartography', 'Breach', 'Bestiary', 'Shaper', 'Elder', 'Torment', 'Blight', 'Expedition', 'Ultimatum']
 
-Gilded Reliquary     |      25.58
-Gilded Divination    |      18.12
+Gilded Reliquary     |      25.28
+Gilded Divination    |       17.7
 Gilded Abyss         |      15.53
-Gilded Ambush        |      10.87
-Gilded Harbinger     |      10.24
+Gilded Ambush        |      11.07
+Gilded Harbinger     |      10.22
 Gilded Legion        |        8.7
-Average Profit (10x): 4.3 
-Average Profit per Div (22.27x): 9.57 
-Upgrading Polished is NOT Profitable
-Buy ['Cartography', 'Breach', 'Bestiary', 'Torment', 'Shaper', 'Sulphite', 'Elder', 'Blight', 'Expedition', 'Ultimatum']
+Average Profit (10x): 5.8 
+Average Profit per Div (22.42x): 13.01 
+Upgrading None is NOT Profitable
+Buy ['Cartography', 'Breach', 'Torment', 'Bestiary', 'Sulphite', 'Blight', 'Ultimatum', 'Elder', 'Shaper', 'Expedition']
 
-Polished Not Profitable
+Polished Legion      |       27.0
+Polished Reliquary   |      10.87
+Polished Divination  |       7.76
+Polished Harbinger   |       6.04
+Polished Ambush      |        5.8
+Polished Abyss       |       5.43
+Average Profit (10x): 0.1 
+Average Profit per Div (36.23x): 0.36 
+Upgrading None is NOT Profitable
+Buy ['Cartography', 'Bestiary', 'Expedition', 'Blight', 'Shaper', 'Sulphite', 'Breach', 'Torment', 'Elder', 'Ultimatum']
 
 
 ----------Essence----------
 
 Deafening Loathing   |       31.0
-Deafening Scorn      |      24.15
-Deafening Contempt   |      17.94
+Deafening Scorn      |       24.0
+Deafening Contempt   |       17.0
 Deafening Rage       |      15.53
-Deafening Spite      |      15.53
-Deafening Zeal       |      15.26
-Deafening Envy       |      14.49
-Deafening Wrath      |       13.0
-Deafening Hatred     |      12.79
-Average Profit (9x): 11.07 
-Average Profit per Div (16.12x): 19.83 
+Deafening Spite      |       15.0
+Deafening Zeal       |       15.0
+Deafening Envy       |       14.0
+Deafening Wrath      |      12.85
+Deafening Anger      |       12.0
+Deafening Hatred     |       12.0
+Average Profit (9x): 8.46 
+Average Profit per Div (16.5x): 15.51 
 Upgrading Shrieking is Profitable
-Buy ['Anger', 'Fear', 'Sorrow', 'Torment', 'Woe', 'Greed', 'Misery', 'Doubt', 'Suffering', 'Anguish', 'Dread']
+Buy ['Sorrow', 'Torment', 'Woe', 'Fear', 'Misery', 'Greed', 'Suffering', 'Doubt', 'Anguish', 'Dread']
 
 Shrieking Not Profitable
 

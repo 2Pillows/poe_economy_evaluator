@@ -1,21 +1,21 @@
 
-Chaos per Sextant: 3.43
-Sextant per Div:   63.38
+Chaos per Sextant: 3.31
+Sextant per Div:   65.68
 
-Min 10c Profit per Roll: 1.94
-Min 10c Profit per Div:  122.96
+Min 10c Profit per Roll: 2.02
+Min 10c Profit per Div:  132.67
 
-All Profit per Roll:     5.72
-All Profit per Div:      362.53
+All Profit per Roll:     5.78
+All Profit per Div:      379.61
 
 -----Min 10c Modifiers-----
 Shaper Guardian                     |         60
 Elder Guardian                      |         25
-Conqueror Map                       |        270
-Alva                                |         15
-Strongbox Enraged                   |         73
+Conqueror Map                       |        263
+Alva                                |         14
+Strongbox Enraged                   |         70
 Chayula                             |         12
-Abyss                               |         43
+Abyss                               |         44
 8 Modifiers                         |         89
 Copy of Beasts                      |         15
 Splinters Emblems Duplicate         |         10
@@ -24,11 +24,11 @@ Blue Plants                         |         40
 Purple Plants                       |         40
 Yellow Plants                       |         60
 Mysterious Harbinger                |         10
-Beyond                              |        235
-Gilded Scarab                       |         17
+Beyond                              |        237
+Gilded Scarab                       |         16
 Mortal/Sacrifice Fragment 8 Packs   |         10
-Legion                              |         16
-Mirror of Delirium                  |         85
+Legion                              |         15
+Mirror of Delirium                  |         84
 Sacred Grove                        |         40
 10c Mods: 21 / 66
 
