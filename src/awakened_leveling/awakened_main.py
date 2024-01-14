@@ -27,17 +27,27 @@ def sort_gem_data(gem_data):
     return sorted_gems
 
 
-def write_to_file(gem_data):
+def write_to_file(gem_data, divine_chaos):
     with open(RESULTS_FILE, "w") as file:
+        file.write(f"{'Gem Name':50} | {'':8} Profit {'':11} Buy {'':12} Sell\n")
         for name, profit in gem_data.items():
             if profit[0] <= MIN_PROFIT:
                 continue
-            formatted_line = f"{name:50} | {round(profit[0]):10} {round(profit[1]), round(profit[2])}"
+            formatted_line = f"{name:50} | \t {round(profit[0]):>5}c | {round(profit[0]/divine_chaos):>3}d  {round(profit[1]):>8}c | {round(profit[1]/divine_chaos):>3}d  {round(profit[2]):>8}c | {round(profit[2]/divine_chaos):>3}d"
             file.write(formatted_line + "\n")
 
 
 def start_awakened_main(GEM_DATA, BEAST_DATA, CURRENCY_DATA):
     gem_levels = sort_gem_data(GEM_DATA)
+
+    divine_chaos = next(
+        (
+            item["chaosEquivalent"]
+            for item in CURRENCY_DATA
+            if "Divine Orb" in item["currencyTypeName"]
+        ),
+        None,
+    )
 
     wild_brambleback = {
         beast.get("name"): beast
@@ -69,5 +79,5 @@ def start_awakened_main(GEM_DATA, BEAST_DATA, CURRENCY_DATA):
         sorted(gem_margins.items(), key=lambda item: item[1], reverse=True)
     )
 
-    write_to_file(sorted_gem_margins)
+    write_to_file(sorted_gem_margins, divine_chaos)
     # os.system(f"start {FILE_NAME}")

@@ -1,16 +1,17 @@
-Awakened Multistrike Support                       |       4634 (14609, 19456)
-Awakened Spell Echo Support                        |        343 (1957, 2513)
-Awakened Unbound Ailments Support                  |        286 (348, 848)
-Awakened Unleash Support                           |        284 (1826, 2324)
-Awakened Greater Multiple Projectiles Support      |        221 (10217, 10652)
-Awakened Ancestral Call Support                    |        166 (40, 420)
-Awakened Burning Damage Support                    |        141 (80, 435)
-Awakened Increased Area of Effect Support          |        134 (870, 1217)
-Awakened Generosity Support                        |        134 (304, 652)
-Awakened Deadly Ailments Support                   |        131 (90, 435)
-Awakened Cast While Channelling Support            |        118 (60, 391)
-Awakened Elemental Damage with Attacks Support     |        112 (1087, 1413)
-Awakened Chain Support                             |        112 (1087, 1413)
-Awakened Void Manipulation Support                 |        109 (90, 413)
-Awakened Spell Cascade Support                     |         41 (398, 652)
-Awakened Lightning Penetration Support             |         12 (35, 261)
+Gem Name                                           |          Profit             Buy              Sell
+Awakened Multistrike Support                       | 	  4569c |  21d     14674c |  67d     19456c |  89d
+Awakened Spell Echo Support                        | 	   330c |   2d      1957c |   9d      2500c |  11d
+Awakened Unleash Support                           | 	   315c |   1d      1826c |   8d      2354c |  11d
+Awakened Unbound Ailments Support                  | 	   287c |   1d       348c |   2d       848c |   4d
+Awakened Greater Multiple Projectiles Support      | 	   221c |   1d     10217c |  47d     10652c |  49d
+Awakened Ancestral Call Support                    | 	   177c |   1d        40c |   0d       430c |   2d
+Awakened Increased Area of Effect Support          | 	   165c |   1d       870c |   4d      1248c |   6d
+Awakened Burning Damage Support                    | 	   141c |   1d        80c |   0d       435c |   2d
+Awakened Generosity Support                        | 	   134c |   1d       304c |   1d       652c |   3d
+Awakened Deadly Ailments Support                   | 	   131c |   1d        90c |   0d       435c |   2d
+Awakened Cast While Channelling Support            | 	   118c |   1d        60c |   0d       391c |   2d
+Awakened Elemental Damage with Attacks Support     | 	   113c |   1d      1087c |   5d      1413c |   7d
+Awakened Chain Support                             | 	   113c |   1d      1087c |   5d      1413c |   7d
+Awakened Void Manipulation Support                 | 	   110c |   1d        90c |   0d       413c |   2d
+Awakened Spell Cascade Support                     | 	    47c |   0d       391c |   2d       652c |   3d
+Awakened Lightning Penetration Support             | 	    12c |   0d        35c |   0d       261c |   1d

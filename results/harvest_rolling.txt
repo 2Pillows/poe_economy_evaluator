@@ -1,18 +1,18 @@
 
 ---------- Lifeforce per Chaos ----------
 
-Yellow: 17.0
-Red: 16.04
-Blue: 18.64
+Yellow: 16.04
+Red: 17.23
+Blue: 22.02
 
 ----------Scarab----------
 
-Winged Reliquary     |      139.0
+Winged Reliquary     |      140.0
 Winged Ambush        |       94.0
 Winged Abyss         |       91.0
 Winged Divination    |       83.0
-Average Profit (10x): 160.8 
-Average Profit per Div (2.78x): 44.71 
+Average Profit (10x): 167.8 
+Average Profit per Div (2.78x): 46.62 
 Upgrading Gilded is Profitable
 Buy ['Legion', 'Harbinger', 'Sulphite', 'Cartography', 'Breach', 'Bestiary', 'Shaper', 'Elder', 'Torment', 'Blight', 'Expedition', 'Ultimatum']
 
@@ -20,12 +20,12 @@ Gilded Reliquary     |      25.58
 Gilded Divination    |      18.12
 Gilded Abyss         |      15.53
 Gilded Ambush        |      10.87
-Gilded Harbinger     |       10.0
+Gilded Harbinger     |       10.2
 Gilded Legion        |        8.7
-Average Profit (10x): 0.6 
-Average Profit per Div (22.3x): 1.34 
+Average Profit (10x): 4.3 
+Average Profit per Div (22.27x): 9.58 
 Upgrading Polished is NOT Profitable
-Buy ['Cartography', 'Breach', 'Bestiary', 'Torment', 'Shaper', 'Sulphite', 'Elder', 'Blight', 'Expedition', 'Ultimatum']
+Buy ['Cartography', 'Breach', 'Bestiary', 'Blight', 'Torment', 'Shaper', 'Sulphite', 'Elder', 'Expedition', 'Ultimatum']
 
 Polished Not Profitable
 
@@ -34,18 +34,17 @@ Polished Not Profitable
 
 Deafening Loathing   |       31.0
 Deafening Scorn      |      24.15
-Deafening Contempt   |      17.93
+Deafening Contempt   |      17.56
 Deafening Rage       |      15.53
-Deafening Zeal       |      15.53
+Deafening Zeal       |      15.07
 Deafening Spite      |       15.0
 Deafening Envy       |      14.49
 Deafening Wrath      |       13.0
-Deafening Anger      |      12.08
-Deafening Hatred     |      12.08
-Average Profit (9x): 3.78 
-Average Profit per Div (16.18x): 6.79 
+Deafening Hatred     |       12.6
+Average Profit (9x): 10.62 
+Average Profit per Div (16.24x): 19.16 
 Upgrading Shrieking is Profitable
-Buy ['Fear', 'Sorrow', 'Torment', 'Woe', 'Greed', 'Misery', 'Anguish', 'Doubt', 'Suffering', 'Dread']
+Buy ['Anger', 'Sorrow', 'Torment', 'Woe', 'Fear', 'Greed', 'Misery', 'Doubt', 'Suffering', 'Anguish', 'Dread']
 
 Shrieking Not Profitable
 

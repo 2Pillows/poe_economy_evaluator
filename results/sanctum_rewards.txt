@@ -1,9 +1,9 @@
 Divine Orb                | 0, 217, 435
-Awakened Sextant          | 10, 21, 56
+Awakened Sextant          | 10, 21, 55
 Glassblower's Bauble      | 15, 33, 50
 Gemcutter's Prism         | 11, 21, 32
-Orb of Annulment          | 0, 14, 29
 Exalted Orb               | 0, 13, 27
+Orb of Annulment          | 0, 13, 25
 Enkindling Orb            | 5, 10, 15
 Chaos Orb                 | 5, 10, 14
 Vaal Orb                  | 4, 8, 12
