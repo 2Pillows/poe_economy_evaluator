@@ -76,9 +76,9 @@ def write_to_file(
     )
 
     with open(file_name, "w") as file:
-        file.write(f"\nChaos per Sextant: {sextant_chaos}")
+        file.write(f"\nChaos per Sextant: {sextant_chaos:13}")
         file.write(f"\nMin {MIN_PROFIT}c Profit per Roll: {valuable_average:7}")
-        file.write(f"\nAll Profit per Roll: {unblocked_average:10}\n\n")
+        file.write(f"\nAll Profit per Roll: {unblocked_average:11}\n\n")
         file.write(f"-----Min {MIN_PROFIT}c Modifiers-----\n")
         for name, value in valuable_mods.items():
             formatted_line = f"{name:35} | {value.get('chaos'):10}"
