@@ -14,10 +14,18 @@ def sort_gem_data(gem_data):
 
     for gem in gem_data:
         gem_name = gem.get("name")
+
+        # remove non-upgradable gems
         if "Awakened" not in gem_name:
             continue
         if "Empower" in gem_name or "Enhance" in gem_name or "Enlighten" in gem_name:
             continue
+
+        # remove corrupted gems
+        gem_variant = gem.get("variant")
+        if "c" in gem_variant:
+            continue
+
         gem_level = gem.get("gemLevel")
         gem_chaos = gem.get("chaosValue")
         if gem_name not in sorted_gems:

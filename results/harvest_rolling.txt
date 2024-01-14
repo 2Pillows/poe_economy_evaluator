@@ -7,12 +7,12 @@ Blue: 22.02
 
 ----------Scarab----------
 
-Winged Reliquary     |      140.0
+Winged Reliquary     |      139.0
 Winged Ambush        |       94.0
 Winged Abyss         |       91.0
 Winged Divination    |       83.0
-Average Profit (10x): 167.8 
-Average Profit per Div (2.78x): 46.62 
+Average Profit (10x): 166.0 
+Average Profit per Div (2.78x): 46.15 
 Upgrading Gilded is Profitable
 Buy ['Legion', 'Harbinger', 'Sulphite', 'Cartography', 'Breach', 'Bestiary', 'Shaper', 'Elder', 'Torment', 'Blight', 'Expedition', 'Ultimatum']
 
@@ -20,12 +20,12 @@ Gilded Reliquary     |      25.58
 Gilded Divination    |      18.12
 Gilded Abyss         |      15.53
 Gilded Ambush        |      10.87
-Gilded Harbinger     |       10.2
+Gilded Harbinger     |      10.24
 Gilded Legion        |        8.7
 Average Profit (10x): 4.3 
-Average Profit per Div (22.27x): 9.58 
+Average Profit per Div (22.27x): 9.57 
 Upgrading Polished is NOT Profitable
-Buy ['Cartography', 'Breach', 'Bestiary', 'Blight', 'Torment', 'Shaper', 'Sulphite', 'Elder', 'Expedition', 'Ultimatum']
+Buy ['Cartography', 'Breach', 'Bestiary', 'Torment', 'Shaper', 'Sulphite', 'Elder', 'Blight', 'Expedition', 'Ultimatum']
 
 Polished Not Profitable
 
