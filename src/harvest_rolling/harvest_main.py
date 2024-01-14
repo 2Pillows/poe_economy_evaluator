@@ -24,7 +24,7 @@ def get_lifeforce_per_chaos(CURRENCY_DATA):
     lifeforce_per_chaos = {
         color: next(
             (
-                currency_item["chaosEquivalent"]
+                (1 / currency_item["receive"]["value"])
                 for currency_item in CURRENCY_DATA
                 if lifeforce_type in currency_item["currencyTypeName"]
             ),
