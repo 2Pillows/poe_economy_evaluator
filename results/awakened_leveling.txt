@@ -1,17 +1,18 @@
-Gem Name                                           |          Profit              Buy               Sell
-Awakened Multistrike Support                       | 	  4569c | 21.0d     14674c | 67.5d     19456c | 89.5d
-Awakened Spell Echo Support                        | 	   330c |  1.5d      1957c |  9.0d      2500c | 11.5d
-Awakened Unleash Support                           | 	   315c |  1.4d      1826c |  8.4d      2354c | 10.8d
-Awakened Unbound Ailments Support                  | 	   287c |  1.3d       348c |  1.6d       848c |  3.9d
-Awakened Greater Multiple Projectiles Support      | 	   221c |  1.0d     10217c | 47.0d     10652c | 49.0d
-Awakened Ancestral Call Support                    | 	   177c |  0.8d        40c |  0.2d       430c |  2.0d
-Awakened Increased Area of Effect Support          | 	   165c |  0.8d       870c |  4.0d      1248c |  5.7d
-Awakened Burning Damage Support                    | 	   141c |  0.7d        80c |  0.4d       435c |  2.0d
-Awakened Generosity Support                        | 	   134c |  0.6d       304c |  1.4d       652c |  3.0d
-Awakened Deadly Ailments Support                   | 	   131c |  0.6d        90c |  0.4d       435c |  2.0d
-Awakened Cast While Channelling Support            | 	   118c |  0.5d        60c |  0.3d       391c |  1.8d
-Awakened Elemental Damage with Attacks Support     | 	   113c |  0.5d      1087c |  5.0d      1413c |  6.5d
-Awakened Chain Support                             | 	   113c |  0.5d      1087c |  5.0d      1413c |  6.5d
-Awakened Void Manipulation Support                 | 	   110c |  0.5d        90c |  0.4d       413c |  1.9d
-Awakened Spell Cascade Support                     | 	    47c |  0.2d       391c |  1.8d       652c |  3.0d
-Awakened Lightning Penetration Support             | 	    12c |  0.1d        35c |  0.2d       261c |  1.2d
+Gem Name                                           |         Profit            Buy              Sell
+Awakened Multistrike Support                       | 	  4569 | 21.0     14674 | 67.5     19456 | 89.5
+Awakened Spell Echo Support                        | 	   330 |  1.5      1957 |  9.0      2500 | 11.5
+Awakened Unleash Support                           | 	   315 |  1.4      1826 |  8.4      2354 | 10.8
+Awakened Unbound Ailments Support                  | 	   287 |  1.3       348 |  1.6       848 |  3.9
+Awakened Greater Multiple Projectiles Support      | 	   221 |  1.0     10217 | 47.0     10652 | 49.0
+Awakened Ancestral Call Support                    | 	   177 |  0.8        40 |  0.2       430 |  2.0
+Awakened Increased Area of Effect Support          | 	   165 |  0.8       870 |  4.0      1248 |  5.7
+Awakened Burning Damage Support                    | 	   141 |  0.7        80 |  0.4       435 |  2.0
+Awakened Generosity Support                        | 	   134 |  0.6       304 |  1.4       652 |  3.0
+Awakened Deadly Ailments Support                   | 	   131 |  0.6        90 |  0.4       435 |  2.0
+Awakened Cast While Channelling Support            | 	   118 |  0.5        60 |  0.3       391 |  1.8
+Awakened Elemental Damage with Attacks Support     | 	   113 |  0.5      1087 |  5.0      1413 |  6.5
+Awakened Chain Support                             | 	   113 |  0.5      1087 |  5.0      1413 |  6.5
+Awakened Void Manipulation Support                 | 	   110 |  0.5        90 |  0.4       413 |  1.9
+Awakened Spell Cascade Support                     | 	    47 |  0.2       391 |  1.8       652 |  3.0
+Awakened Lightning Penetration Support             | 	    12 |  0.1        35 |  0.2       261 |  1.2
+                                                   |     chaos |  div     chaos |  div     chaos |  div

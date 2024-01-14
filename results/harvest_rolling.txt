@@ -34,15 +34,15 @@ Polished Not Profitable
 
 Deafening Loathing   |       31.0
 Deafening Scorn      |      24.15
-Deafening Contempt   |      17.57
+Deafening Contempt   |      17.94
 Deafening Rage       |      15.53
-Deafening Zeal       |      15.37
-Deafening Spite      |       15.0
+Deafening Spite      |      15.53
+Deafening Zeal       |      15.26
 Deafening Envy       |      14.49
 Deafening Wrath      |       13.0
 Deafening Hatred     |      12.79
-Average Profit (9x): 10.98 
-Average Profit per Div (16.2x): 19.77 
+Average Profit (9x): 11.07 
+Average Profit per Div (16.12x): 19.83 
 Upgrading Shrieking is Profitable
 Buy ['Anger', 'Fear', 'Sorrow', 'Torment', 'Woe', 'Greed', 'Misery', 'Doubt', 'Suffering', 'Anguish', 'Dread']
 

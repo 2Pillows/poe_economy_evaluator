@@ -29,12 +29,15 @@ def sort_gem_data(gem_data):
 
 def write_to_file(gem_data, divine_chaos):
     with open(RESULTS_FILE, "w") as file:
-        file.write(f"{'Gem Name':50} | {'':8} Profit {'':12} Buy {'':13} Sell\n")
+        file.write(f"{'Gem Name':50} | {'':7} Profit {'':10} Buy {'':12} Sell\n")
         for name, profit in gem_data.items():
             if profit[0] <= MIN_PROFIT:
                 continue
-            formatted_line = f"{name:50} | \t {round(profit[0]):>5}c | {round(profit[0]/divine_chaos, 1):>4}d  {round(profit[1]):>8}c | {round(profit[1]/divine_chaos, 1):>4}d  {round(profit[2]):>8}c | {round(profit[2]/divine_chaos, 1):>4}d"
+            formatted_line = f"{name:50} | \t {round(profit[0]):>5} | {round(profit[0]/divine_chaos, 1):>4}  {round(profit[1]):>8} | {round(profit[1]/divine_chaos, 1):>4}  {round(profit[2]):>8} | {round(profit[2]/divine_chaos, 1):>4}"
             file.write(formatted_line + "\n")
+        file.write(
+            f"{'':50} | {'':3} chaos | {'div':>4} {'':3} chaos | {'div':>4} {'':3} chaos | {'div':>4}"
+        )
 
 
 def start_awakened_main(GEM_DATA, BEAST_DATA, CURRENCY_DATA):
