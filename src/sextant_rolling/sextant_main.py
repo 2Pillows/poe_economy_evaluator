@@ -74,11 +74,21 @@ def write_to_file(
         ),
         None,
     )
+    divine_chaos = next(
+        (
+            item["chaosEquivalent"]
+            for item in CURRENCY_DATA
+            if "Divine Orb" in item["currencyTypeName"]
+        ),
+        None,
+    )
 
     with open(file_name, "w") as file:
-        file.write(f"\nChaos per Sextant: {sextant_chaos:13}\n")
-        file.write(f"\nMin {MIN_PROFIT}c Profit per Roll: {valuable_average:7}")
-        file.write(f"\nAll Profit per Roll: {unblocked_average:11}\n\n")
+        file.write(f"\nChaos per Sextant: {sextant_chaos}\n")
+        file.write(f"Sextant per Div:   {round(divine_chaos/sextant_chaos, 2)}\n")
+
+        file.write(f"\nMin {MIN_PROFIT}c Profit per Roll: {valuable_average}")
+        file.write(f"\nAll Profit per Roll:     {unblocked_average}\n\n")
         file.write(f"-----Min {MIN_PROFIT}c Modifiers-----\n")
         for name, value in valuable_mods.items():
             formatted_line = f"{name:35} | {value.get('chaos'):10}"
