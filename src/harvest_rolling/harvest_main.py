@@ -16,9 +16,9 @@ def clear_file(file_destination):
 
 def get_lifeforce_per_chaos(CURRENCY_DATA):
     lifeforce_types = {
-        "yellow": "Vivid Crystallised Lifeforce",
-        "red": "Wild Crystallised Lifeforce",
-        "blue": "Primal Crystallised Lifeforce",
+        "Yellow": "Vivid Crystallised Lifeforce",
+        "Red": "Wild Crystallised Lifeforce",
+        "Blue": "Primal Crystallised Lifeforce",
     }
 
     lifeforce_per_chaos = {
@@ -88,7 +88,7 @@ def start_harvest_main(SCARAB_DATA, ESSENCE_DATA, DELIRIUMORB_DATA, CURRENCY_DAT
             "chaos_acquisition_types": average_prices["Scarab"],
             "notable_words": [0, 1],
             "lifeforce_per_reforge": 30,
-            "lifeforce_used": lifeforce_per_chaos["red"],
+            "lifeforce_used": lifeforce_per_chaos["Red"],
             "stack_limit": 10,
         },
         "Essence": {
@@ -97,7 +97,7 @@ def start_harvest_main(SCARAB_DATA, ESSENCE_DATA, DELIRIUMORB_DATA, CURRENCY_DAT
             "chaos_acquisition_types": average_prices["Essence"],
             "notable_words": [0, -1],
             "lifeforce_per_reforge": 30,
-            "lifeforce_used": lifeforce_per_chaos["blue"],
+            "lifeforce_used": lifeforce_per_chaos["Blue"],
             "stack_limit": 9,
         },
         "DeliriumOrb": {
@@ -106,10 +106,16 @@ def start_harvest_main(SCARAB_DATA, ESSENCE_DATA, DELIRIUMORB_DATA, CURRENCY_DAT
             "chaos_acquisition_types": average_prices["DeliriumOrb"],
             "notable_words": [0, -1],
             "lifeforce_per_reforge": 30,
-            "lifeforce_used": lifeforce_per_chaos["blue"],
+            "lifeforce_used": lifeforce_per_chaos["Blue"],
             "stack_limit": 10,
         },
     }
+
+    with open(RESULTS_FILE, "a") as file:
+        file.write("\n---------- Lifeforce per Chaos ----------\n\n")
+
+        for name, lifeforce_amount in lifeforce_per_chaos.items():
+            file.write(f"{name}: {round(lifeforce_amount, 2)}\n")
 
     for item_name, item_data in ITEMS.items():
         filtered_types = filter_types(
