@@ -1,6 +1,7 @@
 
+Chaos per Sextant: 3.48
 Min 10c Profit per Roll:    1.87
-All Profit per Roll:       5.59
+All Profit per Roll:       5.64
 
 -----Min 10c Modifiers-----
 Shaper Guardian                     |         60

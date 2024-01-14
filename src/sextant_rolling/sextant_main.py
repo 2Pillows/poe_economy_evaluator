@@ -64,8 +64,19 @@ def write_to_file(
     unblocked_average,
     valuable_mods,
     valuable_average,
+    CURRENCY_DATA,
 ):
+    sextant_chaos = next(
+        (
+            item["chaosEquivalent"]
+            for item in CURRENCY_DATA
+            if "Awakened Sextant" in item["currencyTypeName"]
+        ),
+        None,
+    )
+
     with open(file_name, "w") as file:
+        file.write(f"\nChaos per Sextant: {sextant_chaos}")
         file.write(f"\nMin {MIN_PROFIT}c Profit per Roll: {valuable_average:7}")
         file.write(f"\nAll Profit per Roll: {unblocked_average:10}\n\n")
         file.write(f"-----Min {MIN_PROFIT}c Modifiers-----\n")
@@ -98,7 +109,7 @@ def find_modifiers(compass_data):
     return valuable_compass
 
 
-def start_sextant_main(PRICES_DATA):
+def start_sextant_main(PRICES_DATA, CURRENCY_DATA):
     compass_prices = {item["name"]: item for item in PRICES_DATA.get("data")}
 
     compass_data = {
@@ -150,5 +161,6 @@ def start_sextant_main(PRICES_DATA):
         unblocked_average,
         valuable_mods,
         valuable_average,
+        CURRENCY_DATA,
     )
     # os.system(f"start {compass_rolling_file}")

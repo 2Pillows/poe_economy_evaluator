@@ -2,8 +2,8 @@
 ---------- Lifeforce per Chaos ----------
 
 Yellow: 16.09
-Red: 16.04
-Blue: 19.04
+Red: 17.0
+Blue: 20.3
 
 ----------Scarab----------
 
@@ -11,19 +11,19 @@ Winged Reliquary     |      140.0
 Winged Ambush        |       94.0
 Winged Abyss         |       91.0
 Winged Divination    |       83.0
-Average Profit (10x): 162.7 
-Average Profit per Div (2.78x): 45.2 
+Average Profit (10x): 166.9 
+Average Profit per Div (2.78x): 46.37 
 Upgrading Gilded is Profitable
 Buy ['Legion', 'Harbinger', 'Sulphite', 'Cartography', 'Breach', 'Bestiary', 'Shaper', 'Elder', 'Torment', 'Blight', 'Expedition', 'Ultimatum']
 
 Gilded Reliquary     |      25.58
 Gilded Divination    |      18.12
 Gilded Abyss         |      15.53
-Gilded Ambush        |       11.0
+Gilded Ambush        |      10.87
 Gilded Harbinger     |       10.0
-Gilded Legion        |        9.0
-Average Profit (10x): 0.8 
-Average Profit per Div (22.18x): 1.77 
+Gilded Legion        |       8.93
+Average Profit (10x): 3.5 
+Average Profit per Div (22.21x): 7.77 
 Upgrading Polished is NOT Profitable
 Buy ['Cartography', 'Breach', 'Bestiary', 'Blight', 'Ultimatum', 'Torment', 'Shaper', 'Sulphite', 'Elder', 'Expedition']
 
@@ -34,18 +34,18 @@ Polished Not Profitable
 
 Deafening Loathing   |       31.0
 Deafening Scorn      |      24.15
-Deafening Contempt   |      17.56
+Deafening Contempt   |       18.0
 Deafening Rage       |      15.53
 Deafening Zeal       |      15.53
 Deafening Spite      |       15.0
-Deafening Envy       |      14.41
+Deafening Envy       |      14.49
 Deafening Wrath      |       13.0
-Deafening Anger      |      12.08
-Deafening Hatred     |      12.06
-Average Profit (9x): 4.5 
-Average Profit per Div (16.24x): 8.12 
+Deafening Hatred     |      12.39
+Deafening Anger      |      12.06
+Average Profit (9x): 6.93 
+Average Profit per Div (16.23x): 12.5 
 Upgrading Shrieking is Profitable
-Buy ['Sorrow', 'Fear', 'Torment', 'Woe', 'Misery', 'Greed', 'Doubt', 'Suffering', 'Anguish', 'Dread']
+Buy ['Fear', 'Sorrow', 'Torment', 'Woe', 'Greed', 'Misery', 'Suffering', 'Doubt', 'Anguish', 'Dread']
 
 Shrieking Not Profitable
 
