@@ -41,10 +41,10 @@ def write_to_file(gem_data, divine_chaos):
         for name, profit in gem_data.items():
             if profit[0] <= MIN_PROFIT:
                 continue
-            formatted_line = f"{name:50} | \t {round(profit[0]):>5} | {round(profit[0]/divine_chaos, 1):>4}  {round(profit[1]):>8} | {round(profit[1]/divine_chaos, 1):>4}  {round(profit[2]):>8} | {round(profit[2]/divine_chaos, 1):>4}"
+            formatted_line = f"{name:50} | \t {round(profit[0]):>5} | {round(profit[0]/divine_chaos, 1):>5}  {round(profit[1]):>8} | {round(profit[1]/divine_chaos, 1):>5}  {round(profit[2]):>8} | {round(profit[2]/divine_chaos, 1):>5}"
             file.write(formatted_line + "\n")
         file.write(
-            f"{'':50} | {'':3} chaos | {'div':>4} {'':3} chaos | {'div':>4} {'':3} chaos | {'div':>4}"
+            f"{'':50} | {'':3} chaos | {'div':>5} {'':3} chaos | {'div':>5} {'':3} chaos | {'div':>5}"
         )
 
 
