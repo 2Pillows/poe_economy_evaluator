@@ -21,11 +21,11 @@ Gilded Divination    |      18.12
 Gilded Abyss         |      15.53
 Gilded Ambush        |      10.87
 Gilded Harbinger     |       10.0
-Gilded Legion        |        9.0
-Average Profit (10x): 0.9 
-Average Profit per Div (22.24x): 2.0 
+Gilded Legion        |        8.7
+Average Profit (10x): 0.6 
+Average Profit per Div (22.3x): 1.34 
 Upgrading Polished is NOT Profitable
-Buy ['Cartography', 'Breach', 'Bestiary', 'Blight', 'Torment', 'Shaper', 'Sulphite', 'Elder', 'Expedition', 'Ultimatum']
+Buy ['Cartography', 'Breach', 'Bestiary', 'Torment', 'Shaper', 'Sulphite', 'Elder', 'Blight', 'Expedition', 'Ultimatum']
 
 Polished Not Profitable
 
@@ -34,18 +34,18 @@ Polished Not Profitable
 
 Deafening Loathing   |       31.0
 Deafening Scorn      |      24.15
-Deafening Contempt   |      17.99
+Deafening Contempt   |      17.93
 Deafening Rage       |      15.53
 Deafening Zeal       |      15.53
 Deafening Spite      |       15.0
 Deafening Envy       |      14.49
 Deafening Wrath      |       13.0
-Deafening Hatred     |      12.78
 Deafening Anger      |      12.08
-Average Profit (9x): 4.41 
-Average Profit per Div (16.16x): 7.92 
+Deafening Hatred     |      12.08
+Average Profit (9x): 3.78 
+Average Profit per Div (16.18x): 6.79 
 Upgrading Shrieking is Profitable
-Buy ['Fear', 'Sorrow', 'Torment', 'Woe', 'Greed', 'Misery', 'Suffering', 'Anguish', 'Doubt', 'Dread']
+Buy ['Fear', 'Sorrow', 'Torment', 'Woe', 'Greed', 'Misery', 'Anguish', 'Doubt', 'Suffering', 'Dread']
 
 Shrieking Not Profitable
 

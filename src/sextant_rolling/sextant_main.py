@@ -72,12 +72,12 @@ def write_to_file(
 
         file.write(f"\nMin {MIN_PROFIT}c Profit per Roll: {valuable_average}")
         file.write(
-            f"\nMin {MIN_PROFIT}c Profit per Div:  {round(divine_chaos * valuable_average, 2)}\n"
+            f"\nMin {MIN_PROFIT}c Profit per Div:  {round(divine_chaos/sextant_chaos * valuable_average, 2)}\n"
         )
 
         file.write(f"\nAll Profit per Roll:     {unblocked_average}")
         file.write(
-            f"\nAll Profit per Div:      {round(divine_chaos * unblocked_average, 2)}\n\n"
+            f"\nAll Profit per Div:      {round(divine_chaos/sextant_chaos * unblocked_average, 2)}\n\n"
         )
 
         file.write(f"-----Min {MIN_PROFIT}c Modifiers-----\n")

@@ -3,10 +3,10 @@ Chaos per Sextant: 3.48
 Sextant per Div:   62.47
 
 Min 10c Profit per Roll: 1.9
-Min 10c Profit per Div:  413.04
+Min 10c Profit per Div:  118.69
 
 All Profit per Roll:     5.67
-All Profit per Div:      1232.6
+All Profit per Div:      354.2
 
 -----Min 10c Modifiers-----
 Shaper Guardian                     |         60
