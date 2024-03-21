@@ -1,28 +1,25 @@
 Gem Name                                           |         Profit            Buy              Sell
-Awakened Multistrike Support                       | 	  1666 |  11.4     21968 | 150.9     23875 | 164.0
-Awakened Greater Multiple Projectiles Support      | 	  1360 |   9.3     10918 |  75.0     12520 |  86.0
-Awakened Fork Support                              | 	  1294 |   8.9      8655 |  59.4     10191 |  70.0
-Awakened Increased Area of Effect Support          | 	   574 |   3.9       873 |   6.0      1689 |  11.6
-Awakened Spell Echo Support                        | 	   501 |   3.4      1747 |  12.0      2489 |  17.1
-Awakened Spell Cascade Support                     | 	   501 |   3.4      1004 |   6.9      1747 |  12.0
-Awakened Unleash Support                           | 	   342 |   2.4      1251 |   8.6      1834 |  12.6
-Awakened Cast On Critical Strike Support           | 	   341 |   2.3      1165 |   8.0      1747 |  12.0
-Awakened Chain Support                             | 	   297 |   2.0       364 |   2.5       903 |   6.2
-Awakened Unbound Ailments Support                  | 	   195 |   1.3       146 |   1.0       582 |   4.0
-Awakened Melee Physical Damage Support             | 	   194 |   1.3        30 |   0.2       466 |   3.2
-Awakened Ancestral Call Support                    | 	   187 |   1.3        67 |   0.5       495 |   3.4
-Awakened Elemental Focus Support                   | 	   168 |   1.2       100 |   0.7       510 |   3.5
-Awakened Void Manipulation Support                 | 	   164 |   1.1        75 |   0.5       480 |   3.3
-Awakened Blasphemy Support                         | 	   156 |   1.1        39 |   0.3       437 |   3.0
-Awakened Elemental Damage with Attacks Support     | 	   137 |   0.9       495 |   3.4       873 |   6.0
-Awakened Deadly Ailments Support                   | 	   120 |   0.8        75 |   0.5       437 |   3.0
-Awakened Hextouch Support                          | 	   112 |   0.8        40 |   0.3       393 |   2.7
-Awakened Burning Damage Support                    | 	   105 |   0.7        90 |   0.6       437 |   3.0
-Awakened Swift Affliction Support                  | 	    83 |   0.6        40 |   0.3       364 |   2.5
-Awakened Lightning Penetration Support             | 	    58 |   0.4        65 |   0.4       364 |   2.5
-Awakened Added Fire Damage Support                 | 	    30 |   0.2        15 |   0.1       287 |   2.0
-Awakened Minion Damage Support                     | 	    20 |   0.1        30 |   0.2       291 |   2.0
-Awakened Cold Penetration Support                  | 	    15 |   0.1        20 |   0.1       277 |   1.9
-Awakened Cast While Channelling Support            | 	    10 |   0.1        39 |   0.3       291 |   2.0
-Awakened Added Lightning Damage Support            | 	    10 |   0.1        40 |   0.3       291 |   2.0
+Awakened Multistrike Support                       | 	  5119 |  34.9     18487 | 126.0     23886 | 162.8
+Awakened Greater Multiple Projectiles Support      | 	  2039 |  13.9     10270 |  70.0     12589 |  85.8
+Awakened Fork Support                              | 	  1525 |  10.4      5795 |  39.5      7600 |  51.8
+Awakened Increased Area of Effect Support          | 	   761 |   5.2       860 |   5.9      1900 |  12.9
+Awakened Blasphemy Support                         | 	   654 |   4.5        41 |   0.3       974 |   6.6
+Awakened Chain Support                             | 	   601 |   4.1       440 |   3.0      1320 |   9.0
+Awakened Unleash Support                           | 	   572 |   3.9      1320 |   9.0      2171 |  14.8
+Awakened Cast On Critical Strike Support           | 	   510 |   3.5       971 |   6.6      1761 |  12.0
+Awakened Spell Cascade Support                     | 	   425 |   2.9      1027 |   7.0      1731 |  11.8
+Awakened Hextouch Support                          | 	   404 |   2.8        50 |   0.3       734 |   5.0
+Awakened Cast While Channelling Support            | 	   181 |   1.2        67 |   0.5       528 |   3.6
+Awakened Void Manipulation Support                 | 	   134 |   0.9       100 |   0.7       514 |   3.5
+Awakened Elemental Damage with Attacks Support     | 	   131 |   0.9       470 |   3.2       880 |   6.0
+Awakened Melee Physical Damage Support             | 	   131 |   0.9        30 |   0.2       440 |   3.0
+Awakened Swift Affliction Support                  | 	   111 |   0.8        47 |   0.3       437 |   3.0
+Awakened Elemental Focus Support                   | 	   102 |   0.7       132 |   0.9       514 |   3.5
+Awakened Spell Echo Support                        | 	    93 |   0.6      1755 |  12.0      2127 |  14.5
+Awakened Deadly Ailments Support                   | 	    83 |   0.6        78 |   0.5       440 |   3.0
+Awakened Unbound Ailments Support                  | 	    67 |   0.5       147 |   1.0       493 |   3.4
+Awakened Burning Damage Support                    | 	    61 |   0.4       100 |   0.7       440 |   3.0
+Awakened Generosity Support                        | 	    51 |   0.3       147 |   1.0       477 |   3.2
+Awakened Brutality Support                         | 	    20 |   0.1        30 |   0.2       330 |   2.2
+Awakened Lightning Penetration Support             | 	    18 |   0.1        69 |   0.5       367 |   2.5
                                                    |     chaos |   div     chaos |   div     chaos |   div

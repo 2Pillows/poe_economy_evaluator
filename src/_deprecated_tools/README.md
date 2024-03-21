@@ -3,3 +3,7 @@
 ## Gem Alt Qualities
 
 Alternate Quality gems were removed in place of Transfigured gems.
+
+## Sextant Rolling
+
+Sextants removed.

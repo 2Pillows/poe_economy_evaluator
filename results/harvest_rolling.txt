@@ -1,21 +1,21 @@
 
 ---------- Lifeforce per Chaos ----------
 
-Yellow: 9.95
-Red: 18.53
-Blue: 20.21
+Yellow: 10.01
+Red: 19.0
+Blue: 20.2
 
 ----------Scarab----------
 
-Winged Reliquary     |      100.0
-Winged Abyss         |       80.0
-Winged Ambush        |       68.0
-Winged Divination    |       60.0
-Winged Harbinger     |       60.0
-Average Profit (10x): 176.1 
-Average Profit per Div (2.87x): 50.45 
+Winged Reliquary     |     100.95
+Winged Abyss         |      73.36
+Winged Divination    |      58.68
+Winged Ambush        |      58.68
+Winged Harbinger     |      58.68
+Average Profit (10x): 156.2 
+Average Profit per Div (2.97x): 46.39 
 Upgrading Gilded is Profitable
-Buy ['Torment', 'Sulphite', 'Legion', 'Cartography', 'Breach', 'Bestiary', 'Shaper', 'Elder', 'Blight', 'Expedition', 'Ultimatum']
+Buy ['Sulphite', 'Legion', 'Cartography', 'Breach', 'Bestiary', 'Shaper', 'Elder', 'Torment', 'Blight', 'Expedition', 'Ultimatum']
 
 Gilded Not Profitable
 
@@ -24,21 +24,24 @@ Polished Not Profitable
 
 ----------Essence----------
 
-Deafening Not Profitable
+Deafening Loathing   |       20.0
+Deafening Scorn      |       16.0
+Deafening Contempt   |       11.0
+Deafening Envy       |       11.0
+Deafening Rage       |       10.0
+Deafening Spite      |       10.0
+Deafening Zeal       |       10.0
+Deafening Hatred     |        7.0
+Deafening Wrath      |        7.0
+Average Profit (9x): 3.6 
+Average Profit per Div (19.22x): 7.69 
+Upgrading None is NOT Profitable
+Buy ['Anger', 'Sorrow', 'Woe', 'Fear', 'Greed', 'Misery', 'Torment', 'Anguish', 'Doubt', 'Dread', 'Suffering']
 
 Shrieking Not Profitable
 
 
 ----------DeliriumOrb----------
 
-Diviner's Orb        |       40.0
-Fine Orb             |       40.0
-Abyssal Orb          |       30.0
-Singular Orb         |       30.0
-Obscured Orb         |       29.0
-Fossilised Orb       |       27.0
-Average Profit (10x): 4.2 
-Average Profit per Div (5.15x): 2.16 
-Upgrading None is NOT Profitable
-Buy ['Orb', 'Orb', 'Orb', 'Orb', 'Orb', 'Orb', 'Orb', 'Orb', 'Orb', 'Orb']
+Orb Not Profitable
 

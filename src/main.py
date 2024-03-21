@@ -63,7 +63,6 @@ def main():
         api_data["CURRENCY"],
     )
     start_sanctum_main(api_data["CURRENCY"])
-    start_sextant_main(api_data["COMPASS_PRICES"], api_data["CURRENCY"])
     start_awakened_main(api_data["GEM"], api_data["BEAST"], api_data["CURRENCY"])
 
 
