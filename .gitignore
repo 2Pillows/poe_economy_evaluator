@@ -1,5 +1,5 @@
 # file that returns urls for api endpoints
-api_urls.py
+api_data.py
 
 
 # Github Python template
