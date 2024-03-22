@@ -7,6 +7,5 @@ poe_economy_evaluator is not affiliated with or endorsed by Grinding Gear Games.
 - Leveling Awakened Gems
 - Harvest Rolling Scarabs, Essence, and Delirium Orbs
 - Sanctum Rewards
-- Sextant Rolling
 
 View economy evaluations in `results`
