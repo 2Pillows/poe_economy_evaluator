@@ -1,57 +1,39 @@
 
 ---------- Lifeforce per Chaos ----------
 
-Yellow: 18.26
-Red: 19.83
+Yellow: 17.84
+Red: 18.42
 Blue: 22.0
-
-----------Scarab----------
-
-Winged Reliquary     |      78.56
-Winged Abyss         |       75.0
-Winged Ambush        |      52.37
-Winged Harbinger     |      52.37
-Winged Divination    |       50.0
-Average Profit (10x): 118.0 
-Average Profit per Div (3.46x): 40.88 
-Upgrading Gilded is Profitable
-Buy ['Legion', 'Breach', 'Torment', 'Ultimatum', 'Blight', 'Cartography', 'Sulphite', 'Bestiary', 'Shaper', 'Elder', 'Expedition']
-
-Gilded Not Profitable
-
-Polished Not Profitable
-
 
 ----------Essence----------
 
 Deafening Loathing   |       18.0
 Deafening Scorn      |       16.0
 Deafening Contempt   |       12.0
-Deafening Envy       |       11.0
+Deafening Envy       |      11.24
 Deafening Rage       |       10.0
 Deafening Spite      |       10.0
 Deafening Zeal       |       10.0
 Deafening Wrath      |        8.0
 Deafening Hatred     |        7.0
-Average Profit (9x): 6.3 
-Average Profit per Div (20.52x): 14.37 
+Deafening Torment    |        7.0
+Average Profit (9x): 4.32 
+Average Profit per Div (21.86x): 10.49 
 Upgrading None is NOT Profitable
-Buy ['Anger', 'Sorrow', 'Woe', 'Fear', 'Greed', 'Misery', 'Torment', 'Anguish', 'Doubt', 'Dread', 'Suffering']
+Buy ['Anger', 'Sorrow', 'Woe', 'Fear', 'Greed', 'Misery', 'Anguish', 'Doubt', 'Dread', 'Suffering']
 
 Shrieking Not Profitable
 
 
 ----------DeliriumOrb----------
 
-Diviner's Orb        |       39.3
-Fine Orb             |       38.4
-Singular Orb         |       32.9
-Obscured Orb         |       30.0
-Abyssal Orb          |       29.0
-Thaumaturge's Orb    |       29.0
+Diviner's Orb        |       38.0
+Fine Orb             |       38.0
+Singular Orb         |       30.0
+Obscured Orb         |       28.1
 Blighted Orb         |       28.0
-Average Profit (10x): 2.2 
-Average Profit per Div (5.37x): 1.18 
+Average Profit (10x): 2.1 
+Average Profit per Div (6.05x): 1.27 
 Upgrading None is NOT Profitable
-Buy ['Orb', 'Orb', 'Orb', 'Orb', 'Orb', 'Orb', 'Orb', 'Orb', 'Orb']
+Buy ['Orb', 'Orb', 'Orb', 'Orb', 'Orb', 'Orb', 'Orb', 'Orb', 'Orb', 'Orb', 'Orb']
 

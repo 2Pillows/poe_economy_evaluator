@@ -11,7 +11,6 @@ def main():
     api_data = get_api_data()
 
     start_harvest_main(
-        api_data["SCARAB"],
         api_data["ESSENCE"],
         api_data["DELIRIUMORB"],
         api_data["CURRENCY"],
