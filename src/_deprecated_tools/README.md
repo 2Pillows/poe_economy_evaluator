@@ -1,13 +1,13 @@
-# Deprecated Information
+# Deprecated Tools
 
 ## Gem Alt Qualities
 
-Alternate Quality gems were removed in place of Transfigured gems.
+3.23 - Alternate Quality gems were removed in place of Transfigured gems.
 
 ## Sextant Rolling
 
-Sextants removed.
+3.24 - Sextants removed.
 
 ## Scarab Harvest Rolling
 
-Harvest crafting option to change a stack of Scarabs to a different type has been removed.
+3.24 - Harvest crafting option to change a stack of Scarabs to a different type has been removed.

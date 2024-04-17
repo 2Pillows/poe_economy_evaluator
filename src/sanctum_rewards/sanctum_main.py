@@ -1,5 +1,7 @@
 # sanctum_main.py
 
+from api_data import API_Data
+
 import os
 
 
@@ -13,6 +15,28 @@ CUR_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(os.path.dirname(CUR_DIR))
 RESULTS_FILE = os.path.join(PROJECT_DIR, "results", "sanctum_rewards.txt")
 REWARD_FILE = os.path.join(CUR_DIR, "reward_data.txt")
+
+
+def start_sanctum_main():
+    reward_data = get_reward_data(REWARD_FILE)
+
+    currency_prices = {
+        item["currencyTypeName"]: item["chaosEquivalent"]
+        for item in API_Data.currency_data
+    }
+
+    all_rewards = calculate_chaos(reward_data, currency_prices)
+
+    good_rewards = [
+        reward_data
+        for reward_data in all_rewards
+        if any(chaos > MIN_CHAOS for chaos in reward_data[CHAOS_KEY])
+    ]
+
+    sorted_rewards = sorted(all_rewards, key=lambda x: x[CHAOS_KEY][-1], reverse=True)
+
+    write_to_file(sorted_rewards)
+    # os.system(f"start {RESULTS_FILE}")
 
 
 def get_reward_data(file):
@@ -75,24 +99,3 @@ def write_to_file(reward_data):
             chaos_equivs = reward[CHAOS_KEY]
             formatted_line = f"{name:25} | {round(chaos_equivs[0])}, {round(chaos_equivs[1])}, {round(chaos_equivs[2])}"
             file.write(formatted_line + "\n")
-
-
-def start_sanctum_main(CURRENCY_DATA):
-    reward_data = get_reward_data(REWARD_FILE)
-
-    currency_prices = {
-        item["currencyTypeName"]: item["chaosEquivalent"] for item in CURRENCY_DATA
-    }
-
-    all_rewards = calculate_chaos(reward_data, currency_prices)
-
-    good_rewards = [
-        reward_data
-        for reward_data in all_rewards
-        if any(chaos > MIN_CHAOS for chaos in reward_data[CHAOS_KEY])
-    ]
-
-    sorted_rewards = sorted(all_rewards, key=lambda x: x[CHAOS_KEY][-1], reverse=True)
-
-    write_to_file(sorted_rewards)
-    # os.system(f"start {RESULTS_FILE}")
