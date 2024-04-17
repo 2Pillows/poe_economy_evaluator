@@ -5,8 +5,12 @@ poe_economy_evaluator is not affiliated with or endorsed by Grinding Gear Games.
 ## Available Tools
 
 - Leveling Awakened Gems
-- Harvest Rolling Essence and Delirium Orbs
+- Chaos Resistance Crafting
+- All Harvest Rolling Options
+- Base Types for Influence Rolling
 - Sanctum Rewards
+- Six Linking
+- T17 Fragment Drops
 
 View tools in `results`
 
