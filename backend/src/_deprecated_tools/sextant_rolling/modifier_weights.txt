@@ -1,0 +1,207 @@
+Boss Drop Unique:
+	weight: 500
+
+Shaper Guardian:
+	weight: 50
+
+Elder Guardian:
+	weight: 50
+
+Conqueror Map:
+	weight: 50
+
+Unidentified Map:
+	weight: 250
+
+Fire Monsters:
+	weight: 1000
+
+Cold Monsters:
+	weight: 1000
+
+Lightning Monsters:
+	weight: 1000
+
+Physical Monsters:
+	weight: 1000
+
+Chaos Monsters:
+	weight: 1000
+
+Unique Monsters Drop Corrupted:
+	weight: 250
+
+Map 20% Quality:
+	weight: 500
+
+Map Quality to Rarity:
+	weight: 500
+
+Alluring:
+	weight: 10
+
+Einhar:
+	weight: 125
+
+Alva:
+	weight: 125
+
+Niko:
+	weight: 125
+
+Jun:
+	weight: 125
+
+Strongbox Corrupted:
+	weight: 500
+
+Boss Drop Vaal:
+	weight: 500
+
+Magic Pack Size:
+	weight: 500
+
+Rogue Exiles:
+	weight: 500
+
+Rare Map Rare Packs:
+	weight: 1000
+
+Reflected:
+	weight: 1000
+
+Mysterious Barrels:
+	weight: 250
+
+Strongbox Enraged:
+	weight: 250
+
+Hunted Traitors:
+	weight: 250
+
+Convert Monsters:
+	weight: 1000
+
+Flasks Instant:
+	weight: 1000
+
+Bodyguards:
+	weight: 250
+
+Breach:
+	weight: 250
+
+Xoph:
+	weight: 50
+
+Tul:
+	weight: 50
+
+Esh:
+	weight: 50
+
+Uul-Netol:
+	weight: 50
+
+Chayula:
+	weight: 50
+
+Abyss:
+	weight: 250
+
+Gloom Shrine:
+	weight: 1000
+
+Resonating Shrine:
+	weight: 1000
+
+Essence:
+	weight: 500
+
+8 Modifiers:
+	weight: 50
+
+Copy of Beasts:
+	weight: 50
+
+Runic Monster Markers:
+	weight: 50
+
+Splinters Emblems Duplicate:
+	weight: 50
+
+Ultimatum:
+	weight: 100
+
+Oils Tier:
+	weight: 50
+
+Syndicate Intelligence:
+	weight: 50
+
+Delirium Reward:
+	weight: 50
+
+Blue Plants:
+	weight: 50
+
+Purple Plants:
+	weight: 50
+
+Yellow Plants:
+	weight: 50
+
+Contracts Implicit:
+	weight: 50
+
+Ritual Rerolling:
+	weight: 50
+
+Mysterious Harbinger:
+	weight: 250
+
+Vaal Soul On Kill:
+	weight: 500
+
+Vaal Monsters Items Corrupted:
+	weight: 250
+
+Beyond:
+	weight: 250
+
+Rusted Scarab:
+	weight: 520
+
+Polished Scarab:
+	weight: 175
+
+Gilded Scarab:
+	weight: 60
+
+Tormented Heretic:
+	weight: 250
+
+Tormented Graverobber:
+	weight: 250
+
+Mortal/Sacrifice Fragment 8 Packs:
+	weight: 250
+
+Soul Gain Prevention:
+	weight: 250
+
+Legion:
+	weight: 250
+
+Blight:
+	weight: 250
+
+Mirror of Delirium:
+	weight: 100
+
+Sacred Grove:
+	weight: 100
+
+Smuggler's Cache:
+	weight: 250
+

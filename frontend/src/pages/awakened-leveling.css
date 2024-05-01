@@ -1,0 +1,57 @@
+.gem-table-wrapper {
+    width: 80%; 
+}
+
+.gem-table {
+    width: 100%; 
+}
+
+
+.table-name {
+    text-align: center;
+    /* border-style: solid; */
+    width: 40%;
+}
+
+.table-profit, .table-buy, .table-sell, .price-label {
+
+    align-items: center;
+    /* border-style: solid; */
+}
+
+
+
+
+.gem-name {
+    /* border-style: solid; */
+}
+
+.gem-links {
+    padding-left: 5px;
+    vertical-align: super;
+    font-size: x-small;
+}
+
+.gem-profit, .gem-buy, .gem-sell {
+    /* border-style: solid; */
+    text-align: center;
+}
+
+.price-separator {
+    padding: 10px;
+}
+
+.gem-chaos, .gem-divine {
+    display: inline-block;
+    width: 50px;
+}
+
+.chaos-label, .divine-label {
+    font-size: small;
+    display: inline-block;
+    width: 50px;
+}
+
+input[type="number"] {
+    appearance: textfield;
+}

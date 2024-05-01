@@ -1,0 +1,87 @@
+
+---------- Lifeforce per Chaos ----------
+
+Yellow:  43 per chaos | 5628 per div
+Blue:    60 per chaos | 7774 per div
+Red:     66 per chaos | 8486 per div 
+
+---------- Mortal Fragment ----------
+
+Avg Profit per Divine (x65): 137.33
+
+Lifeforce: Blue
+Avg Rolls: 1
+
+Sell: Ignorance, Rage, Grief
+Buy: Hope
+
+---------- Elder Fragment ----------
+
+Avg Profit per Divine (x43): 30.33
+
+Lifeforce: Blue
+Avg Rolls: 1
+
+Sell: Constriction, Purification, Enslavement
+Buy: Eradication
+
+---------- Catalyst ----------
+
+Avg Profit per Divine (x259): 13.55
+
+Lifeforce: Yellow
+Avg Rolls: 1
+
+Sell: Prismatic, Fertile
+Buy: Abrasive, Imbued, Noxious, Turbulent, Intrinsic, Tempering, Accelerating, Unstable
+
+---------- Fossil ----------
+
+Avg Profit per Divine (x130): 6.67
+
+Lifeforce: Red
+Avg Rolls: 2
+
+Sell: Perfect, Sanctified, Shuddering, Bound, Corroded, Fundamental, Gilded, Prismatic, Serrated
+Buy: Aetheric, Deft, Lucent, Dense, Scorched, Pristine, Metallic, Jagged, Aberrant, Frigid
+
+---------- Breach Splinter ----------
+
+Avg Profit per Divine (x518): 5.93
+
+Lifeforce: Red
+Avg Rolls: 1
+
+Sell: Chayula, Uul-Netol
+Buy: Tul, Xoph, Esh
+
+---------- Essence ----------
+
+Avg Profit per Divine (x117): 3.0
+
+Lifeforce: Blue
+Avg Rolls: 1
+
+Sell: Scorn, Envy, Spite, Loathing, Zeal, Misery, Rage, Greed, Woe, Sorrow
+Buy: Suffering, Doubt, Dread, Anguish, Hatred, Contempt, Wrath, Anger, Torment, Fear
+
+---------- Delirium Orb ----------
+
+Avg Profit per Divine (x43): 1.55
+
+Lifeforce: Blue
+Avg Rolls: 1
+
+Sell: Skittering, Diviner, Fine, Foreboding, Cartographer, Fossilised
+Buy: Armoursmith, Jeweller, Blacksmith, Whispering, Abyssal, Blighted, Timeless, Thaumaturge, Fragmented, Singular
+
+---------- Breach Stone ----------
+
+Avg Profit per Divine (x13): 0.33
+
+Lifeforce: Red
+Avg Rolls: 1
+
+Sell: Chayula, Uul-Netol
+Buy: Tul, Esh, Xoph
+

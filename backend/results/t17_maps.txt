@@ -1,0 +1,34 @@
+
+---------- Map Prices ----------
+
+Abomination: 60c
+Citadel: 36c
+Fortress: 80c
+Sanctuary: 40c
+Ziggurat: 60c
+
+---------- Fragment Prices ----------
+
+Reality: 191c
+Devouring: 151c
+Blazing: 30c
+Synthesising: 9c
+Awakening: 10c
+Decaying: 73c
+Cosmic: 20c
+
+---------- Map Profit w/ One Frag Dropping ----------
+
+Ziggurat: 57c
+Sanctuary: 24c
+Abomination: 17c
+Citadel: -2c
+Fortress: -46c
+
+---------- Map Profit w/ Two Frags Dropping ----------
+
+Ziggurat: 174c
+Abomination: 93c
+Sanctuary: 88c
+Citadel: 32c
+Fortress: -11c

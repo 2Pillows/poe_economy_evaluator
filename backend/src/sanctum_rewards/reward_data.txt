@@ -1,0 +1,50 @@
+Chromatic Orb
+Orb of Chance
+Orb of Alteration
+Jeweller's Orb
+Glassblower's Bauble
+	9
+	20
+	30
+
+Orb of Fusing
+Orb of Alchemy
+	6
+	14
+	20
+
+Chaos Orb
+Cartographer's Chisel
+Orb of Scouring
+Orb of Regret
+Orb of Binding
+	5
+	10
+	14
+	
+Orb of Horizons
+Vaal Orb
+Regal Orb
+Enkindling Orb
+Instilling Orb
+Blessed Orb
+Orb of Unmaking
+Gemcutter's Prism
+	4
+	8
+	12
+
+Exalted Orb
+Divine Orb
+Divine Vessel
+Orb of Annulment
+Veiled Chaos Orb
+	0
+	1
+	2
+
+Awakened Sextant
+	3
+	6
+	16
+
