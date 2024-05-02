@@ -9,8 +9,8 @@ Glassblower's Bauble      | 2, 4, 6
 Vaal Orb                  | 2, 4, 6
 Regal Orb                 | 2, 4, 6
 Orb of Unmaking           | 2, 3, 5
+Chromatic Orb             | 1, 2, 4
 Orb of Scouring           | 2, 3, 4
-Chromatic Orb             | 1, 2, 3
 Orb of Alchemy            | 1, 2, 3
 Cartographer's Chisel     | 1, 2, 3
 Orb of Regret             | 1, 2, 3

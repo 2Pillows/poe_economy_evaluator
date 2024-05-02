@@ -1,3 +1,22 @@
+
+
+.heading {
+    display: flex;
+}
+
+.options-grid {
+    position: absolute;
+    align-self: center;
+    right: 50px;
+    text-align: right;
+}
+
+.options-input {
+    width: 50px;
+    
+}
+
+
 .gem-table-wrapper {
     width: 80%; 
 }
@@ -18,8 +37,6 @@
     align-items: center;
     /* border-style: solid; */
 }
-
-
 
 
 .gem-name {

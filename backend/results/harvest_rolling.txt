@@ -1,23 +1,23 @@
 
 ---------- Lifeforce per Chaos ----------
 
-Yellow:  43 per chaos | 5623 per div
+Yellow:  43 per chaos | 5614 per div
 Blue:    59 per chaos | 7715 per div
 Red:     65 per chaos | 8475 per div 
 
 ---------- Mortal Fragment ----------
 
-Avg Profit per Divine (x65): 57.64
+Avg Profit per Divine (x26): 17.46
 
 Lifeforce: Blue
 Avg Rolls: 1
 
-Sell: Ignorance, Grief
-Buy: Hope, Rage
+Sell: Ignorance, Rage
+Buy: Grief, Hope
 
 ---------- Catalyst ----------
 
-Avg Profit per Divine (x261): 5.42
+Avg Profit per Divine (x261): 5.3
 
 Lifeforce: Yellow
 Avg Rolls: 1
@@ -27,21 +27,11 @@ Buy: Imbued, Noxious, Turbulent, Abrasive, Tempering, Accelerating, Unstable
 
 ---------- Fossil ----------
 
-Avg Profit per Divine (x131): 3.38
+Avg Profit per Divine (x131): 3.67
 
 Lifeforce: Red
 Avg Rolls: 1
 
 Sell: Perfect, Sanctified, Shuddering, Gilded, Bound, Corroded, Fundamental, Prismatic, Serrated
-Buy: Jagged, Aberrant, Scorched, Lucent, Metallic, Pristine, Frigid, Dense, Aetheric, Deft
-
----------- Essence ----------
-
-Avg Profit per Divine (x131): 1.13
-
-Lifeforce: Blue
-Avg Rolls: 1
-
-Sell: Scorn, Spite, Envy, Loathing, Zeal, Rage, Misery, Greed, Woe, Sorrow, Fear, Torment
-Buy: Suffering, Anger, Dread, Anguish, Wrath, Contempt, Hatred, Doubt
+Buy: Aberrant, Aetheric, Metallic, Dense, Scorched, Lucent, Frigid, Pristine, Jagged, Deft
 
