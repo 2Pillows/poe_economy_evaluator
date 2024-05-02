@@ -3,30 +3,39 @@ import axios from "axios";
 
 import "./awakened-leveling.css";
 
-const Awakened_Leveling = () => {
-  const [divine, setDivine] = useState(0);
-  const [gem_data, setGemData] = useState([]);
-  const [gem_margins, setGemMargins] = useState({});
-  const [gemcutter, setGemcutter] = useState(0);
-  const [wild_brambleback, setWildBrambleback] = useState(0);
+const Awakened_Leveling = ({ apiData }) => {
+  const [divine, setDivine] = useState(apiData ? apiData.divine : 0);
+  const [gem_data, setGemData] = useState(apiData ? apiData.gem_data : []);
+  const [gem_margins, setGemMargins] = useState(
+    apiData ? apiData.gem_margins : {}
+  );
+  const [gemcutter, setGemcutter] = useState(apiData ? apiData.gemcutter : 0);
+  const [wild_brambleback, setWildBrambleback] = useState(
+    apiData ? apiData.wild_brambleback : 0
+  );
 
-  // Function to fetch data from the API
-  const fetchData = async () => {
-    try {
-      const response = await axios.get(
-        "http://localhost:5000/api/awakened_leveling"
-      );
+  // // Function to fetch data from the API
+  // const fetchData = async () => {
+  //   try {
+  //     const response = await axios.get(
+  //       "http://localhost:5000/api/awakened_leveling"
+  //     );
 
-      // populate all data from api
-      setDivine(response.data.divine);
-      setGemData(response.data.gem_data);
-      setGemMargins(response.data.gem_margins);
-      setGemcutter(response.data.gemcutter);
-      setWildBrambleback(response.data.wild_brambleback);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
+  //     // populate all data from api
+  //     setDivine(response.data.divine);
+  //     setGemData(response.data.gem_data);
+  //     setGemMargins(response.data.gem_margins);
+  //     setGemcutter(response.data.gemcutter);
+  //     setWildBrambleback(response.data.wild_brambleback);
+  //   } catch (error) {
+  //     console.error("Error fetching data:", error);
+  //   }
+  // };
+
+  // // Fetch data on component mount
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
 
   // Function to handle input change and update divine state
   const handleInputChange = (event) => {
@@ -49,11 +58,6 @@ const Awakened_Leveling = () => {
       console.error("Error creating post:", error);
     }
   };
-
-  // Fetch data on component mount
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   const gemValueChange = (event) => {};
 
@@ -125,23 +129,22 @@ const Awakened_Leveling = () => {
     return (
       <table className="gem-table">
         <thead>
-          {" "}
           <tr>
-            <th class="table-name">Name</th>
-            <th class="table-profit">
+            <th className="table-name">Name</th>
+            <th className="table-profit">
               <span className="column-label">Profit</span>
               <br></br>
               <span className="chaos-label">chaos</span>
               <span className="price-separator">|</span>
               <span className="divine-label">divine</span>
             </th>
-            <th class="table-buy">
+            <th className="table-buy">
               <span className="column-label">Buy</span> <br></br>
               <span className="chaos-label">chaos</span>
               <span className="price-separator">|</span>
               <span className="divine-label">divine</span>
             </th>
-            <th class="table-sell">
+            <th className="table-sell">
               <span className="column-label">Sell</span>
               <br></br>
               <span className="chaos-label">chaos</span>
@@ -156,11 +159,11 @@ const Awakened_Leveling = () => {
   };
 
   return (
-    <div class="content">
-      <div class="heading">
-        <h1 class="content-title">Awakened Leveling</h1>
+    <div className="content">
+      <div className="heading">
+        <h1 className="content-title">Awakened Leveling</h1>
       </div>
-      <div class="info">
+      <div className="info">
         {/* Text field to display and edit the divine value */}
         <label>Divine:</label>
         <input type="number" value={gemcutter} onChange={handleInputChange} />
