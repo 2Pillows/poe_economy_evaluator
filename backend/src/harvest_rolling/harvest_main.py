@@ -473,13 +473,24 @@ def calc_prices(type_data: Type_Data):
         lifeforce_cost = type_data.lifeforce_used / type_data.lifeforce_type * num_rolls
 
         # probability * expected return (price - cost)
+
+        # probability of getting in x rolls = (1 - ((1 - (count / total_value)) ** num_rolls))
+        # expected return = (price - min price - lifeforce) IF POSITIVE, else (- min price - lifeforce)
+        #       will never sell if still at a loss for ev, so can't include price of item
         potential_ev = {
-            name: (1 - ((1 - (count / total_value)) ** num_rolls))
-            * (type_data.prices[name] - type_data.min_price - lifeforce_cost)
+            name: (
+                (1 - ((1 - (count / total_value)) ** num_rolls))
+                * (type_data.prices[name] - type_data.min_price - lifeforce_cost)
+                if (type_data.prices[name] - type_data.min_price - lifeforce_cost) >= 0
+                else (1 - ((1 - (count / total_value)) ** num_rolls))
+                * (-type_data.min_price - lifeforce_cost)
+            )
             for name, count in type_data.rolls.items()
         }
         total_ev = sum(potential_ev.values())
 
+        # if the total expected value is more than the maxmimum expected value,
+        # set current ev to maximum and check ev for rolling an additional time
         if total_ev > max_ev:
             expected_value = potential_ev
             max_ev = total_ev
@@ -488,14 +499,14 @@ def calc_prices(type_data: Type_Data):
         else:
             break
 
-    valuable = {name: value for name, value in expected_value.items() if value > 0}
-
+    # valuable items have positive ev
+    valuable = {name: value for name, value in expected_value.items() if value >= 0}
     valuable = dict(sorted(valuable.items(), key=lambda x: x[1], reverse=True))
 
     type_data.set_expected_value(expected_value)
     type_data.set_valuable(valuable)
 
-    # last roll didn't have better ev
+    # the final roll didn't have better ev, leading to breaking loop
     type_data.set_avg_rolls(num_rolls - 1)
 
 
