@@ -4,6 +4,7 @@ import axios from "axios";
 import "./awakened-leveling.css";
 
 const Awakened_Leveling = ({ apiData }) => {
+  console.log(apiData);
   const [divine, setDivine] = useState(apiData ? apiData.divine : 0);
   const [gem_data, setGemData] = useState(apiData ? apiData.gem_data : []);
   const [gem_margins, setGemMargins] = useState(

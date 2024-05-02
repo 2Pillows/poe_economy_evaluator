@@ -7,13 +7,13 @@ Red:     65 per chaos | 8475 per div
 
 ---------- Mortal Fragment ----------
 
-Avg Profit per Divine (x65): 133.14
+Avg Profit per Divine (x65): 57.64
 
 Lifeforce: Blue
 Avg Rolls: 1
 
-Sell: Ignorance, Rage, Grief
-Buy: Hope
+Sell: Ignorance, Grief
+Buy: Hope, Rage
 
 ---------- Catalyst ----------
 
@@ -33,7 +33,7 @@ Lifeforce: Red
 Avg Rolls: 1
 
 Sell: Perfect, Sanctified, Shuddering, Gilded, Bound, Corroded, Fundamental, Prismatic, Serrated
-Buy: Lucent, Aetheric, Deft, Scorched, Jagged, Dense, Aberrant, Frigid, Pristine, Metallic
+Buy: Jagged, Aberrant, Scorched, Lucent, Metallic, Pristine, Frigid, Dense, Aetheric, Deft
 
 ---------- Essence ----------
 
@@ -43,5 +43,5 @@ Lifeforce: Blue
 Avg Rolls: 1
 
 Sell: Scorn, Spite, Envy, Loathing, Zeal, Rage, Misery, Greed, Woe, Sorrow, Fear, Torment
-Buy: Contempt, Suffering, Anger, Hatred, Anguish, Wrath, Doubt, Dread
+Buy: Suffering, Anger, Dread, Anguish, Wrath, Contempt, Hatred, Doubt
 

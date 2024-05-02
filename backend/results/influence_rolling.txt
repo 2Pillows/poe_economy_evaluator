@@ -1,120 +1,117 @@
 
 ---------- Crafting Cost ----------
 
-Blue Lifeforce: 66 per chaos | 8484 per div
+Blue Lifeforce: 64 per chaos | 8367 per div
 Redeemer's Exalted Orb, Warlord's Exalted Orb: 30.0 chaos
 
 ---------- Base Types ----------
 
 Simplex Amulet
-	lv. 85: Avg Profit = 5085 c | 39.8 d
-		Buy: Shaper (30579.3)
-		Sell: Shaper (30579.3)
+	lv. 85: Avg Profit = 5206 c | 39.9 d
+		Buy: Shaper (31301.09)
+		Sell: Shaper (31301.09)
 
 Sacrificial Garb
-	lv. 85: Avg Profit = 403 c | 3.2 d
-		Buy: Base + Orb (50.0)
-		Sell: Hunter (1275.2), Redeemer (765.12)
-
-Cogwork Ring
-	lv. 84: Avg Profit = 346 c | 2.7 d
-		Buy: Base + Orb (157.51999999999998)
-		Sell: Hunter (1122.18), Warlord (612.1), Crusader (408.06)
-
-	lv. 86: Avg Profit = 246 c | 1.9 d
-		Buy: Base + Orb (285.03999999999996)
-		Sell: Warlord (1083.92), Crusader (459.07)
-
-	lv. 85: Avg Profit = 170 c | 1.3 d
-		Buy: Base + Orb (157.51999999999998)
-		Sell: Warlord (1083.92)
+	lv. 85: Avg Profit = 407 c | 3.1 d
+		Buy: Crusader (168.42)
+		Sell: Hunter (1305.3), Redeemer (783.18)
 
 Blizzard Crown
-	lv. 84: Avg Profit = 320 c | 2.5 d
-		Buy: Base + Orb (88.5)
-		Sell: Warlord (1632.26), Shaper (357.06)
+	lv. 84: Avg Profit = 390 c | 3.0 d
+		Buy: Shaper (378.54)
+		Sell: Warlord (2023.22)
 
-	lv. 85: Avg Profit = 235 c | 1.8 d
-		Buy: Base + Orb (259.53999999999996)
-		Sell: Warlord (969.15), Shaper (510.08)
+	lv. 86: Avg Profit = 186 c | 1.4 d
+		Buy: Shaper (398.12)
+		Sell: Warlord (783.18), Shaper (398.12)
 
-	lv. 86: Avg Profit = 172 c | 1.3 d
-		Buy: Base + Orb (157.51999999999998)
-		Sell: Warlord (765.12), Shaper (331.55)
+	lv. 85: Avg Profit = 163 c | 1.3 d
+		Buy: Shaper (391.59)
+		Sell: Warlord (652.65), Shaper (391.59)
 
-	lv. 83: Avg Profit = 107 c | 0.8 d
-		Buy: Base + Orb (40.0)
-		Sell: Warlord (255.04), Hunter (233.02), Redeemer (127.52)
+Cogwork Ring
+	lv. 85: Avg Profit = 308 c | 2.4 d
+		Buy: Crusader (704.86)
+		Sell: Warlord (1207.4), Crusader (704.86)
 
-Vermillion Ring
-	lv. 86: Avg Profit = 183 c | 1.4 d
-		Buy: Base + Orb (40.0)
-		Sell: Warlord (344.3), Hunter (255.04), Crusader (242.29), Redeemer (191.28)
+	lv. 84: Avg Profit = 298 c | 2.3 d
+		Buy: Warlord (652.65)
+		Sell: Hunter (1200.88), Warlord (652.65)
 
-	lv. 85: Avg Profit = 140 c | 1.1 d
-		Buy: Elder (29.5)
-		Sell: Redeemer (255.04), Warlord (244.51), Hunter (242.29)
-
-	lv. 84: Avg Profit = 121 c | 0.9 d
-		Buy: Elder (29.0)
-		Sell: Warlord (382.56), Redeemer (191.28)
+	lv. 86: Avg Profit = 233 c | 1.8 d
+		Buy: Crusader (391.59)
+		Sell: Warlord (1070.35), Crusader (391.59)
 
 Runic Sabatons
-	lv. 85: Avg Profit = 180 c | 1.4 d
-		Buy: Base + Orb (40.0)
-		Sell: Crusader (1147.68)
+	lv. 85: Avg Profit = 218 c | 1.7 d
+		Buy: Crusader (1370.56)
+		Sell: Crusader (1370.56)
+
+Micro-Distillery Belt
+	lv. 84: Avg Profit = 176 c | 1.4 d
+		Buy: Hunter (1122.56)
+		Sell: Hunter (1122.56)
+
+	lv. 85: Avg Profit = 111 c | 0.9 d
+		Buy: Hunter (730.97)
+		Sell: Hunter (730.97)
+
+Vermillion Ring
+	lv. 86: Avg Profit = 169 c | 1.3 d
+		Buy: Shaper (60.0)
+		Sell: Warlord (326.32), Crusader (234.95), Redeemer (195.8), Hunter (195.8)
+
+	lv. 85: Avg Profit = 123 c | 0.9 d
+		Buy: Elder (25.0)
+		Sell: Warlord (261.06), Hunter (261.06), Redeemer (130.53)
 
 Stygian Vise
-	lv. 85: Avg Profit = 164 c | 1.3 d
-		Buy: Base + Orb (36.45)
-		Sell: Shaper (382.56), Hunter (255.04)
+	lv. 85: Avg Profit = 167 c | 1.3 d
+		Buy: Crusader (50.0)
+		Sell: Shaper (391.59), Hunter (261.06)
 
-	lv. 86: Avg Profit = 153 c | 1.2 d
-		Buy: Base + Orb (36.7)
-		Sell: Hunter (255.04), Shaper (255.04)
+	lv. 86: Avg Profit = 155 c | 1.2 d
+		Buy: Crusader (80.0)
+		Sell: Hunter (261.06), Shaper (261.06)
 
-	lv. 84: Avg Profit = 148 c | 1.2 d
-		Buy: Base + Orb (39.0)
-		Sell: Shaper (255.04), Hunter (255.04), Redeemer (172.15)
-
-Fugitive Boots
-	lv. 86: Avg Profit = 152 c | 1.2 d
-		Buy: Base + Orb (50.0)
-		Sell: Redeemer (255.04), Hunter (255.04)
-
-Crystal Belt
-	lv. 85: Avg Profit = 140 c | 1.1 d
-		Buy: Elder (15.0)
-		Sell: Hunter (510.08), Crusader (255.04)
-
-	lv. 86: Avg Profit = 124 c | 1.0 d
-		Buy: Shaper (37.4)
-		Sell: Crusader (382.56), Hunter (255.04)
-
-	lv. 84: Avg Profit = 119 c | 0.9 d
-		Buy: Elder (20.0)
-		Sell: Hunter (320.08), Crusader (255.04), Redeemer (148.51)
-
-Geodesic Ring
-	lv. 84: Avg Profit = 138 c | 1.1 d
-		Buy: Base + Orb (40.0)
-		Sell: Crusader (892.64)
-
-	lv. 85: Avg Profit = 127 c | 1.0 d
-		Buy: Base + Orb (40.0)
-		Sell: Crusader (828.88)
+	lv. 84: Avg Profit = 152 c | 1.2 d
+		Buy: Crusader (60.0)
+		Sell: Shaper (261.06), Hunter (261.06)
 
 Manifold Ring
-	lv. 83: Avg Profit = 138 c | 1.1 d
-		Buy: Crusader (892.64)
-		Sell: Crusader (892.64)
+	lv. 83: Avg Profit = 163 c | 1.3 d
+		Buy: Crusader (1044.24)
+		Sell: Crusader (1044.24)
 
-	lv. 86: Avg Profit = 127 c | 1.0 d
-		Buy: Base + Orb (117.0)
-		Sell: Crusader (828.88)
+	lv. 86: Avg Profit = 108 c | 0.8 d
+		Buy: Crusader (711.39)
+		Sell: Crusader (711.39)
+
+Fugitive Boots
+	lv. 86: Avg Profit = 153 c | 1.2 d
+		Buy: Shaper (100.0)
+		Sell: Redeemer (261.06), Hunter (261.06)
+
+Crystal Belt
+	lv. 86: Avg Profit = 148 c | 1.1 d
+		Buy: Shaper (36.8)
+		Sell: Crusader (391.59), Hunter (366.79)
+
+	lv. 85: Avg Profit = 143 c | 1.1 d
+		Buy: Elder (15.4)
+		Sell: Hunter (522.12), Crusader (261.06)
+
+Geodesic Ring
+	lv. 85: Avg Profit = 146 c | 1.1 d
+		Buy: Crusader (939.82)
+		Sell: Crusader (939.82)
+
+	lv. 84: Avg Profit = 133 c | 1.0 d
+		Buy: Crusader (861.5)
+		Sell: Crusader (861.5)
 
 Opal Ring
-	lv. 85: Avg Profit = 108 c | 0.8 d
-		Buy: Shaper (12.4)
-		Sell: Redeemer (255.04), Hunter (168.33), Warlord (127.52), Crusader (122.67)
+	lv. 86: Avg Profit = 135 c | 1.0 d
+		Buy: Shaper (15.0)
+		Sell: Redeemer (378.54), Hunter (236.26), Warlord (216.64)
 
