@@ -2,6 +2,10 @@
 
 poe_economy_evaluator is not affiliated with or endorsed by Grinding Gear Games.
 
+## Website Interface
+
+Currently working on a website interface to replace the result text files. Will provide direct links to trade website and the ability to modify prices if they aren't accurate with trade prices.
+
 ## Available Tools
 
 - Leveling Awakened Gems
