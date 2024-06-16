@@ -6,7 +6,7 @@ from typing import List
 from backend.src.api_data import API_Data, Singleton
 from dataclasses import dataclass
 
-RESULTS_FILE = "backend/results/harvest_rolling.txt"
+RESULTS_FILE = "/workspaces/poe_economy_evaluator/backend/results/harvest_rolling.txt"
 
 
 @dataclass

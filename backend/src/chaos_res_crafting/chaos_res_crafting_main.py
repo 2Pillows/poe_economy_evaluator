@@ -3,7 +3,9 @@
 from backend.src.api_data import API_Data, Singleton
 from dataclasses import dataclass
 
-RESULTS_FILE = "backend/results/chaos_res_crafting.txt"
+RESULTS_FILE = (
+    "/workspaces/poe_economy_evaluator/backend/results/chaos_res_crafting.txt"
+)
 
 # Harvest crafting for T1 Chaos Res is 1/7
 # Each reforge chaos is 70 yellow lifeforce

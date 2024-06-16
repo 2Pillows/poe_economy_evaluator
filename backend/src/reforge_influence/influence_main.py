@@ -3,7 +3,7 @@
 from backend.src.api_data import API_Data, Singleton
 from dataclasses import dataclass
 
-RESULTS_FILE = "backend/results/influence_rolling.txt"
+RESULTS_FILE = "/workspaces/poe_economy_evaluator/backend/results/influence_rolling.txt"
 
 MIN_PROFIT = 100
 

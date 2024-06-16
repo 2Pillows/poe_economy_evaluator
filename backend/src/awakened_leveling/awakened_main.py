@@ -4,7 +4,7 @@ from backend.src.api_data import API_Data, Singleton
 from dataclasses import dataclass
 
 MIN_PROFIT = 10
-RESULTS_FILE = "backend/results/awakened_leveling.txt"
+RESULTS_FILE = "/workspaces/poe_economy_evaluator/backend/results/awakened_leveling.txt"
 
 
 @dataclass

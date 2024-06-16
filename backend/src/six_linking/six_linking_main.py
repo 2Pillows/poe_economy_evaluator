@@ -9,7 +9,7 @@ AVG_JEWELLERS = 223
 BENCH_JEWELLERS = 350
 BENCH_FUSING = 1500
 
-RESULTS_FILE = "backend/results/six_linking.txt"
+RESULTS_FILE = "/workspaces/poe_economy_evaluator/backend/results/six_linking.txt"
 
 MIN_PROFIT = 20
 

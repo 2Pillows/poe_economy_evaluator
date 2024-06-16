@@ -3,7 +3,7 @@
 from backend.src.api_data import API_Data, Singleton
 from dataclasses import dataclass
 
-RESULTS_FILE = "backend/results/t17_maps.txt"
+RESULTS_FILE = "/workspaces/poe_economy_evaluator/backend/results/t17_maps.txt"
 
 
 @dataclass
