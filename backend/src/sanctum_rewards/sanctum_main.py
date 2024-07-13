@@ -11,7 +11,9 @@ CHAOS_KEY = "chaos_equiv"
 MIN_CHAOS = 10
 
 RESULTS_FILE = "/workspaces/poe_economy_evaluator/backend/results/sanctum_rewards.txt"
-REWARD_FILE = "backend/src/sanctum_rewards/reward_data.txt"
+REWARD_FILE = (
+    "/workspaces/poe_economy_evaluator/backend/src/sanctum_rewards/reward_data.txt"
+)
 
 
 @dataclass
