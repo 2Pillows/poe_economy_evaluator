@@ -1,9 +1,7 @@
 # file that returns urls for api endpoints
 api_data.py
 
-to_add.py
-build_notes.py
-strat_notes.py
+notes/
 
 # Github Python template
 

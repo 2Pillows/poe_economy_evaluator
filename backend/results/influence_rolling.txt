@@ -1,0 +1,42 @@
+
+---------- Crafting Cost ----------
+
+Blue Lifeforce: 94 per chaos | 10769 per div
+Redeemer's Exalted Orb: 50.0 chaos
+
+---------- Base Types ----------
+
+Simplex Amulet
+	lv. 86: Avg Profit = 5115 c | 44.5 d
+		Buy: Base + Orb (30483.12)
+		Sell: Shaper (30785.16)
+
+Vermillion Ring
+	lv. 86: Avg Profit = 356 c | 3.1 d
+		Buy: Base + Orb (110.0)
+		Sell: Warlord (1010.86), Hunter (689.22), Shaper (528.4)
+
+Gripped Gloves
+	lv. 86: Avg Profit = 314 c | 2.7 d
+		Buy: Shaper (25.0)
+		Sell: Hunter (1952.79)
+
+Stygian Vise
+	lv. 86: Avg Profit = 272 c | 2.4 d
+		Buy: Base + Orb (110.0)
+		Sell: Hunter (459.48), Elder (402.04), Redeemer (367.58), Shaper (344.61)
+
+	lv. 85: Avg Profit = 157 c | 1.4 d
+		Buy: Redeemer (104.41)
+		Sell: Warlord (413.53), Hunter (229.74), Shaper (172.3)
+
+Manifold Ring
+	lv. 85: Avg Profit = 210 c | 1.8 d
+		Buy: Base + Orb (204.45999999999998)
+		Sell: Crusader (1355.47)
+
+Sacrificial Garb
+	lv. 85: Avg Profit = 176 c | 1.5 d
+		Buy: Base + Orb (114.0)
+		Sell: Hunter (574.35), Redeemer (574.35)
+

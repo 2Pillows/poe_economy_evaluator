@@ -1,0 +1,23 @@
+Divine Orb                | 0, 115, 230
+Chaos Orb                 | 5, 10, 14
+Exalted Orb               | 0, 6, 12
+Orb of Annulment          | 0, 5, 10
+Enkindling Orb            | 3, 5, 8
+Gemcutter's Prism         | 3, 5, 8
+Vaal Orb                  | 2, 4, 6
+Orb of Alteration         | 1, 3, 5
+Glassblower's Bauble      | 2, 4, 5
+Chromatic Orb             | 1, 2, 4
+Regal Orb                 | 1, 3, 4
+Orb of Unmaking           | 1, 3, 4
+Cartographer's Chisel     | 1, 2, 3
+Orb of Scouring           | 1, 2, 3
+Orb of Regret             | 1, 2, 3
+Blessed Orb               | 1, 2, 3
+Orb of Chance             | 0, 1, 2
+Jeweller's Orb            | 1, 1, 2
+Orb of Fusing             | 0, 1, 2
+Orb of Alchemy            | 1, 1, 2
+Orb of Horizons           | 1, 2, 2
+Instilling Orb            | 1, 1, 2
+Orb of Binding            | 0, 1, 1
