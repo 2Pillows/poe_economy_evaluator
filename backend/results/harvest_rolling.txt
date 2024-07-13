@@ -1,23 +1,33 @@
 
 ---------- Lifeforce per Chaos ----------
 
-Yellow:  43 per chaos | 4939 per div
-Blue:    94 per chaos | 10770 per div
-Red:     93 per chaos | 10687 per div 
+Yellow:  41 per chaos | 4769 per div
+Blue:    93 per chaos | 10691 per div
+Red:     92 per chaos | 10573 per div 
 
 ---------- Fossil ----------
 
-Avg Profit per Divine (x115): 9.68
+Avg Profit per Divine (x115): 182.33
 
 Lifeforce: Red
 Avg Rolls: 2
 
 Sell: Gilded, Perfect, Sanctified, Shuddering, Corroded, Bound, Deft, Fundamental, Serrated
-Buy: Aberrant, Jagged, Prismatic, Pristine, Dense, Lucent, Metallic, Scorched, Aetheric, Frigid
+Buy: Metallic, Jagged, Frigid, Aetheric, Dense, Lucent, Aberrant, Scorched, Prismatic, Pristine
+
+---------- Essence ----------
+
+Avg Profit per Divine (x115): 78.67
+
+Lifeforce: Blue
+Avg Rolls: 1
+
+Sell: Scorn, Envy, Spite, Loathing, Zeal, Greed, Misery, Rage, Anger, Woe, Sorrow, Torment, Fear, Wrath, Contempt, Hatred, Dread
+Buy: Doubt, Anguish, Suffering
 
 ---------- Catalyst ----------
 
-Avg Profit per Divine (x230): 7.5
+Avg Profit per Divine (x230): 69.62
 
 Lifeforce: Yellow
 Avg Rolls: 1
@@ -25,19 +35,9 @@ Avg Rolls: 1
 Sell: Prismatic, Fertile, Intrinsic
 Buy: Imbued, Noxious, Turbulent, Abrasive, Tempering, Accelerating, Unstable
 
----------- Essence ----------
-
-Avg Profit per Divine (x115): 3.93
-
-Lifeforce: Blue
-Avg Rolls: 1
-
-Sell: Scorn, Envy, Spite, Loathing, Zeal, Greed, Misery, Rage, Anger, Woe, Sorrow, Torment, Fear, Wrath, Contempt, Hatred, Dread
-Buy: Suffering, Anguish, Doubt
-
 ---------- Delirium Orb ----------
 
-Avg Profit per Divine (x57): 1.34
+Avg Profit per Divine (x57): 22.7
 
 Lifeforce: Blue
 Avg Rolls: 1

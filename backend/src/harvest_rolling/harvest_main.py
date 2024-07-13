@@ -54,10 +54,11 @@ class Type_Data:
         api_data = API_Data()
         self.expected_value = expected_value
 
-        # avg expected value
-        self.profit_per_roll = sum(self.expected_value.values()) / len(
-            self.expected_value
-        )
+        # avg expected value, unsure if need to get avg of evs or just sum since probability already acounted for
+        # self.profit_per_roll = sum(self.expected_value.values()) / len(
+        #     self.expected_value
+        # )
+        self.profit_per_roll = sum(self.expected_value.values())
 
         self.rolls_per_div = api_data.divine / self.min_price
         self.profit_per_div = self.profit_per_roll * self.rolls_per_div
@@ -400,6 +401,8 @@ def start_harvest_main():
     ]
 
     for reroll_type in harvest_rerolls:
+        # if reroll_type.type == "Essence":
+        #     calc_prices(reroll_type)
         calc_prices(reroll_type)
 
     harvest_rerolls = sorted(
@@ -419,13 +422,13 @@ def write_results(harvest_data: HarvestRollingData):
         file.write("\n---------- Lifeforce per Chaos ----------\n\n")
 
         file.write(
-            f"{'Yellow:':8} {round(harvest_data.lifeforce_yellow - 5)} per chaos | {round((harvest_data.lifeforce_yellow - 5) * harvest_data.divine)} per div\n"
+            f"{'Yellow:':8} {round(harvest_data.lifeforce_yellow)} per chaos | {round((harvest_data.lifeforce_yellow) * harvest_data.divine)} per div\n"
         )
         file.write(
-            f"{'Blue:':8} {round(harvest_data.lifeforce_blue - 5)} per chaos | {round((harvest_data.lifeforce_blue - 5) * harvest_data.divine)} per div\n"
+            f"{'Blue:':8} {round(harvest_data.lifeforce_blue)} per chaos | {round((harvest_data.lifeforce_blue) * harvest_data.divine)} per div\n"
         )
         file.write(
-            f"{'Red:':8} {round(harvest_data.lifeforce_red - 5)} per chaos | {round((harvest_data.lifeforce_red - 5) * harvest_data.divine)} per div \n\n"
+            f"{'Red:':8} {round(harvest_data.lifeforce_red)} per chaos | {round((harvest_data.lifeforce_red) * harvest_data.divine)} per div \n\n"
         )
 
         for reroll in harvest_data.reroll_data:
@@ -469,6 +472,40 @@ def calc_prices(type_data: Type_Data):
     max_ev = float("-inf")
     expected_value = {}
 
+    total_prob = 0
+    for name, count in type_data.rolls.items():
+        total_prob += count / total_value
+
+    # (sum(product(weight * price))) = adjusted price total
+    # weight * price = adjusted price
+    # price total - price = price for rerolling
+    # price for rerolling / chances of alternative rolls = avg price for reroll
+    # avg price for reroll - reroll cost - price for item = profit
+
+    roll_prices = {}
+    roll_chances = {}
+
+    for name, count in type_data.rolls.items():
+        roll_chances[name] = count / total_value
+
+    for name, price in type_data.prices.items():
+        roll_prices[name] = roll_chances[name] * price
+
+    # roll info has avg price, get total
+    total_price = sum(roll_prices.values())
+
+    reroll_profit = {}
+
+    lifeforce_price = 0.32
+    for name, count in type_data.rolls.items():
+        reroll_result = (total_price - roll_prices[name]) / (1 - roll_chances[name])
+        reroll_profit[name] = reroll_result - type_data.prices[name] - lifeforce_price
+
+    # shows what to reroll when will lose at least 1c from rerolling, how to determine profit?
+    should_reroll = [name for name, profit in reroll_profit.items() if profit < -1]
+
+    # get weights for each option
+
     while True:
         lifeforce_cost = type_data.lifeforce_used / type_data.lifeforce_type * num_rolls
 
@@ -477,6 +514,7 @@ def calc_prices(type_data: Type_Data):
         # probability of getting in x rolls = (1 - ((1 - (count / total_value)) ** num_rolls))
         # expected return = (price - min price - lifeforce) IF POSITIVE, else (- min price - lifeforce)
         #       will never sell if still at a loss for ev, so can't include price of item
+
         potential_ev = {
             name: (
                 (1 - ((1 - (count / total_value)) ** num_rolls))
