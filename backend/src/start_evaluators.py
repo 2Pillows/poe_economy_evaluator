@@ -12,6 +12,11 @@ from backend.src.chaos_res_crafting.chaos_res_crafting_main import (
     start_chaos_res_crafting,
 )
 
+# Timer to test script performance
+# import time
+
+# start_time = time.time()
+
 
 def start_evaluators():
 
@@ -26,3 +31,7 @@ def start_evaluators():
 
 if __name__ == "__main__":
     start_evaluators()
+    # Timer for script performance
+    # end_time = time.time()
+    # runtime = end_time - start_time
+    # print(f"Runtime: {runtime} seconds")
