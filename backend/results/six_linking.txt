@@ -5,76 +5,74 @@ Omen of the Jeweller: 10.0c
 
 ---------- Linking Cost ----------
 
-Total: 31.36c 
-Black Morrigan: 17.96c 
-Craicic Sand Spitter: 5.4c 
-2 Yellow: 4c per
+Total: 48.92c 
+Black Morrigan: 17.05c 
+Craicic Sand Spitter: 5.87c 
+2 Yellow: 13c per
 
 ---------- Unique Armours ----------
 
 Name                           |         Profit            Buy              Sell
-Shroud of the Lightless        | 	  6007 |  52.3        40 |   0.3      6088 |  53.0
-The Apostate                   | 	   671 |   5.8      1585 |  13.8      2297 |  20.0
-The Queen's Hunger             | 	   411 |   3.6         7 |   0.1       459 |   4.0
-The Eternity Shroud            | 	   378 |   3.3        40 |   0.3       459 |   4.0
-Utula's Hunger                 | 	   286 |   2.5        10 |   0.1       338 |   2.9
-The Perfect Form               | 	   257 |   2.2       115 |   1.0       414 |   3.6
-Hyrri's Ire                    | 	   243 |   2.1        60 |   0.5       345 |   3.0
-Replica Farrul's Fur           | 	   234 |   2.0       758 |   6.6      1034 |   9.0
-Sporeguard                     | 	   188 |   1.6      2527 |  22.0      2757 |  24.0
-Garb of the Ephemeral          | 	   188 |   1.6       115 |   1.0       345 |   3.0
-Dendrobate                     | 	   187 |   1.6         1 |   0.0       230 |   2.0
-Daresso's Defiance             | 	   185 |   1.6         3 |   0.0       230 |   2.0
-Carcass Jack                   | 	   183 |   1.6         5 |   0.0       230 |   2.0
-Pragmatism                     | 	   178 |   1.6        10 |   0.1       230 |   2.0
-Cloak of Flame                 | 	   178 |   1.6        10 |   0.1       230 |   2.0
-The Ivory Tower                | 	   178 |   1.6        10 |   0.1       230 |   2.0
-Inpulsa's Broken Heart         | 	   168 |   1.5        20 |   0.2       230 |   2.0
-Doryani's Prototype            | 	   168 |   1.5        10 |   0.1       219 |   1.9
-Fleshcrafter                   | 	   167 |   1.5        20 |   0.2       229 |   2.0
-Queen of the Forest            | 	   166 |   1.4         4 |   0.0       211 |   1.8
-Loreweave                      | 	   163 |   1.4        26 |   0.2       230 |   2.0
-The Iron Fortress              | 	   158 |   1.4        30 |   0.3       230 |   2.0
-Tinkerskin                     | 	   152 |   1.3         2 |   0.0       195 |   1.7
-Dialla's Malefaction           | 	   152 |   1.3       324 |   2.8       517 |   4.5
-The Covenant                   | 	   148 |   1.3        40 |   0.3       230 |   2.0
-The Fourth Vow                 | 	   148 |   1.3        40 |   0.3       230 |   2.0
-Cloak of Tawm'r Isley          | 	   142 |   1.2       448 |   3.9       632 |   5.5
-Infernal Mantle                | 	   140 |   1.2         2 |   0.0       184 |   1.6
-Doppelgänger Guise             | 	   138 |   1.2        50 |   0.4       230 |   2.0
-Replica Hyrri's Ire            | 	   131 |   1.1       172 |   1.5       345 |   3.0
-Farrul's Fur                   | 	   126 |   1.1        63 |   0.5       230 |   2.0
-Shavronne's Wrappings          | 	   121 |   1.1        10 |   0.1       172 |   1.5
-Incandescent Heart             | 	   121 |   1.1        10 |   0.1       172 |   1.5
-The Brass Dome                 | 	   107 |   0.9        18 |   0.2       167 |   1.4
-The Snowblind Grace            | 	    98 |   0.9         5 |   0.0       145 |   1.3
-Craiceann's Carapace           | 	    88 |   0.8        10 |   0.1       139 |   1.2
-Cloak of Defiance              | 	    86 |   0.7        20 |   0.2       147 |   1.3
-Replica Restless Ward          | 	    76 |   0.7        25 |   0.2       142 |   1.2
-Greed's Embrace                | 	    72 |   0.6         1 |   0.0       115 |   1.0
-Soul Mantle                    | 	    72 |   0.6         1 |   0.0       115 |   1.0
-The Restless Ward              | 	    72 |   0.6         1 |   0.0       115 |   1.0
-Vis Mortis                     | 	    72 |   0.6         1 |   0.0       115 |   1.0
-Ghostwrithe                    | 	    72 |   0.6         1 |   0.0       115 |   1.0
-Briskwrap                      | 	    72 |   0.6         1 |   0.0       115 |   1.0
-Lioneye's Vision               | 	    72 |   0.6         1 |   0.0       115 |   1.0
-Cherrubim's Maleficence        | 	    72 |   0.6         1 |   0.0       114 |   1.0
-Cospri's Will                  | 	    71 |   0.6         2 |   0.0       115 |   1.0
-Yriel's Fostering              | 	    70 |   0.6         3 |   0.0       115 |   1.0
-Death's Oath                   | 	    69 |   0.6         4 |   0.0       115 |   1.0
-Belly of the Beast             | 	    68 |   0.6         5 |   0.0       115 |   1.0
-Thousand Ribbons               | 	    68 |   0.6         5 |   0.0       115 |   1.0
-Perfidy                        | 	    68 |   0.6         5 |   0.0       115 |   1.0
-Blunderbore                    | 	    67 |   0.6         3 |   0.0       112 |   1.0
-Bronn's Lithe                  | 	    65 |   0.6         1 |   0.0       107 |   0.9
-Ashrend                        | 	    63 |   0.6         1 |   0.0       106 |   0.9
-Kintsugi                       | 	    63 |   0.6        10 |   0.1       115 |   1.0
-Lightning Coil                 | 	    63 |   0.6        10 |   0.1       115 |   1.0
-Saqawal's Nest                 | 	    63 |   0.6        10 |   0.1       115 |   1.0
-Replica Loreweave              | 	    63 |   0.5        10 |   0.1       114 |   1.0
-Foxshade                       | 	    62 |   0.5         1 |   0.0       104 |   0.9
-Victario's Influence           | 	    62 |   0.5         1 |   0.0       104 |   0.9
-Chains of Command              | 	    60 |   0.5         2 |   0.0       103 |   0.9
-Replica Covenant               | 	    57 |   0.5        80 |   0.7       178 |   1.6
-Geofri's Sanctuary             | 	    27 |   0.2         1 |   0.0        69 |   0.6
-Gruthkul's Pelt                | 	    23 |   0.2        50 |   0.4       115 |   1.0
+Shroud of the Lightless        | 	  5649 |  49.1        40 |   0.3      5748 |  50.0
+The Apostate                   | 	   527 |   4.6      1713 |  14.9      2299 |  20.0
+Sporeguard                     | 	   401 |   3.5      2299 |  20.0      2759 |  24.0
+The Queen's Hunger             | 	   395 |   3.4         6 |   0.1       460 |   4.0
+The Eternity Shroud            | 	   361 |   3.1        40 |   0.3       460 |   4.0
+Utula's Hunger                 | 	   271 |   2.4        10 |   0.1       340 |   3.0
+The Perfect Form               | 	   240 |   2.1       115 |   1.0       414 |   3.6
+Hyrri's Ire                    | 	   226 |   2.0        60 |   0.5       345 |   3.0
+Replica Farrul's Fur           | 	   211 |   1.8       764 |   6.6      1035 |   9.0
+Cloak of Tawm'r Isley          | 	   188 |   1.6       385 |   3.4       632 |   5.5
+Garb of the Ephemeral          | 	   171 |   1.5       115 |   1.0       345 |   3.0
+Dendrobate                     | 	   170 |   1.5         1 |   0.0       230 |   2.0
+Daresso's Defiance             | 	   168 |   1.5         3 |   0.0       230 |   2.0
+Carcass Jack                   | 	   163 |   1.4         5 |   0.0       227 |   2.0
+Cloak of Flame                 | 	   161 |   1.4        10 |   0.1       230 |   2.0
+The Ivory Tower                | 	   161 |   1.4        10 |   0.1       230 |   2.0
+Doryani's Prototype            | 	   161 |   1.4        10 |   0.1       230 |   2.0
+Pragmatism                     | 	   161 |   1.4        10 |   0.1       230 |   2.0
+Inpulsa's Broken Heart         | 	   151 |   1.3        20 |   0.2       230 |   2.0
+Queen of the Forest            | 	   151 |   1.3         4 |   0.0       214 |   1.9
+Fleshcrafter                   | 	   150 |   1.3        20 |   0.2       229 |   2.0
+Loreweave                      | 	   146 |   1.3        25 |   0.2       230 |   2.0
+The Iron Fortress              | 	   141 |   1.2        30 |   0.3       230 |   2.0
+Dialla's Malefaction           | 	   139 |   1.2       333 |   2.9       531 |   4.6
+Infernal Mantle                | 	   134 |   1.2         2 |   0.0       195 |   1.7
+Tinkerskin                     | 	   134 |   1.2         2 |   0.0       195 |   1.7
+The Covenant                   | 	   133 |   1.2        38 |   0.3       230 |   2.0
+The Fourth Vow                 | 	   131 |   1.1        40 |   0.3       230 |   2.0
+Doppelgänger Guise             | 	   121 |   1.1        50 |   0.4       230 |   2.0
+Farrul's Fur                   | 	   111 |   1.0        60 |   0.5       230 |   2.0
+Yriel's Fostering              | 	   105 |   0.9         3 |   0.0       167 |   1.4
+Incandescent Heart             | 	   103 |   0.9        10 |   0.1       172 |   1.5
+Shavronne's Wrappings          | 	   103 |   0.9        10 |   0.1       172 |   1.5
+Replica Hyrri's Ire            | 	   102 |   0.9       184 |   1.6       345 |   3.0
+Cloak of Defiance              | 	    89 |   0.8        20 |   0.2       168 |   1.5
+The Brass Dome                 | 	    85 |   0.7        18 |   0.2       162 |   1.4
+The Snowblind Grace            | 	    81 |   0.7         5 |   0.0       145 |   1.3
+Bronn's Lithe                  | 	    78 |   0.7         1 |   0.0       138 |   1.2
+Craiceann's Carapace           | 	    71 |   0.6        10 |   0.1       140 |   1.2
+Death's Oath                   | 	    63 |   0.6         4 |   0.0       126 |   1.1
+Greed's Embrace                | 	    55 |   0.5         1 |   0.0       115 |   1.0
+Soul Mantle                    | 	    55 |   0.5         1 |   0.0       115 |   1.0
+The Restless Ward              | 	    55 |   0.5         1 |   0.0       115 |   1.0
+Vis Mortis                     | 	    55 |   0.5         1 |   0.0       115 |   1.0
+Ghostwrithe                    | 	    55 |   0.5         1 |   0.0       115 |   1.0
+Briskwrap                      | 	    55 |   0.5         1 |   0.0       115 |   1.0
+Cherrubim's Maleficence        | 	    55 |   0.5         1 |   0.0       114 |   1.0
+Cospri's Will                  | 	    54 |   0.5         2 |   0.0       115 |   1.0
+Lioneye's Vision               | 	    54 |   0.5         2 |   0.0       115 |   1.0
+Belly of the Beast             | 	    51 |   0.4         5 |   0.0       115 |   1.0
+Thousand Ribbons               | 	    51 |   0.4         5 |   0.0       115 |   1.0
+Perfidy                        | 	    51 |   0.4         5 |   0.0       115 |   1.0
+Blunderbore                    | 	    48 |   0.4         3 |   0.0       110 |   1.0
+Lightning Coil                 | 	    46 |   0.4        10 |   0.1       115 |   1.0
+Ashrend                        | 	    46 |   0.4         1 |   0.0       106 |   0.9
+Kintsugi                       | 	    46 |   0.4        10 |   0.1       115 |   1.0
+Replica Loreweave              | 	    45 |   0.4        10 |   0.1       114 |   1.0
+Saqawal's Nest                 | 	    45 |   0.4        11 |   0.1       115 |   1.0
+Victario's Influence           | 	    44 |   0.4         1 |   0.0       104 |   0.9
+Chains of Command              | 	    42 |   0.4         2 |   0.0       103 |   0.9
+Foxshade                       | 	    42 |   0.4         1 |   0.0       102 |   0.9
+Replica Covenant               | 	    39 |   0.3        80 |   0.7       178 |   1.6
+Replica Restless Ward          | 	    34 |   0.3        25 |   0.2       118 |   1.0

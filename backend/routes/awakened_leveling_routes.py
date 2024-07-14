@@ -3,7 +3,7 @@ from flask import Blueprint, jsonify, request
 from dataclasses import asdict
 from backend.routes.utils import handle_post
 
-from backend.src.awakened_leveling.awakened_main import (
+from backend.scripts.awakened_leveling.awakened_main import (
     AwakenedLevelingData,
     start_awakened_main,
 )

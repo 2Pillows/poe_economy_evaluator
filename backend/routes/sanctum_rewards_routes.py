@@ -3,7 +3,7 @@ from flask import Blueprint, jsonify, request
 from dataclasses import asdict
 from backend.routes.utils import handle_post
 
-from backend.src.sanctum_rewards.sanctum_main import (
+from backend.scripts.sanctum_rewards.sanctum_main import (
     SanctumRewardsData,
     start_sanctum_main,
 )

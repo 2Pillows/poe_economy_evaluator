@@ -3,7 +3,7 @@
 
 from typing import List
 
-from backend.src.api_data import API_Data, Singleton
+from backend.scripts.api_data import API_Data, Singleton
 from dataclasses import dataclass
 
 RESULTS_FILE = "/workspaces/poe_economy_evaluator/backend/results/harvest_rolling.txt"
@@ -556,7 +556,7 @@ def calc_prices(type_data: Type_Data):
             num_rolls += 1
 
         else:
-            num_rolls -= 1
+            num_rolls -= 1  # the final roll didn't have better ev
             break
 
     # valuable items have positive ev
@@ -566,7 +566,6 @@ def calc_prices(type_data: Type_Data):
     type_data.set_expected_value(expected_value)
     type_data.set_valuable(valuable)
 
-    # the final roll didn't have better ev, leading to breaking loop
     type_data.set_avg_rolls(num_rolls)
 
 

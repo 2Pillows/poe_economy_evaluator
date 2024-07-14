@@ -3,7 +3,7 @@ from flask import Blueprint, jsonify, request
 from dataclasses import asdict
 from backend.routes.utils import handle_post
 
-from backend.src.harvest_rolling.harvest_main import (
+from backend.scripts.harvest_rolling.harvest_main import (
     HarvestRollingData,
     start_harvest_main,
 )

@@ -1,33 +1,33 @@
 
 ---------- Lifeforce per Chaos ----------
 
-Yellow:  41 per chaos | 4760 per div
-Blue:    91 per chaos | 10472 per div
-Red:     90 per chaos | 10359 per div 
+Yellow:  41 per chaos | 4718 per div
+Blue:    90 per chaos | 10347 per div
+Red:     90 per chaos | 10347 per div 
 
 ---------- Essence ----------
 
-Avg Profit per Divine (x115): 77.96c 
+Avg Profit per Divine (x115): 77.62c 
 
 Lifeforce: Blue
 Avg Rolls: 1
 
 Sell: Scorn, Envy, Spite, Loathing, Zeal, Greed, Misery, Rage, Anger, Woe, Sorrow, Torment, Fear, Wrath, Hatred, Contempt, Dread
-Buy: Suffering, Anguish, Doubt
+Buy: Doubt, Anguish, Suffering
 
 ---------- Catalyst ----------
 
-Avg Profit per Divine (x230): 47.7c 
+Avg Profit per Divine (x230): 45.55c 
 
 Lifeforce: Yellow
 Avg Rolls: 1
 
 Sell: Prismatic, Fertile, Intrinsic
-Buy: Imbued, Noxious, Turbulent, Abrasive, Tempering, Accelerating, Unstable
+Buy: Noxious, Turbulent, Imbued, Abrasive, Tempering, Unstable, Accelerating
 
 ---------- Corrupted Essence ----------
 
-Avg Profit per Divine (x10): 39.03c 
+Avg Profit per Divine (x10): 38.77c 
 
 Lifeforce: Blue
 Avg Rolls: 3
@@ -37,7 +37,7 @@ Buy: Hysteria
 
 ---------- Delirium Orb ----------
 
-Avg Profit per Divine (x57): 22.8c 
+Avg Profit per Divine (x57): 22.57c 
 
 Lifeforce: Blue
 Avg Rolls: 1

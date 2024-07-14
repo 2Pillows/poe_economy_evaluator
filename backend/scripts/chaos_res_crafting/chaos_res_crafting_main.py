@@ -1,6 +1,6 @@
 # chaos_res_crafting_main
 
-from backend.src.api_data import API_Data, Singleton
+from backend.scripts.api_data import API_Data, Singleton
 from dataclasses import dataclass
 
 RESULTS_FILE = (

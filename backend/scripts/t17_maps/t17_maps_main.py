@@ -1,6 +1,6 @@
 # t17_maps_main.py
 
-from backend.src.api_data import API_Data, Singleton
+from backend.scripts.api_data import API_Data, Singleton
 from dataclasses import dataclass
 
 RESULTS_FILE = "/workspaces/poe_economy_evaluator/backend/results/t17_maps.txt"

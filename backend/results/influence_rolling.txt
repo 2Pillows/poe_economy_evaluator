@@ -1,42 +1,74 @@
 
 ---------- Crafting Cost ----------
 
-Blue Lifeforce: 94 per chaos | 10769 per div
+Blue Lifeforce: 90 per chaos | 10347 per div
 Redeemer's Exalted Orb: 50.0 chaos
 
 ---------- Base Types ----------
 
-Simplex Amulet
-	lv. 86: Avg Profit = 5115 c | 44.5 d
-		Buy: Base + Orb (30483.12)
-		Sell: Shaper (30785.16)
-
 Vermillion Ring
-	lv. 86: Avg Profit = 356 c | 3.1 d
-		Buy: Base + Orb (110.0)
-		Sell: Warlord (1010.86), Hunter (689.22), Shaper (528.4)
+	lv. 86: Avg Profit = 357 c | 3.1 d
+		Buy: Base + Orb (210.0)
+		Sell: Warlord (1011.65), Hunter (689.76), Shaper (528.82)
 
 Gripped Gloves
-	lv. 86: Avg Profit = 314 c | 2.7 d
+	lv. 86: Avg Profit = 315 c | 2.7 d
 		Buy: Shaper (25.0)
-		Sell: Hunter (1952.79)
+		Sell: Hunter (1954.32)
 
 Stygian Vise
-	lv. 86: Avg Profit = 272 c | 2.4 d
-		Buy: Base + Orb (110.0)
-		Sell: Hunter (459.48), Elder (402.04), Redeemer (367.58), Shaper (344.61)
+	lv. 86: Avg Profit = 259 c | 2.3 d
+		Buy: Crusader (114.96)
+		Sell: Hunter (459.84), Elder (402.36), Redeemer (344.88), Shaper (321.89)
 
-	lv. 85: Avg Profit = 157 c | 1.4 d
-		Buy: Redeemer (104.41)
-		Sell: Warlord (413.53), Hunter (229.74), Shaper (172.3)
+	lv. 85: Avg Profit = 158 c | 1.4 d
+		Buy: Redeemer (104.47)
+		Sell: Warlord (413.86), Hunter (229.92), Shaper (172.44)
 
 Manifold Ring
-	lv. 85: Avg Profit = 210 c | 1.8 d
-		Buy: Base + Orb (204.45999999999998)
-		Sell: Crusader (1355.47)
+	lv. 85: Avg Profit = 177 c | 1.5 d
+		Buy: Base + Orb (314.96)
+		Sell: Crusader (1149.6)
 
 Sacrificial Garb
-	lv. 85: Avg Profit = 176 c | 1.5 d
-		Buy: Base + Orb (114.0)
-		Sell: Hunter (574.35), Redeemer (574.35)
+	lv. 85: Avg Profit = 177 c | 1.5 d
+		Buy: Base + Orb (214.0)
+		Sell: Hunter (574.8), Redeemer (574.8)
+
+
+---------- Crafting Cost ----------
+
+Blue Lifeforce: 90 per chaos | 10347 per div
+Redeemer's Exalted Orb: 50.0 chaos
+
+---------- Base Types ----------
+
+Vermillion Ring
+	lv. 86: Avg Profit = 357 c | 3.1 d
+		Buy: Base + Orb (210.0)
+		Sell: Warlord (1011.65), Hunter (689.76), Shaper (528.82)
+
+Gripped Gloves
+	lv. 86: Avg Profit = 315 c | 2.7 d
+		Buy: Shaper (25.0)
+		Sell: Hunter (1954.32)
+
+Stygian Vise
+	lv. 86: Avg Profit = 259 c | 2.3 d
+		Buy: Crusader (114.96)
+		Sell: Hunter (459.84), Elder (402.36), Redeemer (344.88), Shaper (321.89)
+
+	lv. 85: Avg Profit = 158 c | 1.4 d
+		Buy: Redeemer (104.47)
+		Sell: Warlord (413.86), Hunter (229.92), Shaper (172.44)
+
+Manifold Ring
+	lv. 85: Avg Profit = 177 c | 1.5 d
+		Buy: Base + Orb (314.96)
+		Sell: Crusader (1149.6)
+
+Sacrificial Garb
+	lv. 85: Avg Profit = 177 c | 1.5 d
+		Buy: Base + Orb (214.0)
+		Sell: Hunter (574.8), Redeemer (574.8)
 

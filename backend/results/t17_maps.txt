@@ -4,8 +4,8 @@
 Abomination: 45c
 Citadel: 40c
 Fortress: 70c
-Sanctuary: 40c
-Ziggurat: 50c
+Sanctuary: 39c
+Ziggurat: 45c
 
 ---------- Fragment Prices ----------
 
@@ -19,16 +19,16 @@ Cosmic: 5c
 
 ---------- Map Profit w/ One Frag Dropping ----------
 
-Ziggurat: 29c
+Ziggurat: 34c
 Abomination: 13c
-Sanctuary: 6c
+Sanctuary: 7c
 Citadel: -18c
 Fortress: -50c
 
 ---------- Map Profit w/ Two Frags Dropping ----------
 
-Ziggurat: 108c
-Abomination: 70c
+Ziggurat: 113c
+Abomination: 71c
 Sanctuary: 52c
 Citadel: 5c
 Fortress: -31c

@@ -1,6 +1,6 @@
 # awakened_main.py
 
-from backend.src.api_data import API_Data, Singleton
+from backend.scripts.api_data import API_Data, Singleton
 from dataclasses import dataclass
 
 MIN_PROFIT = 10

@@ -1,6 +1,6 @@
 # sanctum_main.py
 
-from backend.src.api_data import API_Data, Singleton
+from backend.scripts.api_data import API_Data, Singleton
 from dataclasses import dataclass
 
 
@@ -12,7 +12,7 @@ MIN_CHAOS = 10
 
 RESULTS_FILE = "/workspaces/poe_economy_evaluator/backend/results/sanctum_rewards.txt"
 REWARD_FILE = (
-    "/workspaces/poe_economy_evaluator/backend/src/sanctum_rewards/reward_data.txt"
+    "/workspaces/poe_economy_evaluator/backend/scripts/sanctum_rewards/reward_data.txt"
 )
 
 
