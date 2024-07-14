@@ -114,25 +114,23 @@ def start_harvest_main():
         Type_Data(
             "Fossil",
             {
-                "Aberrant": 1,
-                "Aetheric": 1,
-                "Bound": 1,
-                "Corroded": 1,
-                "Deft": 1,
-                "Dense": 1,
-                "Frigid": 1,
-                "Fundamental": 1,
-                "Gilded": 1,
-                "Jagged": 1,
-                "Lucent": 1,
-                "Metallic": 1,
-                "Perfect": 1,
-                "Prismatic": 1,
-                "Pristine": 1,
-                "Sanctified": 1,
-                "Scorched": 1,
-                "Serrated": 1,
-                "Shuddering": 1,
+                "Aberrant": 10.97,
+                "Pristine": 10.971,
+                "Scorched": 10.97,
+                "Dense": 10.97,
+                "Frigid": 10.97,
+                "Jagged": 10.97,
+                "Metallic": 10.97,
+                "Aetheric": 2.19,
+                "Bound": 2.19,
+                "Corroded": 2.19,
+                "Deft": 2.19,
+                "Fundamental": 2.19,
+                "Lucent": 2.19,
+                "Perfect": 2.19,
+                "Prismatic": 2.19,
+                "Serrated": 2.19,
+                "Shuddering": 2.19,
             },
             api_data.fossil_data,
             "Red",
@@ -143,19 +141,19 @@ def start_harvest_main():
         Type_Data(
             "Oil",
             {
-                "Golden": 0,
-                "Silver": 0,
-                "Opalescent": 0,
-                "Black": 2,
-                "Crimson": 4,
-                "Violet": 8,
-                "Azure": 10,
-                "Indigo": 5,
-                "Teal": 20,
-                "Verdant": 31,
-                "Amber": 49,
-                "Clear": 70,
-                "Sepia": 55,
+                "Clear": 33.11,
+                "Sepia": 23.18,
+                "Amber": 16.56,
+                "Verdant": 9.93,
+                "Teal": 4.97,
+                "Indigo": 3.31,
+                "Azure": 3.31,
+                "Violet": 2.65,
+                "Crimson": 1.00,
+                "Black": 0.66,
+                "Opalescent": 0.66,
+                "Silver": 0.33,
+                "Golden": 0.33,
             },
             api_data.oil_data,
             "Yellow",
@@ -166,16 +164,16 @@ def start_harvest_main():
         Type_Data(
             "Catalyst",
             {
-                "Intrinsic": 485,
-                "Imbued": 301,
-                "Noxious": 297,
-                "Turbulent": 296,
-                "Abrasive": 292,
-                "Prismatic": 91,
-                "Fertile": 88,
-                "Tempering": 83,
-                "Accelerating": 35,
-                "Unstable": 32,
+                "Intrinsic": 28.75,
+                "Imbued": 14.38,
+                "Noxious": 14.38,
+                "Turbulent": 14.38,
+                "Abrasive": 14.38,
+                "Prismatic": 3.75,
+                "Fertile": 3.75,
+                "Tempering": 3.75,
+                "Accelerating": 1.25,
+                "Unstable": 1.25,
             },
             api_data.catalyst_data,
             "Yellow",
@@ -216,6 +214,28 @@ def start_harvest_main():
                 "Delirium",
                 "Insanity",
                 "Hysteria",
+                "Shrieking",
+                "Muttering",
+                "Screaming",
+                "Wailing",
+                "Weeping",
+                "Whispering",
+                "Remnant",
+            ],
+        ),
+        Type_Data(
+            "Corrupted Essence",
+            {
+                "Insanity": 1,
+                "Horror": 1,
+                "Delirium": 1,
+                "Hysteria": 1,
+            },
+            api_data.essence_data,
+            "Blue",
+            api_data.lifeforce_blue,
+            30,
+            [
                 "Shrieking",
                 "Muttering",
                 "Screaming",
@@ -288,25 +308,25 @@ def start_harvest_main():
         Type_Data(
             "Delirium Orb",
             {
-                "Armoursmith": 608,
-                "Jeweller": 584,
-                "Blacksmith": 546,
-                "Fine": 542,
-                "Diviner": 344,
-                "Whispering": 313,
-                "Foreboding": 304,
-                # "Imperial": 287,
-                "Cartographer": 186,
-                "Abyssal": 172,
-                "Blighted": 167,
-                "Timeless": 164,
-                "Thaumaturge": 161,
-                "Skittering": 156,
-                "Fossilised": 150,
-                # "Amorphous": 149,
-                "Fragmented": 138,
-                "Singular": 132,
-                "Obscured": 83,
+                "Armoursmith": 11.1,
+                "Blacksmith": 11.1,
+                "Fine": 11.1,
+                "Jeweller": 11.1,
+                "Diviner": 5.85,
+                "Foreboding": 5.85,
+                # "Imperial": 5.85,
+                "Whispering": 5.85,
+                "Blighted": 3.2,
+                "Cartographer": 3.2,
+                "Fossilised": 3.2,
+                "Obscured": 3.2,
+                "Skittering": 3.2,
+                "Abyssal": 3.2,
+                # "Amorphous": 2.6,
+                "Fragmented": 2.6,
+                "Singular": 2.6,
+                "Thaumaturge": 2.6,
+                "Timeless": 2.6,
             },
             api_data.delirium_orb_data,
             "Blue",
@@ -401,7 +421,7 @@ def start_harvest_main():
     ]
 
     for reroll_type in harvest_rerolls:
-        # if reroll_type.type == "Essence":
+        # if reroll_type.type == "Delirium Orb":
         #     calc_prices(reroll_type)
         calc_prices(reroll_type)
 
@@ -438,8 +458,12 @@ def write_results(harvest_data: HarvestRollingData):
                 # file.write(
                 #     f"Avg Profit per Reroll: {round(reroll.profit_per_roll, 5)}\n"
                 # )
+                profit_per_div = reroll.profit_per_roll * (
+                    harvest_data.divine / reroll.min_price
+                )
+
                 file.write(
-                    f"Avg Profit per Divine (x{round(reroll.rolls_per_div)}): {round(reroll.profit_per_roll * (harvest_data.divine / reroll.min_price), 2)}\n\n"
+                    f"Avg Profit per Divine (x{round(reroll.rolls_per_div)}): {round(profit_per_div, 2)}c \n\n"
                 )
                 file.write(f"Lifeforce: {reroll.lifeforce_name}\n")
                 file.write(f"Avg Rolls: {reroll.avg_rolls}\n\n")
@@ -472,39 +496,36 @@ def calc_prices(type_data: Type_Data):
     max_ev = float("-inf")
     expected_value = {}
 
-    total_prob = 0
-    for name, count in type_data.rolls.items():
-        total_prob += count / total_value
-
     # (sum(product(weight * price))) = adjusted price total
     # weight * price = adjusted price
     # price total - price = price for rerolling
     # price for rerolling / chances of alternative rolls = avg price for reroll
     # avg price for reroll - reroll cost - price for item = profit
 
-    roll_prices = {}
-    roll_chances = {}
+    # roll_prices = {}
+    # roll_chances = {}
 
-    for name, count in type_data.rolls.items():
-        roll_chances[name] = count / total_value
+    # for name, count in type_data.rolls.items():
+    #     roll_chances[name] = count / total_value
 
-    for name, price in type_data.prices.items():
-        roll_prices[name] = roll_chances[name] * price
+    # for name, price in type_data.prices.items():
+    #     roll_prices[name] = roll_chances[name] * price
 
-    # roll info has avg price, get total
-    total_price = sum(roll_prices.values())
+    # # roll info has avg price, get total
+    # total_price = sum(roll_prices.values())
 
-    reroll_profit = {}
+    # reroll_profit = {}
 
-    lifeforce_price = 0.32
-    for name, count in type_data.rolls.items():
-        reroll_result = (total_price - roll_prices[name]) / (1 - roll_chances[name])
-        reroll_profit[name] = reroll_result - type_data.prices[name] - lifeforce_price
+    # lifeforce_price = 0.32
+    # for name, count in type_data.rolls.items():
+    #     reroll_result = (total_price - roll_prices[name]) / (1 - roll_chances[name])
+    #     reroll_profit[name] = reroll_result - type_data.prices[name] - lifeforce_price
 
-    # shows what to reroll when will lose at least 1c from rerolling, how to determine profit?
-    should_reroll = [name for name, profit in reroll_profit.items() if profit < -1]
+    # # shows what to reroll when will lose at least 1c from rerolling, how to determine profit?
+    # should_reroll = [name for name, profit in reroll_profit.items() if profit < -1]
 
-    # get weights for each option
+    # # get weights for each option
+    # roll_chances = dict(sorted(roll_chances.items(), key=lambda x: x[1], reverse=True))
 
     while True:
         lifeforce_cost = type_data.lifeforce_used / type_data.lifeforce_type * num_rolls
@@ -535,6 +556,7 @@ def calc_prices(type_data: Type_Data):
             num_rolls += 1
 
         else:
+            num_rolls -= 1
             break
 
     # valuable items have positive ev
@@ -545,7 +567,7 @@ def calc_prices(type_data: Type_Data):
     type_data.set_valuable(valuable)
 
     # the final roll didn't have better ev, leading to breaking loop
-    type_data.set_avg_rolls(num_rolls - 1)
+    type_data.set_avg_rolls(num_rolls)
 
 
 if __name__ == "__main__":
