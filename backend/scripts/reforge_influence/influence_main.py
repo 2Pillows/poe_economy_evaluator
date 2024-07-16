@@ -3,35 +3,62 @@
 from backend.scripts.api_data import API_Data, Singleton
 from dataclasses import dataclass
 
+from backend.scripts.api_data import API_Data
+
+
 RESULTS_FILE = "/workspaces/poe_economy_evaluator/backend/results/influence_rolling.txt"
 
 MIN_PROFIT = 100
 
 
-@dataclass
-class ReforgeInfluenceData(metaclass=Singleton):
-    all_exalted_orbs: float = None
-    base_type_data: float = None
-    lifeforce_blue: float = None
-    divine: float = None
+class ReforgeInfluenceData:
+    def __init__(self):
+        self.api_data = API_Data.get_instance()
 
-    profitable_bases: dict = None
+        # ref objects used to intellisense
+        self.all_exalted_orbs: float = self.api_data.all_exalted_orbs
+        self.base_type_data: float = self.api_data.base_type_data
+        self.lifeforce_blue: float = self.api_data.lifeforce_blue
+        self.divine: float = self.api_data.divine
 
-    base_type_data: list = None
+        self.profitable_bases: dict = self.api_data.profitable_bases
 
-    def set_api_data(
-        self,
-    ):
-        api_data = API_Data()
-        self.all_exalted_orbs = api_data.all_exalted_orbs
-        self.base_type_data = api_data.base_type_data
-        self.lifeforce_blue = api_data.lifeforce_blue
-        self.divine = api_data.divine
+        self.base_type_data: list = self.api_data.base_type_data
 
-        self.base_type_data = api_data.base_type_data
+    def __getattr__(self, attr):
+        return getattr(API_Data.get_instance(), attr)
 
-    def set_results(cls, _profitable_bases):
-        cls.profitable_bases = _profitable_bases
+    def __setattr__(self, attr, value):
+        if attr == "api_data":
+            super().__setattr__(attr, value)
+        else:
+            setattr(API_Data.get_instance(), attr, value)
+
+
+# @dataclass
+# class ReforgeInfluenceData(metaclass=Singleton):
+#     all_exalted_orbs: float = None
+#     base_type_data: float = None
+#     lifeforce_blue: float = None
+#     divine: float = None
+
+#     profitable_bases: dict = None
+
+#     base_type_data: list = None
+
+#     def set_api_data(
+#         self,
+#     ):
+#         api_data = API_Data()
+#         self.all_exalted_orbs = api_data.all_exalted_orbs
+#         self.base_type_data = api_data.base_type_data
+#         self.lifeforce_blue = api_data.lifeforce_blue
+#         self.divine = api_data.divine
+
+#         self.base_type_data = api_data.base_type_data
+
+#     def set_results(cls, _profitable_bases):
+#         cls.profitable_bases = _profitable_bases
 
 
 def start_influnece_main():

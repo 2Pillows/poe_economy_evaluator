@@ -1,7 +1,8 @@
 # chaos_res_crafting_main
 
-from backend.scripts.api_data import API_Data, Singleton
+from backend.scripts.api_data import API_Data
 from dataclasses import dataclass
+
 
 RESULTS_FILE = (
     "/workspaces/poe_economy_evaluator/backend/results/chaos_res_crafting.txt"
@@ -17,35 +18,59 @@ yellow_needed = 700
 AVG_ENVY_RES_LIFE = 6
 
 
-@dataclass
-class ChaosResCraftingData(metaclass=Singleton):
+class ChaosResCraftingData:
+    def __init__(self):
+        self.api_data = API_Data.get_instance()
 
-    lifeforce_yellow: float = None
-    deafening_envy: float = None
-    stygian_base_cost: float = None
-    divine: float = None
-    catalyst_fertile: float = None
-    harvest_cost: float = None
-    yellow_equiv: float = None
-    stygian_crafting_cost: float = None
+        # ref objects used to intellisense
+        self.lifeforce_yellow: float = self.api_data.lifeforce_yellow
+        self.deafening_envy: float = self.api_data.deafening_envy
+        self.stygian_base_cost: float = self.api_data.stygian_base_cost
+        self.divine: float = self.api_data.divine
+        self.catalyst_fertile: float = self.api_data.catalyst_fertile
+        self.harvest_cost: float = self.api_data.harvest_cost
+        self.yellow_equiv: float = self.api_data.yellow_equiv
+        self.stygian_crafting_cost: float = self.api_data.stygian_crafting_cost
 
-    scour: float = None
-    alch: float = None
+    def __getattr__(self, attr):
+        return getattr(API_Data.get_instance(), attr)
 
-    def set_api_data(self):
-        api_data = API_Data()
-        self.lifeforce_yellow = api_data.lifeforce_yellow
-        self.deafening_envy = api_data.deafening_envy
-        self.stygian_base_cost = api_data.stygian_vise
-        self.divine = api_data.divine
-        self.catalyst_fertile = api_data.catalyst_fertile
-        self.scour = api_data.scour
-        self.alch = api_data.alch
+    def __setattr__(self, attr, value):
+        if attr == "api_data":
+            super().__setattr__(attr, value)
+        else:
+            setattr(API_Data.get_instance(), attr, value)
 
-    def set_results(self, _harvest_cost, _yellow_equiv, _stygian_cost):
-        self.harvest_cost = _harvest_cost
-        self.yellow_equiv = _yellow_equiv
-        self.stygian_crafting_cost = _stygian_cost
+
+# @dataclass
+# class ChaosResCraftingData(metaclass=Singleton):
+
+#     lifeforce_yellow: float = None
+#     deafening_envy: float = None
+#     stygian_base_cost: float = None
+#     divine: float = None
+#     catalyst_fertile: float = None
+#     harvest_cost: float = None
+#     yellow_equiv: float = None
+#     stygian_crafting_cost: float = None
+
+#     scour: float = None
+#     alch: float = None
+
+#     def set_api_data(self):
+#         api_data = API_Data()
+#         self.lifeforce_yellow = api_data.lifeforce_yellow
+#         self.deafening_envy = api_data.deafening_envy
+#         self.stygian_base_cost = api_data.stygian_vise
+#         self.divine = api_data.divine
+#         self.catalyst_fertile = api_data.catalyst_fertile
+#         self.scour = api_data.scour
+#         self.alch = api_data.alch
+
+#     def set_results(self, _harvest_cost, _yellow_equiv, _stygian_cost):
+#         self.harvest_cost = _harvest_cost
+#         self.yellow_equiv = _yellow_equiv
+#         self.stygian_crafting_cost = _stygian_cost
 
 
 def start_chaos_res_crafting():

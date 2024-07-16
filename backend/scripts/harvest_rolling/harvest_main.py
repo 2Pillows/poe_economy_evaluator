@@ -3,8 +3,11 @@
 
 from typing import List
 
-from backend.scripts.api_data import API_Data, Singleton
+from backend.scripts.api_data import get_api_data
 from dataclasses import dataclass
+
+from backend.scripts.api_data import API_Data
+
 
 RESULTS_FILE = "/workspaces/poe_economy_evaluator/backend/results/harvest_rolling.txt"
 
@@ -51,7 +54,7 @@ class Type_Data:
         self.valuable = valuable
 
     def set_expected_value(self, expected_value):
-        api_data = API_Data()
+        api_data = get_api_data()
         self.expected_value = expected_value
 
         # avg expected value, unsure if need to get avg of evs or just sum since probability already acounted for
@@ -84,29 +87,50 @@ class Type_Data:
         self.avg_rolls = rolls
 
 
-@dataclass
-class HarvestRollingData(metaclass=Singleton):
+class HarvestRollingData:
+    def __init__(self):
+        self.api_data = API_Data.get_instance()
 
-    divine: float = None
-    lifeforce_yellow: float = None
-    lifeforce_blue: float = None
-    lifeforce_red: float = None
+        # ref objects used to intellisense
+        self.divine = self.api_data.divine
+        self.lifeforce_yellow = self.api_data.lifeforce_yellow
+        self.lifeforce_blue = self.api_data.lifeforce_blue
+        self.lifeforce_red = self.api_data.lifeforce_red
+        self.reroll_data = self.api_data.reroll_data
 
-    reroll_data: List[Type_Data] = None
+    def __getattr__(self, attr):
+        return getattr(API_Data.get_instance(), attr)
 
-    def set_api_data(self):
-        api_data = API_Data()
-        self.divine = api_data.divine
-        self.lifeforce_yellow = api_data.lifeforce_yellow
-        self.lifeforce_blue = api_data.lifeforce_blue
-        self.lifeforce_red = api_data.lifeforce_red
+    def __setattr__(self, attr, value):
+        if attr == "api_data":
+            super().__setattr__(attr, value)
+        else:
+            setattr(API_Data.get_instance(), attr, value)
 
-    def set_results(cls, _reroll_data):
-        cls.reroll_data = _reroll_data
+
+# @dataclass
+# class HarvestRollingData:
+
+#     divine: float = None
+#     lifeforce_yellow: float = None
+#     lifeforce_blue: float = None
+#     lifeforce_red: float = None
+
+#     reroll_data: List[Type_Data] = None
+
+#     def set_api_data(self):
+#         api_data = API_Data()
+#         self.divine = api_data.divine
+#         self.lifeforce_yellow = api_data.lifeforce_yellow
+#         self.lifeforce_blue = api_data.lifeforce_blue
+#         self.lifeforce_red = api_data.lifeforce_red
+
+#     def set_results(cls, _reroll_data):
+#         cls.reroll_data = _reroll_data
 
 
 def start_harvest_main():
-    api_data = API_Data()
+    api_data = API_Data.get_instance()
     harvest_data = HarvestRollingData()
     harvest_data.set_api_data()
 
@@ -342,7 +366,7 @@ def start_harvest_main():
                 "Minotaur": 1,
                 "Phoenix": 1,
             },
-            api_data.fragment_data,
+            api_data.all_shaper_frags,
             "Red",
             api_data.lifeforce_red,
             500,
@@ -356,7 +380,7 @@ def start_harvest_main():
                 "Eradication": 1,
                 "Enslavement": 1,
             },
-            api_data.fragment_data,
+            api_data.all_elder_frags,
             "Blue",
             api_data.lifeforce_blue,
             500,
@@ -370,7 +394,7 @@ def start_harvest_main():
                 "Drox": 1,
                 "Veritania": 1,
             },
-            api_data.fragment_data,
+            api_data.all_conqueror_frags,
             "Yellow",
             api_data.lifeforce_yellow,
             500,
@@ -384,7 +408,7 @@ def start_harvest_main():
                 "Dawn": 1,
                 "Midnight": 1,
             },
-            api_data.fragment_data,
+            api_data.all_sacrifice_frags,
             "Blue",
             api_data.lifeforce_blue,
             500,
@@ -398,7 +422,7 @@ def start_harvest_main():
                 "Hope": 1,
                 "Rage": 1,
             },
-            api_data.fragment_data,
+            api_data.all_mortal_frags,
             "Blue",
             api_data.lifeforce_blue,
             500,
@@ -412,7 +436,7 @@ def start_harvest_main():
                 "Emptiness": 1,
                 "Terror": 1,
             },
-            api_data.fragment_data,
+            api_data.all_uber_elder_frags,
             "Yellow",
             api_data.lifeforce_yellow,
             800,
