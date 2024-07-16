@@ -25,7 +25,7 @@ class TypeData:
         self.name = name
         self.weights = weights
         self.lifeforce = 1 / lifeforce[keys.CHAOS]
-        self.lifeforce_name = lifeforce[keys.NAME]
+        self.lifeforce_name = lifeforce[keys.NAME].split()[0]
         self.lifeforce_used = lifeforce_used
 
         self.prices = {}
@@ -394,7 +394,7 @@ def write_results(harvest_data: HarvestRollingData):
                 file.write(
                     f"Avg Profit per Divine (x{round(reroll.rolls_per_div)}): {round(profit_per_div, 2)}c \n\n"
                 )
-                file.write(f"Lifeforce: {reroll.lifeforce}\n")
+                file.write(f"Lifeforce: {reroll.lifeforce_name}\n")
                 file.write(f"Avg Rolls: {reroll.avg_rolls}\n\n")
                 # for name, price in type_data.valuable.items():
                 #     file.write(f"{name}: {round(type_data.prices[name])}\n")

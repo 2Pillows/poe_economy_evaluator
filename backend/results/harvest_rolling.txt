@@ -9,17 +9,17 @@ Red:     0 per chaos | 1 per div
 
 Avg Profit per Divine (x115): 82.48c 
 
-Lifeforce: 93.09253397877491
+Lifeforce: Primal
 Avg Rolls: 1
 
 Sell: Scorn, Envy, Spite, Loathing, Zeal, Greed, Misery, Rage, Anger, Woe, Sorrow, Torment, Fear, Contempt, Wrath, Hatred, Dread
-Buy: Anguish, Suffering, Doubt
+Buy: Doubt, Anguish, Suffering
 
 ---------- Corrupted Essence ----------
 
 Avg Profit per Divine (x10): 74.35c 
 
-Lifeforce: 93.09253397877491
+Lifeforce: Primal
 Avg Rolls: 4
 
 Sell: Horror, Delirium, Insanity
@@ -29,7 +29,7 @@ Buy: Hysteria
 
 Avg Profit per Divine (x490): 63.15c 
 
-Lifeforce: 94.9667616334283
+Lifeforce: Wild
 Avg Rolls: 1
 
 Sell: Chayula, Uul-Netol, Tul, Xoph
@@ -39,17 +39,17 @@ Buy: Esh
 
 Avg Profit per Divine (x230): 48.77c 
 
-Lifeforce: 41.04079454978248
+Lifeforce: Vivid
 Avg Rolls: 1
 
 Sell: Prismatic, Fertile, Intrinsic
-Buy: Imbued, Abrasive, Turbulent, Noxious, Tempering, Accelerating, Unstable
+Buy: Abrasive, Imbued, Turbulent, Noxious, Tempering, Unstable, Accelerating
 
 ---------- Delirium Orb ----------
 
 Avg Profit per Divine (x58): 19.33c 
 
-Lifeforce: 93.09253397877491
+Lifeforce: Primal
 Avg Rolls: 1
 
 Sell: Diviner, Fine, Skittering, Cartographer, Thaumaturge, Blighted, Fossilised, Abyssal, Timeless, Foreboding, Fragmented, Singular
