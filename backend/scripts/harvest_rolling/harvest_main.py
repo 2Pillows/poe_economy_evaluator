@@ -394,8 +394,12 @@ def write_results(harvest_data: HarvestRollingData):
                 file.write(
                     f"Avg Profit per Divine (x{round(reroll.rolls_per_div)}): {round(profit_per_div, 2)}c \n\n"
                 )
-                file.write(f"Lifeforce: {reroll.lifeforce_name}\n")
-                file.write(f"Avg Rolls: {reroll.avg_rolls}\n\n")
+
+                file.write(
+                    f"Buying At: {round(reroll.min_price)}c each | {round(harvest_data.divine_cost/reroll.min_price)} per div\n"
+                )
+                file.write(f"Avg Rolls: {reroll.avg_rolls}\n")
+                file.write(f"Lifeforce: {reroll.lifeforce_name}\n\n")
                 # for name, price in type_data.valuable.items():
                 #     file.write(f"{name}: {round(type_data.prices[name])}\n")
 

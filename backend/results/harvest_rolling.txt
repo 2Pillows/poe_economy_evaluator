@@ -9,18 +9,20 @@ Red:     0 per chaos | 1 per div
 
 Avg Profit per Divine (x115): 82.48c 
 
-Lifeforce: Primal
+Buying At: 1c each | 115 per div
 Avg Rolls: 1
+Lifeforce: Primal
 
 Sell: Scorn, Envy, Spite, Loathing, Zeal, Greed, Misery, Rage, Anger, Woe, Sorrow, Torment, Fear, Contempt, Wrath, Hatred, Dread
-Buy: Doubt, Anguish, Suffering
+Buy: Anguish, Doubt, Suffering
 
 ---------- Corrupted Essence ----------
 
 Avg Profit per Divine (x10): 74.35c 
 
-Lifeforce: Primal
+Buying At: 11c each | 10 per div
 Avg Rolls: 4
+Lifeforce: Primal
 
 Sell: Horror, Delirium, Insanity
 Buy: Hysteria
@@ -29,8 +31,9 @@ Buy: Hysteria
 
 Avg Profit per Divine (x490): 63.15c 
 
-Lifeforce: Wild
+Buying At: 0c each | 490 per div
 Avg Rolls: 1
+Lifeforce: Wild
 
 Sell: Chayula, Uul-Netol, Tul, Xoph
 Buy: Esh
@@ -39,19 +42,21 @@ Buy: Esh
 
 Avg Profit per Divine (x230): 48.77c 
 
-Lifeforce: Vivid
+Buying At: 0c each | 230 per div
 Avg Rolls: 1
+Lifeforce: Vivid
 
 Sell: Prismatic, Fertile, Intrinsic
-Buy: Abrasive, Imbued, Turbulent, Noxious, Tempering, Unstable, Accelerating
+Buy: Imbued, Abrasive, Noxious, Turbulent, Tempering, Accelerating, Unstable
 
 ---------- Delirium Orb ----------
 
 Avg Profit per Divine (x58): 19.33c 
 
-Lifeforce: Primal
+Buying At: 2c each | 58 per div
 Avg Rolls: 1
+Lifeforce: Primal
 
 Sell: Diviner, Fine, Skittering, Cartographer, Thaumaturge, Blighted, Fossilised, Abyssal, Timeless, Foreboding, Fragmented, Singular
-Buy: Armoursmith, Jeweller, Blacksmith, Whispering, Obscured
+Buy: Armoursmith, Blacksmith, Jeweller, Whispering, Obscured
 
