@@ -22,7 +22,7 @@ class ChaosResCraftingData(ScriptData):
         api_data = API_Data().all_data
 
         # ref objects used to intellisense
-        self.lifeforce_yellow_cost = api_data[keys.YELLOW_LIFEFORCE][keys.CHAOS]
+        self.lifeforce_yellow = 1 / api_data[keys.YELLOW_LIFEFORCE][keys.CHAOS]
         self.deafening_envy_cost = api_data[keys.DEAFENING_ENVY][keys.CHAOS]
         self.stygian_base_cost = api_data[keys.STYGIAN_i86_BASE][keys.CHAOS]
         self.divine_cost = api_data[keys.DIVINE][keys.CHAOS]
@@ -40,7 +40,7 @@ def start_chaos_res_crafting():
     keys = Keys()
     crafting_data = ChaosResCraftingData(keys)
 
-    harvest_cost = yellow_needed / crafting_data.lifeforce_yellow_cost
+    harvest_cost = yellow_needed / crafting_data.lifeforce_yellow
 
     yellow_equiv = yellow_needed / crafting_data.deafening_envy_cost
     envy_equiv = crafting_data.deafening_envy_cost / yellow_needed
@@ -70,7 +70,7 @@ def write_results(crafting_data: ChaosResCraftingData):
     # write data to file
     with open(RESULTS_FILE, "a", encoding="utf-8") as file:
         file.write("\n---------- Rolling Cost ----------\n\n")
-        yellow_lifeforce_per_chaos = 1 / crafting_data.lifeforce_yellow_cost
+        yellow_lifeforce_per_chaos = 1 / crafting_data.lifeforce_yellow
         yellow_lifeforce_per_div = (
             yellow_lifeforce_per_chaos * crafting_data.divine_cost
         )
