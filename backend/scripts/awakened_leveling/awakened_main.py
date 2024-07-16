@@ -11,15 +11,15 @@ class AwakenedLevelingData(ScriptData):
     def __init__(self, keys: Keys):
         api_data = API_Data().all_data
 
-        self.divine = api_data[keys.DIVINE]
-        self.wild_brambleback = api_data[keys.WILD_BRAMBLEBACK]
-        self.gemcutter = api_data[keys.GEMCUTTER]
+        self.divine_cost = api_data[keys.DIVINE]["chaos"]
+        self.wild_brambleback_cost = api_data[keys.WILD_BRAMBLEBACK]["chaos"]
+        self.gemcutter_cost = api_data[keys.GEMCUTTER]["chaos"]
         self.min_lvl_gems = api_data[keys.MIN_LVL_AWAKENED_GEMS]
         self.max_lvl_gems = api_data[keys.MAX_LVL_AWAKENED_GEMS]
         self.max_lvl_max_qual_gems = api_data[keys.MAX_LVL_QUAL_AWAKENED_GEMS]
 
-        self.level_cost = 4 * self.wild_brambleback
-        self.quality_cost = 20 * self.gemcutter
+        self.level_cost = 4 * self.wild_brambleback_cost
+        self.quality_cost = 20 * self.gemcutter_cost
 
         self.gem_margins = None
 
@@ -28,14 +28,14 @@ def start_awakened_main():
     keys = Keys()
     leveling_data = AwakenedLevelingData(keys)
 
-    gem_margins = calculate_gem_margins(leveling_data)
+    gem_margins = calculate_gem_margins(leveling_data, keys)
 
     leveling_data.gem_margins = gem_margins
 
     write_to_file(leveling_data)
 
 
-def calculate_gem_margins(leveling_data: AwakenedLevelingData):
+def calculate_gem_margins(leveling_data: AwakenedLevelingData, keys: Keys):
     gem_margins = {}
 
     for name, min_gem in leveling_data.min_lvl_gems.items():
@@ -51,8 +51,8 @@ def calculate_gem_margins(leveling_data: AwakenedLevelingData):
         else:
             continue
 
-        min_price = min_gem
-        max_price = max_gem
+        min_price = min_gem[keys.CHAOS]
+        max_price = max_gem[keys.CHAOS]
 
         profit = (
             max_price
@@ -76,7 +76,7 @@ def write_to_file(leveling_data: AwakenedLevelingData):
             profit = margin["profit"]
             buy = margin["buy"]
             sell = margin["sell"]
-            divine_price = leveling_data.divine
+            divine_price = leveling_data.divine_cost
             if profit <= MIN_PROFIT:
                 continue
             formatted_line = f"{name:50} | \t {round(profit):>5} | {round(profit/divine_price, 1):>5}  {round(buy):>8} | {round(buy/divine_price, 1):>5}  {round(sell):>8} | {round(sell/divine_price, 1):>5}"
