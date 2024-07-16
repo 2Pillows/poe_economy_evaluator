@@ -1,15 +1,15 @@
 
 ---------- Rolling Cost ----------
 
-Harvest Reforge Chaos (~700 Yellow): 28729 chaos total 
-	Buy: 41 per chaos | 4,720 per div
+Harvest Reforge Chaos (~700 Yellow): 17 chaos total 
+	Buy: 0 per chaos | 3 per div
 	Equiv to Essence: 177 per chaos | 20,328 per div
 
 Deafening Envy: 4 chaos | 29.04 per div
 
 ---------- Crafting Cost ----------
 
-Stygian Vise: 75c avg total 
+Stygian Vise: 74c avg total 
 	iLvl 86 Base: 6c 
 	4x Fertile Catalyst: 44 chaos total | 11 chaos per or 10.45 per div 
 	6x Deafening Envy: 24 chaos total
