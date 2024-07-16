@@ -1,62 +1,62 @@
 
 ---------- Lifeforce per Chaos ----------
 
-Yellow:  0 per chaos | 3 per div
-Blue:    0 per chaos | 1 per div
-Red:     0 per chaos | 1 per div 
+Yellow:  42 per chaos | 4846 per div
+Blue:    94 per chaos | 10792 per div
+Red:     95 per chaos | 10921 per div 
 
 ---------- Essence ----------
 
-Avg Profit per Divine (x115): 82.48c 
+Avg Profit per Divine (x115): 82.26c 
 
 Buying At: 1c each | 115 per div
 Avg Rolls: 1
-Lifeforce: Primal
+Lifeforce: Blue
 
-Sell: Scorn, Envy, Spite, Loathing, Zeal, Greed, Misery, Rage, Anger, Woe, Sorrow, Torment, Fear, Contempt, Wrath, Hatred, Dread
-Buy: Anguish, Doubt, Suffering
+Sell: Scorn, Envy, Spite, Loathing, Zeal, Greed, Misery, Rage, Anger, Woe, Sorrow, Fear, Torment, Contempt, Wrath, Hatred, Dread
+Buy: Suffering, Anguish, Doubt
 
 ---------- Corrupted Essence ----------
 
-Avg Profit per Divine (x10): 74.35c 
+Avg Profit per Divine (x10): 80.72c 
 
 Buying At: 11c each | 10 per div
 Avg Rolls: 4
-Lifeforce: Primal
+Lifeforce: Blue
 
 Sell: Horror, Delirium, Insanity
 Buy: Hysteria
 
 ---------- Breach Splinter ----------
 
-Avg Profit per Divine (x490): 63.15c 
+Avg Profit per Divine (x488): 62.83c 
 
-Buying At: 0c each | 490 per div
+Buying At: 0c each | 488 per div
 Avg Rolls: 1
-Lifeforce: Wild
+Lifeforce: Red
 
 Sell: Chayula, Uul-Netol, Tul, Xoph
 Buy: Esh
 
 ---------- Catalyst ----------
 
-Avg Profit per Divine (x230): 48.77c 
+Avg Profit per Divine (x230): 53.17c 
 
 Buying At: 0c each | 230 per div
 Avg Rolls: 1
-Lifeforce: Vivid
+Lifeforce: Yellow
 
 Sell: Prismatic, Fertile, Intrinsic
-Buy: Imbued, Abrasive, Noxious, Turbulent, Tempering, Accelerating, Unstable
+Buy: Turbulent, Abrasive, Imbued, Noxious, Tempering, Accelerating, Unstable
 
 ---------- Delirium Orb ----------
 
-Avg Profit per Divine (x58): 19.33c 
+Avg Profit per Divine (x58): 19.48c 
 
 Buying At: 2c each | 58 per div
 Avg Rolls: 1
-Lifeforce: Primal
+Lifeforce: Blue
 
 Sell: Diviner, Fine, Skittering, Cartographer, Thaumaturge, Blighted, Fossilised, Abyssal, Timeless, Foreboding, Fragmented, Singular
-Buy: Armoursmith, Blacksmith, Jeweller, Whispering, Obscured
+Buy: Jeweller, Armoursmith, Blacksmith, Whispering, Obscured
 

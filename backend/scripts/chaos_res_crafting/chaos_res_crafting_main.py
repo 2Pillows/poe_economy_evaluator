@@ -1,6 +1,6 @@
 # chaos_res_crafting_main
 
-from backend.scripts.api_data import API_Data, ScriptData
+from backend.scripts.api_data import API_Data
 from backend.scripts.keys import Keys
 
 RESULTS_FILE = (
@@ -17,7 +17,7 @@ yellow_needed = 700
 AVG_ENVY_RES_LIFE = 6
 
 
-class ChaosResCraftingData(ScriptData):
+class ChaosResCraftingData:
     def __init__(self, keys: Keys):
         api_data = API_Data().all_data
 

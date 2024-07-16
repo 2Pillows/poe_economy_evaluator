@@ -3,7 +3,7 @@
 
 from typing import List
 
-from backend.scripts.api_data import API_Data, ScriptData
+from backend.scripts.api_data import API_Data
 from backend.scripts.keys import Keys
 
 
@@ -25,31 +25,29 @@ class TypeData:
         self.name = name
         self.weights = weights
         self.lifeforce = 1 / lifeforce[keys.CHAOS]
-        self.lifeforce_name = lifeforce[keys.NAME].split()[0]
+        self.lifeforce_name = self._convert_lifeforce_name(lifeforce[keys.NAME])
         self.lifeforce_used = lifeforce_used
 
         self.prices = {}
         self.min_price = float("inf")
         self.roll_names = set(self.weights.keys())
 
+        self.valuable = None
+        self.avg_rolls = None
+
+        self.expected_value = None
+        self.profit_per_roll = None
+        self.rolls_per_div = None
+        self.profit_per_div = None
+
         self._process_api_data(api_data)
 
-    def set_valuable(self, valuable):
-        self.valuable = valuable
+    def _convert_lifeforce_name(self, name):
+        color_name = name.split()[0]
 
-    def set_expected_value(self, expected_value):
-        api_data = API_Data().all_data
-        keys = Keys()
-        self.expected_value = expected_value
+        name_map = {"Vivid": "Yellow", "Primal": "Blue", "Wild": "Red"}
 
-        # avg expected value, unsure if need to get avg of evs or just sum since probability already acounted for
-        # self.profit_per_roll = sum(self.expected_value.values()) / len(
-        #     self.expected_value
-        # )
-        self.profit_per_roll = sum(self.expected_value.values())
-
-        self.rolls_per_div = api_data[keys.DIVINE][keys.CHAOS] / self.min_price
-        self.profit_per_div = self.profit_per_roll * self.rolls_per_div
+        return name_map[color_name]
 
     def _process_api_data(self, data):
         keys = Keys()
@@ -65,9 +63,6 @@ class TypeData:
                     self.min_price = price
             else:
                 print("no name found")
-
-    def set_avg_rolls(self, rolls):
-        self.avg_rolls = rolls
 
 
 def set_harvest_rolls(keys: Keys):
@@ -332,14 +327,14 @@ def set_harvest_rolls(keys: Keys):
     ]
 
 
-class HarvestRollingData(ScriptData):
+class HarvestRollingData:
     def __init__(self, keys: Keys):
         api_data = API_Data().all_data
 
         self.divine_cost = api_data[keys.DIVINE][keys.CHAOS]
-        self.lifeforce_yellow_cost = api_data[keys.YELLOW_LIFEFORCE][keys.CHAOS]
-        self.lifeforce_blue_cost = api_data[keys.BLUE_LIFEFORCE][keys.CHAOS]
-        self.lifeforce_red_cost = api_data[keys.RED_LIFEFORCE][keys.CHAOS]
+        self.yellow_lifeforce = 1 / api_data[keys.YELLOW_LIFEFORCE][keys.CHAOS]
+        self.blue_lifeforce = 1 / api_data[keys.BLUE_LIFEFORCE][keys.CHAOS]
+        self.red_lifeforce = 1 / api_data[keys.RED_LIFEFORCE][keys.CHAOS]
 
         self.harvest_rerolls = None
 
@@ -352,7 +347,7 @@ def start_harvest_main():
     for reroll_type in harvest_rerolls:
         # if reroll_type.type == "Delirium Orb":
         #     calc_prices(reroll_type)
-        calc_prices(reroll_type)
+        calc_prices(harvest_data, reroll_type)
 
     harvest_rerolls = sorted(
         harvest_rerolls, key=lambda x: x.profit_per_div, reverse=True
@@ -371,16 +366,17 @@ def write_results(harvest_data: HarvestRollingData):
         file.write("\n---------- Lifeforce per Chaos ----------\n\n")
 
         file.write(
-            f"{'Yellow:':8} {round(harvest_data.lifeforce_yellow_cost)} per chaos | {round((harvest_data.lifeforce_yellow_cost) * harvest_data.divine_cost)} per div\n"
+            f"{'Yellow:':8} {round(harvest_data.yellow_lifeforce)} per chaos | {round((harvest_data.yellow_lifeforce) * harvest_data.divine_cost)} per div\n"
         )
         file.write(
-            f"{'Blue:':8} {round(harvest_data.lifeforce_blue_cost)} per chaos | {round((harvest_data.lifeforce_blue_cost) * harvest_data.divine_cost)} per div\n"
+            f"{'Blue:':8} {round(harvest_data.blue_lifeforce)} per chaos | {round((harvest_data.blue_lifeforce) * harvest_data.divine_cost)} per div\n"
         )
         file.write(
-            f"{'Red:':8} {round(harvest_data.lifeforce_red_cost)} per chaos | {round((harvest_data.lifeforce_red_cost) * harvest_data.divine_cost)} per div \n\n"
+            f"{'Red:':8} {round(harvest_data.red_lifeforce)} per chaos | {round((harvest_data.red_lifeforce) * harvest_data.divine_cost)} per div \n\n"
         )
 
         for reroll in harvest_data.harvest_rerolls:
+            reroll: TypeData
             if reroll.profit_per_div > 0:
                 file.write(f"---------- {reroll.name} ----------\n\n")
 
@@ -418,12 +414,10 @@ def write_results(harvest_data: HarvestRollingData):
 
 
 # find rolls w/ higher price that potential prices of other rolls
-def calc_prices(type_data: TypeData):
+def calc_prices(harvest_data: HarvestRollingData, type_data: TypeData):
 
     # using roll data, find percentages
     total_value = sum(type_data.weights.values())
-
-    n = type_data.name
 
     # number of harvest rolls
     num_rolls = 1
@@ -513,10 +507,16 @@ def calc_prices(type_data: TypeData):
     valuable = {name: value for name, value in expected_value.items() if value >= 0}
     valuable = dict(sorted(valuable.items(), key=lambda x: x[1], reverse=True))
 
-    type_data.set_expected_value(expected_value)
-    type_data.set_valuable(valuable)
+    profit_per_roll = sum(expected_value.values())
+    rolls_per_div = harvest_data.divine_cost / type_data.min_price
+    profit_per_div = profit_per_roll * rolls_per_div
 
-    type_data.set_avg_rolls(num_rolls)
+    type_data.valuable = valuable
+    type_data.avg_rolls = num_rolls
+    type_data.expected_value = expected_value
+    type_data.profit_per_roll = profit_per_roll
+    type_data.rolls_per_div = rolls_per_div
+    type_data.profit_per_div = profit_per_div
 
 
 if __name__ == "__main__":
