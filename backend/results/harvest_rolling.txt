@@ -1,47 +1,57 @@
 
 ---------- Lifeforce per Chaos ----------
 
-Yellow:  41 per chaos | 4718 per div
-Blue:    90 per chaos | 10347 per div
-Red:     90 per chaos | 10347 per div 
+Yellow:  0 per chaos | 3 per div
+Blue:    0 per chaos | 1 per div
+Red:     0 per chaos | 1 per div 
 
 ---------- Essence ----------
 
-Avg Profit per Divine (x115): 77.62c 
+Avg Profit per Divine (x115): 82.48c 
 
-Lifeforce: Blue
+Lifeforce: 93.09253397877491
 Avg Rolls: 1
 
-Sell: Scorn, Envy, Spite, Loathing, Zeal, Greed, Misery, Rage, Anger, Woe, Sorrow, Torment, Fear, Wrath, Hatred, Contempt, Dread
-Buy: Doubt, Anguish, Suffering
-
----------- Catalyst ----------
-
-Avg Profit per Divine (x230): 45.55c 
-
-Lifeforce: Yellow
-Avg Rolls: 1
-
-Sell: Prismatic, Fertile, Intrinsic
-Buy: Noxious, Turbulent, Imbued, Abrasive, Tempering, Unstable, Accelerating
+Sell: Scorn, Envy, Spite, Loathing, Zeal, Greed, Misery, Rage, Anger, Woe, Sorrow, Torment, Fear, Contempt, Wrath, Hatred, Dread
+Buy: Anguish, Suffering, Doubt
 
 ---------- Corrupted Essence ----------
 
-Avg Profit per Divine (x10): 38.77c 
+Avg Profit per Divine (x10): 74.35c 
 
-Lifeforce: Blue
-Avg Rolls: 3
+Lifeforce: 93.09253397877491
+Avg Rolls: 4
 
 Sell: Horror, Delirium, Insanity
 Buy: Hysteria
 
----------- Delirium Orb ----------
+---------- Breach Splinter ----------
 
-Avg Profit per Divine (x57): 22.57c 
+Avg Profit per Divine (x490): 63.15c 
 
-Lifeforce: Blue
+Lifeforce: 94.9667616334283
 Avg Rolls: 1
 
-Sell: Diviner, Fine, Skittering, Cartographer, Blighted, Fossilised, Timeless, Thaumaturge, Foreboding, Abyssal, Fragmented, Singular, Obscured
-Buy: Armoursmith, Jeweller, Blacksmith, Whispering
+Sell: Chayula, Uul-Netol, Tul, Xoph
+Buy: Esh
+
+---------- Catalyst ----------
+
+Avg Profit per Divine (x230): 48.77c 
+
+Lifeforce: 41.04079454978248
+Avg Rolls: 1
+
+Sell: Prismatic, Fertile, Intrinsic
+Buy: Imbued, Abrasive, Turbulent, Noxious, Tempering, Accelerating, Unstable
+
+---------- Delirium Orb ----------
+
+Avg Profit per Divine (x58): 19.33c 
+
+Lifeforce: 93.09253397877491
+Avg Rolls: 1
+
+Sell: Diviner, Fine, Skittering, Cartographer, Thaumaturge, Blighted, Fossilised, Abyssal, Timeless, Foreboding, Fragmented, Singular
+Buy: Armoursmith, Jeweller, Blacksmith, Whispering, Obscured
 
