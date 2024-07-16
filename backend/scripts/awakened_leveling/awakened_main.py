@@ -26,10 +26,7 @@ class AwakenedLevelingData:
         return API_Data().all_data[attr]
 
     def __setattr__(self, attr, value):
-        if attr == "api_data":
-            super().__setattr__(attr, value)
-        else:
-            API_Data().all_data[attr] = value
+        API_Data().all_data[attr] = value
 
 
 def start_awakened_main():
