@@ -10,6 +10,6 @@ Deafening Envy: 4 chaos | 29.04 per div
 ---------- Crafting Cost ----------
 
 Stygian Vise: 75c avg total 
-	iLvl 86 Base: 75c 
+	iLvl 86 Base: 6c 
 	4x Fertile Catalyst: 44 chaos total | 11 chaos per or 10.45 per div 
 	6x Deafening Envy: 24 chaos total

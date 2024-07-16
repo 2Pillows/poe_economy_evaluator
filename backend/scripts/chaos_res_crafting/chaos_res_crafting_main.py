@@ -91,7 +91,7 @@ def write_results(crafting_data: ChaosResCraftingData):
 
         file.write("\n---------- Crafting Cost ----------\n\n")
         file.write(
-            f"Stygian Vise: {round(crafting_data.stygian_crafting_cost)}c avg total \n\tiLvl 86 Base: {round(crafting_data.stygian_crafting_cost)}c \n\t4x Fertile Catalyst: {round(4 * crafting_data.fertile_catalyst_cost)} chaos total | {round(crafting_data.fertile_catalyst_cost)} chaos per or {round(crafting_data.divine_cost / crafting_data.fertile_catalyst_cost, 2)} per div \n"
+            f"Stygian Vise: {round(crafting_data.stygian_crafting_cost)}c avg total \n\tiLvl 86 Base: {round(crafting_data.stygian_base_cost)}c \n\t4x Fertile Catalyst: {round(4 * crafting_data.fertile_catalyst_cost)} chaos total | {round(crafting_data.fertile_catalyst_cost)} chaos per or {round(crafting_data.divine_cost / crafting_data.fertile_catalyst_cost, 2)} per div \n"
         )
         if crafting_data.harvest_cost < crafting_data.deafening_envy_cost:
             file.write(
