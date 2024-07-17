@@ -7,10 +7,10 @@ RESULTS_FILE = "backend/results/chaos_res_crafting.txt"
 
 
 # 100 yellow lifeforce per reforge chaos
-# 1/31 for T3+ chaos res, T3+ life or open prefix
+# 1/31 for T1 chaos res, T3+ any ele res, T3+ life or open prefix
 YELLOW_NEEDED = 31 * 100
 
-# 1/6 for T3+ chaos res, T3+ life or open prefix
+# 1/6 for T1 chaos res, T3+ any ele res, T3+ life or open prefix
 ENVY_NEEDED = 6
 
 
