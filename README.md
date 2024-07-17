@@ -1,6 +1,6 @@
-# poe_economy_evaluator
+# POE Economy Evaluator
 
-poe_economy_evaluator is not affiliated with or endorsed by Grinding Gear Games.
+POE Economy Evaluator is not affiliated with or endorsed by Grinding Gear Games.
 
 ## Website Interface
 
