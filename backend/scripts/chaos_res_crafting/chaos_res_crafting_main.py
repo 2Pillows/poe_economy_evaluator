@@ -82,19 +82,22 @@ def write_results(crafting_data: ChaosResCraftingData):
         )
         if crafting_data.yellow_equiv >= 1:
             file.write(
-                f"\tEquiv to Essence: {round(crafting_data.yellow_equiv)} per chaos | {round(crafting_data.yellow_equiv * crafting_data.divine_cost):,} per div\n\n"
+                f"\tEquiv to Essence: {round(crafting_data.yellow_equiv)} per chaos | {round(crafting_data.yellow_equiv * crafting_data.divine_cost):,} per div\n"
             )
         file.write(
-            f"Essence Spamming (~{ENVY_NEEDED} Envy): {round(crafting_data.deafening_crafting_cost)} chaos total \n\tBuy: {round(crafting_data.deafening_envy_cost)} chaos | {round(crafting_data.divine_cost/crafting_data.deafening_envy_cost):,} per div\n"
+            f"\nEssence Spamming (~{ENVY_NEEDED} Envy): {round(crafting_data.deafening_crafting_cost)} chaos total \n\tBuy: {round(crafting_data.deafening_envy_cost)} chaos | {round(crafting_data.divine_cost/crafting_data.deafening_envy_cost):,} per div\n"
         )
         if crafting_data.envy_equiv >= 1:
             file.write(
-                f"\tEquiv to Lifeforce: {round(crafting_data.envy_equiv)} per chaos | {round(crafting_data.envy_equiv * crafting_data.divine_cost):,} per div\n\n"
+                f"\tEquiv to Lifeforce: {round(crafting_data.envy_equiv)} per chaos | {round(crafting_data.envy_equiv * crafting_data.divine_cost):,} per div\n"
             )
+        file.write(
+            f"\n4x Fertile Catalyst: {round(crafting_data.fertile_catalyst_cost * 4)} chaos total \n\tBuy: {round(crafting_data.fertile_catalyst_cost)} chaos | {round(crafting_data.divine_cost/crafting_data.fertile_catalyst_cost):,} per div\n"
+        )
 
         file.write("\n---------- Crafting Cost ----------\n\n")
         file.write(
-            f"Stygian Vise: {round(crafting_data.stygian_crafting_cost)}c avg total \n\tiLvl 86 Base: {round(crafting_data.stygian_base_cost)}c \n\t4x Fertile Catalyst: {round(4 * crafting_data.fertile_catalyst_cost)} chaos total | {round(crafting_data.fertile_catalyst_cost)} chaos per or {round(crafting_data.divine_cost / crafting_data.fertile_catalyst_cost, 2)} per div \n"
+            f"Stygian Vise: {round(crafting_data.stygian_crafting_cost)}c avg total \n\tiLvl 86 Base: {round(crafting_data.stygian_base_cost)}c \n\t4x Fertile Catalyst: {round(4 * crafting_data.fertile_catalyst_cost)} chaos total \n"
         )
         if crafting_data.harvest_crafting_cost < crafting_data.deafening_crafting_cost:
             file.write(
