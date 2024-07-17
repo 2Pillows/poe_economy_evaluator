@@ -16,8 +16,6 @@ Currently working on a website interface to replace the result text files. Will 
 - Six Linking
 - T17 Fragment Drops
 
-View results directly in `backend/results/`
-
 ## Deprecated Tools
 
 - Gem Alt Qualities
