@@ -6,15 +6,11 @@ from backend.scripts.keys import Keys
 RESULTS_FILE = "backend/results/chaos_res_crafting.txt"
 
 
-# average rolls
-# harvest is 1/31 for same rolls,
-AVG_HARVEST_RES_LIFE = 31
+# 100 yellow lifeforce per reforge chaos
+# 1/31 for T3+ chaos res, T3+ life or open prefix
+YELLOW_NEEDED = 31 * 100
 
-# Harvest crafting for T1 Chaos Res is 1/7
-# Each reforge chaos is 100 yellow lifeforce
-YELLOW_NEEDED = 7 * 100 * AVG_HARVEST_RES_LIFE
-
-# deafening envy and getting t3+ res and (t3+ life or open prefix)
+# 1/6 for T3+ chaos res, T3+ life or open prefix
 ENVY_NEEDED = 6
 
 

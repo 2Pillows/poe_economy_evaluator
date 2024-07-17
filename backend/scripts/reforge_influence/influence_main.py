@@ -1,132 +1,73 @@
 # main.py
 
-from backend.scripts.api_data import API_Data, Singleton
-from dataclasses import dataclass
-
 from backend.scripts.api_data import API_Data
+from backend.scripts.keys import Keys
 
 
-RESULTS_FILE = "/workspaces/poe_economy_evaluator/backend/results/influence_rolling.txt"
+RESULTS_FILE = "backend/results/influence_rolling.txt"
 
 MIN_PROFIT = 100
 
 
 class ReforgeInfluenceData:
     def __init__(self):
-        self.api_data = API_Data.get_instance()
+        keys = Keys()
+        api_data = API_Data().all_data
 
         # ref objects used to intellisense
-        self.all_exalted_orbs: float = self.api_data.all_exalted_orbs
-        self.base_type_data: float = self.api_data.base_type_data
-        self.lifeforce_blue: float = self.api_data.lifeforce_blue
-        self.divine: float = self.api_data.divine
+        self.base_type_data = api_data[keys.ALL_BASE_TYPES]
+        self.blue_lifeforce_per_chaos = 1 / api_data[keys.BLUE_LIFEFORCE][keys.CHAOS]
+        self.divine_cost = api_data[keys.DIVINE][keys.CHAOS]
+        self.cheapest_conq_exalted_orb_cost = api_data[keys.CHEAPEST_CONQ_EXALTED_ORB][
+            keys.CHAOS
+        ]
 
-        self.profitable_bases: dict = self.api_data.profitable_bases
-
-        self.base_type_data: list = self.api_data.base_type_data
-
-    def __getattr__(self, attr):
-        return getattr(API_Data.get_instance(), attr)
-
-    def __setattr__(self, attr, value):
-        if attr == "api_data":
-            super().__setattr__(attr, value)
-        else:
-            setattr(API_Data.get_instance(), attr, value)
-
-
-# @dataclass
-# class ReforgeInfluenceData(metaclass=Singleton):
-#     all_exalted_orbs: float = None
-#     base_type_data: float = None
-#     lifeforce_blue: float = None
-#     divine: float = None
-
-#     profitable_bases: dict = None
-
-#     base_type_data: list = None
-
-#     def set_api_data(
-#         self,
-#     ):
-#         api_data = API_Data()
-#         self.all_exalted_orbs = api_data.all_exalted_orbs
-#         self.base_type_data = api_data.base_type_data
-#         self.lifeforce_blue = api_data.lifeforce_blue
-#         self.divine = api_data.divine
-
-#         self.base_type_data = api_data.base_type_data
-
-#     def set_results(cls, _profitable_bases):
-#         cls.profitable_bases = _profitable_bases
+        self.profitable_bases = None
 
 
 def start_influnece_main():
     influence_data = ReforgeInfluenceData()
-    influence_data.set_api_data()
 
-    # collect and sort api data to dict with type key
     base_data = get_base_data(influence_data)
 
     reforge_viable = get_reforge_bases(base_data)
 
-    profitable_bases = find_profit(reforge_viable)
+    profitable_bases = find_profit(influence_data, reforge_viable)
 
-    influence_data.set_results(profitable_bases)
+    influence_data.profitable_bases = profitable_bases
 
     write_to_file(influence_data)
-
-
-# return cheapest exalted orb name, exalted orb price, blue juice price
-class Cheapest_Orb:
-    name = []
-    price = float("inf")
-    api_data = API_Data()
-    for orb_item in api_data.all_exalted_orbs:
-        orb_price = orb_item["chaosEquivalent"]
-        orb_name = orb_item["currencyTypeName"]
-
-        if orb_price < price:
-            name = [orb_name]
-            price = orb_price
-
-        elif orb_price == price:
-            name.append(orb_name)
 
 
 # sort api data to a dict
 # key = base variant
 # value = {"level": {"variant": [data]}}
 def get_base_data(influence_data: ReforgeInfluenceData):
-    # defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
+    keys = Keys()
+
     base_data = {}
-    for entry in influence_data.base_type_data:
-        # need at least 5 listing to consider
-        if entry["count"] < 5:
-            continue
+    for base_name, base_items in influence_data.base_type_data.items():
+        for entry in base_items:
+            # need at least 5 listing to consider
+            if entry[keys.COUNT] < 5:
+                continue
 
-        # get base info
-        base_name = entry["name"]
-        base_level = str(entry["levelRequired"])
-        base_type = entry.get("variant", "base")
+            # get base info
+            base_level = str(entry[keys.LEVEL])
+            base_type = entry[keys.BASE_TYPE]
 
-        # skip items that have 2 influences
-        if "/" in base_type:
-            continue
+            # Initialize base_data if it doesn't exist
+            if base_name not in base_data:
+                base_data[base_name] = {}
 
-        # Initialize base_data if it doesn't exist
-        if base_name not in base_data:
-            base_data[base_name] = {}
+            # Initialize base_level dictionary if it doesn't exist
+            if base_level not in base_data[base_name]:
+                base_data[base_name][base_level] = {}
 
-        # Initialize base_level dictionary if it doesn't exist
-        if base_level not in base_data[base_name]:
-            base_data[base_name][base_level] = {}
+                # if current type is base, add orb value tokeys.CHAOS            if base_type == "base":
+                entry[keys.CHAOS] += influence_data.cheapest_conq_exalted_orb_cost
 
-        # if current type is base, add orb value to chaosValue
-        if base_type == "base":
-            entry["chaosValue"] += Cheapest_Orb.price
-
-        base_data[base_name][base_level][base_type] = entry
+            base_data[base_name][base_level][base_type] = entry
 
     return base_data
 
@@ -159,8 +100,8 @@ def get_reforge_bases(base_data):
 
 
 # needs to meet lv requirements
-def find_profit(reforge_bases):
-    api_data = API_Data()
+def find_profit(influence_data: ReforgeInfluenceData, reforge_bases):
+    keys = Keys()
     profitable_bases = {}
 
     # loop for all bases
@@ -177,26 +118,28 @@ def find_profit(reforge_bases):
 
             # loop through all variants of base at level
             for type, data in type_data.items():
-                if data["chaosValue"] < buy_cost:
+                if data[keys.CHAOS] < buy_cost:
                     buy_name = type
-                    buy_cost = data["chaosValue"]
+                    buy_cost = data[keys.CHAOS]
 
                 if type != "base":
-                    sum_influence_prices += data["chaosValue"]
+                    sum_influence_prices += data[keys.CHAOS]
 
             # find avg profit per roll
-            avg_profit = (sum_influence_prices - api_data.lifeforce_blue) / 6
+            avg_profit = (
+                sum_influence_prices - influence_data.blue_lifeforce_per_chaos
+            ) / 6
             if avg_profit < 0:
                 continue
 
             profitable_variants = []
             for type, data in type_data.items():
                 # if base is cheaper than avg profit or is the base, not profitable
-                if data["chaosValue"] < avg_profit or "variant" not in data:
+                if data[keys.CHAOS] < avg_profit or "variant" not in data:
                     continue
 
                 profitable_variants.append(
-                    {"name": data["variant"], "price": data["chaosValue"]}
+                    {"name": data["variant"], "price": data[keys.CHAOS]}
                 )
 
             level_data = {
@@ -231,12 +174,14 @@ def write_to_file(influence_data: ReforgeInfluenceData):
 
     # write data to file
     with open(RESULTS_FILE, "a") as file:
-        orb_name = ", ".join(Cheapest_Orb.name)
+        # orb_name = ", ".join(Cheapest_Orb.name)
         file.write("\n---------- Crafting Cost ----------\n\n")
         file.write(
-            f"Blue Lifeforce: {round(influence_data.lifeforce_blue)} per chaos | {round(influence_data.lifeforce_blue * influence_data.divine)} per div\n"
+            f"Blue Lifeforce: {round(influence_data.blue_lifeforce_per_chaos)} per chaos | {round(influence_data.blue_lifeforce_per_chaos * influence_data.divine_cost)} per div\n"
         )
-        file.write(f"{orb_name}: {Cheapest_Orb.price} chaos\n")
+        file.write(
+            f"Conq Exalted Orb: {influence_data.cheapest_conq_exalted_orb_cost} chaos\n"
+        )
         file.write("\n---------- Base Types ----------\n\n")
 
         for base_name, level_data in influence_data.profitable_bases.items():
@@ -259,7 +204,7 @@ def write_to_file(influence_data: ReforgeInfluenceData):
                 if avg_profit < MIN_PROFIT:
                     continue
                 file.write(
-                    f"\tlv. {base_level}: Avg Profit = {round(avg_profit)} c | {round(avg_profit / influence_data.divine, 1)} d\n"
+                    f"\tlv. {base_level}: Avg Profit = {round(avg_profit)} c | {round(avg_profit / influence_data.divine_cost, 1)} d\n"
                 )
 
                 buy_name = data["data"]["buy"]["name"]
