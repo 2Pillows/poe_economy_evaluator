@@ -3,9 +3,7 @@
 from backend.scripts.api_data import API_Data
 from backend.scripts.keys import Keys
 
-RESULTS_FILE = (
-    "/workspaces/poe_economy_evaluator/backend/results/chaos_res_crafting.txt"
-)
+RESULTS_FILE = "backend/results/chaos_res_crafting.txt"
 
 # Harvest crafting for T1 Chaos Res is 1/7
 # Each reforge chaos is 70 yellow lifeforce

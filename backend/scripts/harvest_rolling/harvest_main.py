@@ -4,7 +4,7 @@ from backend.scripts.api_data import API_Data
 from backend.scripts.keys import Keys
 
 
-RESULTS_FILE = "/workspaces/poe_economy_evaluator/backend/results/harvest_rolling.txt"
+RESULTS_FILE = "backend/results/harvest_rolling.txt"
 
 
 class TypeData:
