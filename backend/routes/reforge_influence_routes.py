@@ -3,7 +3,7 @@ from flask import Blueprint, jsonify, request
 from dataclasses import asdict
 from backend.routes.utils import handle_post
 
-from backend.src.reforge_influence.influence_main import (
+from backend.scripts.reforge_influence.influence_main import (
     ReforgeInfluenceData,
     start_influnece_main,
 )

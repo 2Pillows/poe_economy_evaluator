@@ -1,6 +1,6 @@
 # sanctum_main.py
 
-from backend.src.api_data import API_Data, Singleton
+from backend.scripts.api_data import API_Data
 from dataclasses import dataclass
 
 
@@ -12,22 +12,40 @@ MIN_CHAOS = 10
 
 RESULTS_FILE = "/workspaces/poe_economy_evaluator/backend/results/sanctum_rewards.txt"
 REWARD_FILE = (
-    "/workspaces/poe_economy_evaluator/backend/src/sanctum_rewards/reward_data.txt"
+    "/workspaces/poe_economy_evaluator/backend/scripts/sanctum_rewards/reward_data.txt"
 )
 
 
-@dataclass
-class SanctumRewardsData(metaclass=Singleton):
+class SanctumRewardsData:
+    def __init__(self):
+        self.api_data = API_Data.get_instance()
 
-    currency_data: list = None
-    rewards: list = None
+        # ref objects used to intellisense
+        self.currency_data: list = self.api_data.currency_data
+        self.rewards: list = self.api_data.rewards
 
-    def set_api_data(self):
-        api_data = API_Data()
-        self.currency_data = api_data.currency_data
+    def __getattr__(self, attr):
+        return getattr(API_Data.get_instance(), attr)
 
-    def set_results(cls, _rewards):
-        cls.rewards = _rewards
+    def __setattr__(self, attr, value):
+        if attr == "api_data":
+            super().__setattr__(attr, value)
+        else:
+            setattr(API_Data.get_instance(), attr, value)
+
+
+# @dataclass
+# class SanctumRewardsData(metaclass=Singleton):
+
+#     currency_data: list = None
+#     rewards: list = None
+
+#     def set_api_data(self):
+#         api_data = API_Data()
+#         self.currency_data = api_data.currency_data
+
+#     def set_results(cls, _rewards):
+#         cls.rewards = _rewards
 
 
 def start_sanctum_main():

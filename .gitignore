@@ -1,5 +1,8 @@
-# file that returns urls for api endpoints
+# files to access api data
 api_data.py
+keys.py
+
+results/
 
 notes/
 

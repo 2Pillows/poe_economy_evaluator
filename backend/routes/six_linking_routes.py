@@ -3,7 +3,7 @@ from flask import Blueprint, jsonify, request
 from dataclasses import asdict
 from backend.routes.utils import handle_post
 
-from backend.src.six_linking.six_linking_main import (
+from backend.scripts.six_linking.six_linking_main import (
     SixLinkingData,
     start_six_linking_main,
 )

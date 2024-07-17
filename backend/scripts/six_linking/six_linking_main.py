@@ -1,7 +1,10 @@
 # six_linking_main.py
 
-from backend.src.api_data import API_Data, Singleton
+from backend.scripts.api_data import API_Data, Singleton
 from dataclasses import dataclass
+
+from backend.scripts.api_data import API_Data
+
 
 AVG_FUSINGS = 1244
 AVG_JEWELLERS = 223
@@ -14,42 +17,73 @@ RESULTS_FILE = "/workspaces/poe_economy_evaluator/backend/results/six_linking.tx
 MIN_PROFIT = 20
 
 
-@dataclass
-class SixLinkingData(metaclass=Singleton):
-    best_methods: list = None
-    best_armours: list = None
+class SixLinkingData:
+    def __init__(self):
+        self.api_data = API_Data.get_instance()
 
-    jeweller: int = None
-    omen_of_the_jeweller: int = None
-    black_morrigan: int = None
-    craicic_shield_crab: int = None
-    beast_yellow: int = None
-    fusing: int = None
-    omen_of_connections: int = None
-    craicic_sand_spitter: int = None
+        # ref objects used to intellisense
+        self.best_methods: list = self.api_data.best_methods
+        self.best_armours: list = self.api_data.best_methods
 
-    unique_armour_data: list = None
+        self.jeweller: int = self.api_data.jeweller
+        self.omen_of_the_jeweller: int = self.api_data.omen_of_the_jeweller
+        self.black_morrigan: int = self.api_data.black_morrigan
+        self.craicic_shield_crab: int = self.api_data.craicic_shield_crab
+        self.beast_yellow: int = self.api_data.beast_yellow
+        self.fusing: int = self.api_data.fusing
+        self.omen_of_connections: int = self.api_data.omen_of_connections
+        self.craicic_sand_spitter: int = self.api_data.craicic_sand_spitter
 
-    divine: int = None
+        self.unique_armour_data: list = self.api_data.unique_armour_data
 
-    def set_api_data(self):
-        api_data = API_Data()
-        self.jeweller = api_data.jeweller
-        self.omen_of_the_jeweller = api_data.omen_of_the_jeweller
-        self.black_morrigan = api_data.black_morrigan
-        self.craicic_shield_crab = api_data.craicic_shield_crab
-        self.beast_yellow = api_data.beast_yellow
-        self.fusing = api_data.fusing
-        self.omen_of_connections = api_data.omen_of_connections
-        self.craicic_sand_spitter = api_data.craicic_sand_spitter
+        self.divine: int = self.api_data.divine
 
-        self.unique_armour_data = api_data.unique_armour_data
+    def __getattr__(self, attr):
+        return getattr(API_Data.get_instance(), attr)
 
-        self.divine = api_data.divine
+    def __setattr__(self, attr, value):
+        if attr == "api_data":
+            super().__setattr__(attr, value)
+        else:
+            setattr(API_Data.get_instance(), attr, value)
 
-    def set_results(cls, _best_methods, _best_armours):
-        cls.best_methods = _best_methods
-        cls.best_armours = _best_armours
+
+# @dataclass
+# class SixLinkingData(metaclass=Singleton):
+#     best_methods: list = None
+#     best_armours: list = None
+
+#     jeweller: int = None
+#     omen_of_the_jeweller: int = None
+#     black_morrigan: int = None
+#     craicic_shield_crab: int = None
+#     beast_yellow: int = None
+#     fusing: int = None
+#     omen_of_connections: int = None
+#     craicic_sand_spitter: int = None
+
+#     unique_armour_data: list = None
+
+#     divine: int = None
+
+#     def set_api_data(self):
+#         api_data = API_Data()
+#         self.jeweller = api_data.jeweller
+#         self.omen_of_the_jeweller = api_data.omen_of_the_jeweller
+#         self.black_morrigan = api_data.black_morrigan
+#         self.craicic_shield_crab = api_data.craicic_shield_crab
+#         self.beast_yellow = api_data.beast_yellow
+#         self.fusing = api_data.fusing
+#         self.omen_of_connections = api_data.omen_of_connections
+#         self.craicic_sand_spitter = api_data.craicic_sand_spitter
+
+#         self.unique_armour_data = api_data.unique_armour_data
+
+#         self.divine = api_data.divine
+
+#     def set_results(cls, _best_methods, _best_armours):
+#         cls.best_methods = _best_methods
+#         cls.best_armours = _best_armours
 
 
 def start_six_linking_main():

@@ -3,7 +3,7 @@ from flask import Blueprint, jsonify, request
 from dataclasses import asdict
 from backend.routes.utils import handle_post
 
-from backend.src.chaos_res_crafting.chaos_res_crafting_main import (
+from backend.scripts.chaos_res_crafting.chaos_res_crafting_main import (
     ChaosResCraftingData,
     start_chaos_res_crafting,
 )

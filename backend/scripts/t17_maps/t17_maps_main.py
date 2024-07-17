@@ -1,33 +1,58 @@
 # t17_maps_main.py
 
-from backend.src.api_data import API_Data, Singleton
+from backend.scripts.api_data import get_api_data
 from dataclasses import dataclass
+
+from backend.scripts.api_data import API_Data
 
 RESULTS_FILE = "/workspaces/poe_economy_evaluator/backend/results/t17_maps.txt"
 
 
-@dataclass
-class T17MapData(metaclass=Singleton):
-    map_prices: dict = None
-    fragment_prices: dict = None
-    one_frag_profit: dict = None
-    two_frag_profit: dict = None
+class T17MapData:
+    def __init__(self):
+        self.api_data = API_Data.get_instance()
 
-    map_data: list = None
-    currency_data: list = None
+        # ref objects used to intellisense
+        self.map_prices: dict = self.api_data.map_prices
+        self.fragment_prices: dict = self.api_data.fragment_prices
+        self.one_frag_profit: dict = self.api_data.one_frag_profit
+        self.two_frag_profit: dict = self.api_data.two_frag_profit
 
-    def set_api_data(self):
-        api_data = API_Data()
-        self.map_data = api_data.map_data
-        self.currency_data = api_data.currency_data
+        self.map_data: list = self.api_data.map_data
+        self.currency_data: list = self.api_data.currency_data
 
-    def set_results(
-        self, _map_prices, _fragment_prices, _one_frag_profit, _two_frag_profit
-    ):
-        self.map_prices = _map_prices
-        self.fragment_prices = _fragment_prices
-        self.one_frag_profit = _one_frag_profit
-        self.two_frag_profit = _two_frag_profit
+    def __getattr__(self, attr):
+        return getattr(API_Data.get_instance(), attr)
+
+    def __setattr__(self, attr, value):
+        if attr == "api_data":
+            super().__setattr__(attr, value)
+        else:
+            setattr(API_Data.get_instance(), attr, value)
+
+
+# @dataclass
+# class T17MapData:
+#     map_prices: dict = None
+#     fragment_prices: dict = None
+#     one_frag_profit: dict = None
+#     two_frag_profit: dict = None
+
+#     map_data: list = None
+#     currency_data: list = None
+
+#     def set_api_data(self):
+#         api_data = get_api_data()
+#         self.map_data = api_data.map_data
+#         self.currency_data = api_data.currency_data
+
+#     def set_results(
+#         self, _map_prices, _fragment_prices, _one_frag_profit, _two_frag_profit
+#     ):
+#         self.map_prices = _map_prices
+#         self.fragment_prices = _fragment_prices
+#         self.one_frag_profit = _one_frag_profit
+#         self.two_frag_profit = _two_frag_profit
 
 
 def start_t17_maps():
