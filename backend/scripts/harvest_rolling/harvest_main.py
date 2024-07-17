@@ -1,9 +1,5 @@
 #
 
-
-import math
-from typing import List
-
 from backend.scripts.api_data import API_Data
 from backend.scripts.keys import Keys
 
@@ -516,10 +512,6 @@ def calc_prices(harvest_data: HarvestRollingData, type_data: TypeData):
         stop_weight -= weight
 
         avg_rolls = total_weight / stop_weight
-
-        # prob = stop_weight / total_weight
-        # success_rate = 0.95
-        # avg_rolls = math.ceil(math.log(1 - success_rate) / math.log(1 - prob))
 
         total_ev = _calc_ev(stop_on, type_data, stop_weight)
 
