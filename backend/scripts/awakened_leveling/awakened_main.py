@@ -4,7 +4,7 @@ from backend.scripts.api_data import API_Data
 from backend.scripts.keys import Keys
 
 MIN_PROFIT = 10
-RESULTS_FILE = "/workspaces/poe_economy_evaluator/backend/results/awakened_leveling.txt"
+RESULTS_FILE = "backend/results/awakened_leveling.txt"
 
 
 class AwakenedLevelingData:
