@@ -25,7 +25,7 @@ class TypeData:
 
         self.name = name
         self.weights = weights
-        self.lifeforce = 1 / lifeforce[keys.CHAOS]
+        self.lifeforce_per_chaos = 1 / lifeforce[keys.CHAOS]
         self.lifeforce_name = self._convert_lifeforce_name(lifeforce[keys.NAME])
         self.lifeforce_used = lifeforce_used
 
@@ -33,8 +33,8 @@ class TypeData:
         self.buy_in = float("inf")
         self.roll_names = set(self.weights.keys())
 
-        self.stop_at = None
-        self.roll_at = None
+        self.stop_on = None
+        self.roll_on = None
 
         self.avg_rolls = None
 
@@ -334,9 +334,11 @@ class HarvestRollingData:
         api_data = API_Data().all_data
 
         self.divine_cost = api_data[keys.DIVINE][keys.CHAOS]
-        self.yellow_lifeforce = 1 / api_data[keys.YELLOW_LIFEFORCE][keys.CHAOS]
-        self.blue_lifeforce = 1 / api_data[keys.BLUE_LIFEFORCE][keys.CHAOS]
-        self.red_lifeforce = 1 / api_data[keys.RED_LIFEFORCE][keys.CHAOS]
+        self.yellow_lifeforce_per_chaos = (
+            1 / api_data[keys.YELLOW_LIFEFORCE][keys.CHAOS]
+        )
+        self.blue_lifeforce_per_chaos = 1 / api_data[keys.BLUE_LIFEFORCE][keys.CHAOS]
+        self.red_lifeforce_per_chaos = 1 / api_data[keys.RED_LIFEFORCE][keys.CHAOS]
 
         self.harvest_rerolls = None
 
@@ -368,13 +370,13 @@ def write_results(harvest_data: HarvestRollingData):
         file.write("\n---------- Lifeforce per Chaos ----------\n\n")
 
         file.write(
-            f"{'Yellow:':8} {round(harvest_data.yellow_lifeforce)} per chaos | {round((harvest_data.yellow_lifeforce) * harvest_data.divine_cost)} per div\n"
+            f"{'Yellow:':8} {round(harvest_data.yellow_lifeforce_per_chaos)} per chaos | {round((harvest_data.yellow_lifeforce_per_chaos) * harvest_data.divine_cost)} per div\n"
         )
         file.write(
-            f"{'Blue:':8} {round(harvest_data.blue_lifeforce)} per chaos | {round((harvest_data.blue_lifeforce) * harvest_data.divine_cost)} per div\n"
+            f"{'Blue:':8} {round(harvest_data.blue_lifeforce_per_chaos)} per chaos | {round((harvest_data.blue_lifeforce_per_chaos) * harvest_data.divine_cost)} per div\n"
         )
         file.write(
-            f"{'Red:':8} {round(harvest_data.red_lifeforce)} per chaos | {round((harvest_data.red_lifeforce) * harvest_data.divine_cost)} per div \n\n"
+            f"{'Red:':8} {round(harvest_data.red_lifeforce_per_chaos)} per chaos | {round((harvest_data.red_lifeforce_per_chaos) * harvest_data.divine_cost)} per div \n\n"
         )
 
         for reroll in harvest_data.harvest_rerolls:
@@ -396,30 +398,20 @@ def write_results(harvest_data: HarvestRollingData):
                 file.write(
                     f"Buying At: {round(reroll.buy_in, 2)}c each | {round(harvest_data.divine_cost/reroll.buy_in)} per div\n"
                 )
-                file.write(f"Avg Rolls: {reroll.avg_rolls}\n")
+                file.write(f"Avg Rolls: {round(reroll.avg_rolls)}\n")
                 file.write(f"Lifeforce: {reroll.lifeforce_name}\n\n")
-                # for name, price in type_data.stop_at.items():
+                # for name, price in type_data.stop_on.items():
                 #     file.write(f"{name}: {round(type_data.prices[name])}\n")
 
-                sell_names = ", ".join(reroll.stop_at)
+                sell_names = ", ".join(reroll.stop_on)
                 file.write(f"Sell: {sell_names}\n")
 
-                buy_names = ", ".join(reroll.roll_at)
+                buy_names = ", ".join(reroll.roll_on)
                 file.write(f"Buy: {buy_names}\n\n")
 
 
 # find rolls w/ higher price that potential prices of other rolls
 def calc_prices(harvest_data: HarvestRollingData, type_data: TypeData):
-
-    total_weight = sum(type_data.weights.values())
-
-    lifeforce_cost = type_data.lifeforce_used / type_data.lifeforce
-
-    stop_at = []
-    roll_at = []
-
-    total_ev = 0
-    total_prob = 0
 
     # calculate generic and actual ev for rolling at each name
     # if generic ev > 0, roll
@@ -428,65 +420,133 @@ def calc_prices(harvest_data: HarvestRollingData, type_data: TypeData):
     # then find the ev with the actual_ev as the value
     # get sum for actual_ev for profit
 
-    actual_evs = {}
+    # sum of the prodcut of weight * price = weighted_price
+    # minus current weight * price = current_price
+    # remaining_price
+    #
+    # divided by 1 - weight = other weights
+    # = result of rolling
+
+    # new method
+
+    # use generic ev (ev = current price - lifeforce) to find when to roll / stay
+    # then find avg number of rolls to hit a stay
+    # then find ev for each stay
+    # sum is expected profit
+
+    total_weight = sum(type_data.weights.values())
+
+    lifeforce_cost_per_roll = type_data.lifeforce_used / type_data.lifeforce_per_chaos
+
+    expected_values = {}
 
     for current_name, current_weight in type_data.weights.items():
-
         remaining_weight = total_weight - current_weight
-
         current_price = type_data.prices[current_name]
-
         current_ev = 0
 
-        for name, weight in type_data.weights.items():
-            if name == current_name:
+        for temp_name, temp_weight in type_data.weights.items():
+            if temp_name == current_name:
                 continue
 
-            probability = weight / remaining_weight
+            probability = temp_weight / remaining_weight
+            current_ev += probability * type_data.prices[temp_name]
 
-            current_ev += probability * type_data.prices[name]
+        generic_ev = current_ev - current_price
 
-        generic_ev = current_ev - current_price - lifeforce_cost
-        actual_ev = current_ev - type_data.buy_in - lifeforce_cost
+        expected_values[current_name] = generic_ev
 
-        # Roll when generic ev is more than 0
-        if generic_ev > 0:
-            roll_at.append(current_name)
+        # # Roll when generic ev is more than 0
+        # if generic_ev > 0:
+        #     roll_on.append(current_name)
 
-            actual_evs[current_name] = actual_ev
+        # # Stop when generic ev <= 0
+        # else:
+        #     stop_on.append(current_name)
+        #     stop_weight += current_weight
 
-        # Stop when generic ev <= 0
-        else:
-            stop_at.append(current_name)
+    # use loop to narrow down when to stop, limiting number of stops
+    # return after no more rolls to stop at
+    # have highest ev w/ set of rolls to stop at
 
-    for name in roll_at:
+    # avg_rolls = total_weight / stop_weight
+    # lifeforce_cost *= avg_rolls
+
+    # total_ev = 0
+
+    # for name in stop_on:
+    #     weight = type_data.weights[name]
+    #     price = type_data.prices[name]
+
+    #     prob = weight / stop_weight
+
+    #     total_ev = prob * price
+
+    def _calc_ev(names, type_data: TypeData, stop_weight):
+        total_ev = 0
+
+        for name in names:
+            weight = type_data.weights[name]
+            price = type_data.prices[name]
+
+            prob = weight / stop_weight
+
+            total_ev += prob * price
+
+        return total_ev
+
+    expected_values = dict(sorted(expected_values.items(), key=lambda item: item[1]))
+
+    roll_weight = 0
+    stop_weight = total_weight
+    roll_on = []
+    stop_on = [name for name in expected_values.keys()]
+    max_total_ev = float("-inf")
+    max_roll_on = []
+    max_stop_on = []
+    max_avg_rolls = -1
+
+    while len(stop_on) > 1:
+        name = stop_on.pop()
+        roll_on.append(name)
+
         weight = type_data.weights[name]
 
-        prob = weight / total_weight
+        roll_weight += weight
+        stop_weight -= weight
 
-        ev = prob * actual_evs[name]
+        avg_rolls = total_weight / stop_weight
 
-        total_prob += prob
-        total_ev += ev
+        # prob = stop_weight / total_weight
+        # success_rate = 0.95
+        # avg_rolls = math.ceil(math.log(1 - success_rate) / math.log(1 - prob))
 
-    type_data.stop_at = stop_at
-    type_data.roll_at = roll_at
+        total_ev = _calc_ev(stop_on, type_data, stop_weight)
+
+        total_lifeforce_cost = avg_rolls * lifeforce_cost_per_roll
+
+        total_ev -= type_data.buy_in + total_lifeforce_cost
+
+        if total_ev > max_total_ev:
+            max_total_ev = total_ev
+            max_avg_rolls = avg_rolls
+            max_roll_on = roll_on.copy()
+            max_stop_on = stop_on.copy()
+
+    type_data.stop_on = max_stop_on
+    type_data.roll_on = max_roll_on
 
     rolls_per_div = harvest_data.divine_cost / type_data.buy_in
-    profit_per_div = total_ev * rolls_per_div
+    profit_per_div = max_total_ev * rolls_per_div
+
     type_data.rolls_per_div = rolls_per_div
     type_data.profit_per_div = profit_per_div
 
-    accuracy = 0.95
+    type_data.avg_rolls = max_avg_rolls
 
-    type_data.avg_rolls = (
-        math.ceil(math.log(1 - accuracy) / math.log(1 - total_prob))
-        if total_ev > 0
-        else -1
-    )
-
-    type_data.total_ev = total_ev
+    type_data.total_ev = max_total_ev
 
 
-if __name__ == "__main__":  #
+if __name__ == "__main__":
+
     start_harvest_main()

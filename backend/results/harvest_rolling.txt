@@ -2,116 +2,94 @@
 ---------- Lifeforce per Chaos ----------
 
 Yellow:  43 per chaos | 5000 per div
-Blue:    94 per chaos | 10848 per div
-Red:     95 per chaos | 10978 per div 
+Blue:    92 per chaos | 10768 per div
+Red:     90 per chaos | 10536 per div 
 
 ---------- Catalyst ----------
 
-Avg Profit per Divine (x231): 139.38c 
+Avg Profit per Divine (x234): 500.23c 
 
-Buying At: 0.5c each | 231 per div
-Avg Rolls: 3
+Buying At: 0.5c each | 234 per div
+Avg Rolls: 13
 Lifeforce: Yellow
 
-Sell: Intrinsic, Prismatic, Fertile
-Buy: Imbued, Noxious, Turbulent, Abrasive, Tempering, Accelerating, Unstable
+Sell: Prismatic, Fertile
+Buy: Abrasive, Imbued, Noxious, Turbulent, Tempering, Unstable, Accelerating, Intrinsic
 
 ---------- Breach Splinter ----------
 
-Avg Profit per Divine (x491): 64.39c 
+Avg Profit per Divine (x490): 228.61c 
 
-Buying At: 0.24c each | 491 per div
-Avg Rolls: 4
+Buying At: 0.24c each | 490 per div
+Avg Rolls: 5
 Lifeforce: Red
 
-Sell: Chayula, Uul-Netol
-Buy: Esh, Tul, Xoph
-
----------- Oil ----------
-
-Avg Profit per Divine (x1156): 63.86c 
-
-Buying At: 0.1c each | 1156 per div
-Avg Rolls: 4
-Lifeforce: Yellow
-
-Sell: Amber, Verdant, Teal, Indigo, Azure, Violet, Crimson, Black, Opalescent, Silver, Golden
-Buy: Clear, Sepia
-
----------- Essence ----------
-
-Avg Profit per Divine (x116): 52.27c 
-
-Buying At: 1.0c each | 116 per div
-Avg Rolls: 5
-Lifeforce: Blue
-
-Sell: Anger, Envy, Greed, Loathing, Misery, Rage, Scorn, Spite, Woe, Zeal
-Buy: Anguish, Contempt, Doubt, Dread, Fear, Hatred, Sorrow, Suffering, Torment, Wrath
+Sell: Chayula
+Buy: Esh, Xoph, Tul, Uul-Netol
 
 ---------- Delirium Orb ----------
 
-Avg Profit per Divine (x58): 48.02c 
+Avg Profit per Divine (x59): 198.02c 
 
-Buying At: 2.0c each | 58 per div
+Buying At: 2.0c each | 59 per div
+Avg Rolls: 10
+Lifeforce: Blue
+
+Sell: Skittering, Diviner
+Buy: Jeweller, Blacksmith, Armoursmith, Whispering, Obscured, Foreboding, Singular, Fragmented, Timeless, Abyssal, Fossilised, Blighted, Thaumaturge, Cartographer, Fine
+
+---------- Essence ----------
+
+Avg Profit per Divine (x117): 163.35c 
+
+Buying At: 1.0c each | 117 per div
 Avg Rolls: 4
 Lifeforce: Blue
 
-Sell: Fine, Diviner, Blighted, Cartographer, Fossilised, Skittering, Abyssal, Thaumaturge, Timeless
-Buy: Armoursmith, Blacksmith, Jeweller, Foreboding, Whispering, Obscured, Fragmented, Singular
+Sell: Scorn, Envy, Spite, Zeal, Loathing
+Buy: Suffering, Doubt, Anguish, Dread, Hatred, Wrath, Contempt, Fear, Torment, Sorrow, Woe, Anger, Rage, Misery, Greed
 
 ---------- Corrupted Essence ----------
 
-Avg Profit per Divine (x11): 43.75c 
+Avg Profit per Divine (x11): 151.16c 
 
 Buying At: 11.0c each | 11 per div
-Avg Rolls: 5
+Avg Rolls: 4
 Lifeforce: Blue
 
-Sell: Horror, Delirium
-Buy: Insanity, Hysteria
-
----------- Breach Stone ----------
-
-Avg Profit per Divine (x12): 38.99c 
-
-Buying At: 10.0c each | 12 per div
-Avg Rolls: 4
-Lifeforce: Red
-
-Sell: Chayula, Uul-Netol
-Buy: Esh, Tul, Xoph
+Sell: Horror
+Buy: Hysteria, Insanity, Delirium
 
 ---------- Fossil ----------
 
-Avg Profit per Divine (x116): 21.55c 
+Avg Profit per Divine (x117): 100.08c 
 
-Buying At: 1.0c each | 116 per div
+Buying At: 1.0c each | 117 per div
+Avg Rolls: 6
+Lifeforce: Red
+
+Sell: Perfect, Shuddering, Corroded, Bound, Deft, Fundamental, Prismatic, Serrated
+Buy: Metallic, Jagged, Frigid, Dense, Scorched, Pristine, Aberrant, Lucent, Aetheric
+
+---------- Breach Stone ----------
+
+Avg Profit per Divine (x11): 76.0c 
+
+Buying At: 11.0c each | 11 per div
 Avg Rolls: 2
 Lifeforce: Red
 
-Sell: Bound, Corroded, Deft, Fundamental, Perfect, Prismatic, Serrated, Shuddering
-Buy: Aberrant, Pristine, Scorched, Dense, Frigid, Jagged, Metallic, Aetheric, Lucent
+Sell: Chayula, Uul-Netol
+Buy: Xoph, Tul, Esh
 
 ---------- Timeless Splinter ----------
 
-Avg Profit per Divine (x694): 7.84c 
+Avg Profit per Divine (x702): 12.24c 
 
-Buying At: 0.17c each | 694 per div
-Avg Rolls: 4
+Buying At: 0.17c each | 702 per div
+Avg Rolls: 2
 Lifeforce: Blue
 
-Sell: Maraketh, Templar
-Buy: Eternal, Karui, Vaal
-
----------- Mortal Fragment ----------
-
-Avg Profit per Divine (x13): 7.53c 
-
-Buying At: 9.0c each | 13 per div
-Avg Rolls: 5
-Lifeforce: Blue
-
-Sell: Grief, Ignorance
-Buy: Hope, Rage
+Sell: Templar, Maraketh
+Buy: Karui, Eternal, Vaal
 
